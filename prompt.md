@@ -51,7 +51,7 @@ Page-level content guidance:
   Saved Addresses, Payment Methods, Wishlist, and Account Settings.
 ```
 
-#### Level 2 Accessibility [More detailed, level0 and level1 are in below]
+#### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
 ```
 Accessibility (Mandatory):
 
@@ -159,7 +159,7 @@ Page-level content guidance:
   (Name, Email, Department, Message), embedded map showing City Hall location,
   and social media links.
 ```
-#### Level 2 Accessibility [More detailed, level0 and level1 are in below]
+#### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
 ```
 Accessibility (Mandatory):
 
@@ -270,7 +270,7 @@ Page-level content guidance:
   (who can see posts, DM permissions), Notifications (email and push toggles),
   Appearance (dark/light mode toggle), and Danger Zone (Deactivate/Delete Account).
 ```
-#### Level 2 Accessibility [More detailed, level0 and level1 are in below]
+#### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
 ```
 Accessibility (Mandatory):
 
@@ -380,7 +380,7 @@ Page-level content guidance:
 - Subscription page: Pricing tiers (Free, Digital – $9.99/mo, All-Access – $19.99/mo),
   feature comparison table, testimonials, FAQ accordion, and a sign-up form.
 ```
-#### Level 2 Accessibility [More detailed, level0 and level1 are in below]
+#### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
 ```
 Accessibility (Mandatory):
 
@@ -500,7 +500,7 @@ Page-level content guidance:
   enrolled courses, "Continue Learning" section with resume buttons, achievement badges,
   learning streak tracker, and a "Recommended for You" course strip.
 ```
-#### Level 2 Accessibility [More detailed, level0 and level1 are in below]
+#### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
 ```
 Accessibility (Mandatory):
 
