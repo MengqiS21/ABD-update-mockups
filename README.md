@@ -7,3 +7,33 @@ include prompt, in the structure of:
 
 [3 level accessibility requirement]
 ```
+
+## Implementation Status Check (Level 0)
+
+| Platform      | Codex | Claude Code | Google Antigravity
+|---------------|-----|-------|-------------|
+| E-commerce    | ✅  | ✅    |           | 
+| Government    | ✅  | ✅    |           | 
+| Social Media  | ✅  |     |           |
+| Mass Media    |   |     |           |
+| Education     | ✅  | ✅    |           |
+
+## Implementation Status Check (Level 0)
+
+| Platform      | Codex | Claude Code | Google Antigravity
+|---------------|-----|-------|-------------|
+| E-commerce    |   |     |           |
+| Government    |   |     |           |
+| Social Media  |   |     |           |
+| Mass Media    |   |     |           |
+| Education     |   |     |           |
+
+## Implementation Status Check (Level 0)
+
+| Platform      | Codex | Claude Code | Google Antigravity
+|---------------|-----|-------|-------------|
+| E-commerce    |   |     |           |
+| Government    |   |     |           |
+| Social Media  |   |     |           |
+| Mass Media    |   |     |           |
+| Education     |   |     |           |
