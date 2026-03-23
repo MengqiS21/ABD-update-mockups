@@ -1,5 +1,6 @@
 ## ABD-update-mockups
 ### E-commerce [concise prompt+realistic description]
+#### concise prompt
 ```
 Create a new subfolder called `ecommerce` inside the current working directory.
 Inside this folder, build a multi-page mock e-commerce website.
@@ -28,7 +29,10 @@ Focus on:
 - Clean spacing and strong CTA buttons
 
 Allow flexibility in layout, component naming, and structure.
+```
 
+#### Resalistic description #1
+```
 Realistic Content Reference:
 Model this website after a mid-size online retail store called "NovaMart" —
 a general merchandise marketplace selling electronics, home goods, and apparel.
@@ -49,6 +53,32 @@ Page-level content guidance:
   and a prominent "Proceed to Checkout" button.
 - Account page: Show a user dashboard with sections: Order History,
   Saved Addresses, Payment Methods, Wishlist, and Account Settings.
+```
+
+#### realistic description #2
+```
+Realistic Content Reference:
+Model this website after "ThreadHouse" — a fashion-focused online boutique
+specializing in sustainable, independently designed clothing and accessories
+for young adults aged 18–35.
+
+Page-level content guidance:
+- Homepage: Feature a full-screen editorial hero image with overlaid text
+  ("Wear What You Stand For — New Spring Collection"), a "Shop by Mood" section
+  with lifestyle-themed tiles (Minimalist, Streetwear, Workwear, Weekend),
+  a "New Arrivals" horizontal scroll with product cards showing name, price,
+  and a "Low Stock" badge, and a brand story blurb with a "Our Mission" CTA.
+- Product listing page: Show 20–30 items in a grid. Filters include Clothing Type,
+  Size (XS–XXL), Color swatch selector, Material (Organic Cotton, Recycled Polyester),
+  and Price Range. Include a "Style Match" toggle to show outfits as curated sets.
+- Product detail page: Show a product like "Oversized Linen Shirt — Sage Green – $89.00",
+  with 4 lifestyle photos, size guide modal, material and care instructions tab,
+  "Complete the Look" product suggestions, and a user-submitted photo review section.
+- Cart page: Show 2–3 items with size/color summary, gift wrapping option (+$5),
+  estimated delivery date, a loyalty points tracker ("You're 120 points away from
+  a free tote"), and checkout CTA.
+- Account page: Show sections for My Orders, Style Profile (saved preferences),
+  Loyalty Rewards balance, Saved Outfits, and Referral Program with unique share link.
 ```
 
 #### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
@@ -106,6 +136,7 @@ cat_10 · Meaningful Sequence and Reading Order Failures
 ```
 ---
 ### Government
+#### concise prompt
 ```
 Create a new subfolder called `government` in the current working directory.
 Build a multi-page public service portal mockup.
@@ -134,7 +165,10 @@ Focus on:
 - Calm, neutral color palette
 
 Leave layout details and components open for creative interpretation.
+```
 
+#### realistic description #1
+```
 Realistic Content Reference:
 Model this website after "City of Lakewood — Official Government Portal",
 a mid-sized U.S. municipal government serving approximately 160,000 residents.
@@ -159,6 +193,39 @@ Page-level content guidance:
   (Name, Email, Department, Message), embedded map showing City Hall location,
   and social media links.
 ```
+
+#### realistic description #2
+```
+Realistic Content Reference:
+Model this website after "State of Vermont — Official Resident Services Portal",
+a state-level government platform serving residents with access to
+licensing, health, education, and benefits services.
+
+Page-level content guidance:
+- Homepage: A banner announcing a seasonal reminder ("Tax Filing Deadline:
+  April 15 — File Online Now"), a "What Do You Need Today?" prompt with
+  a prominent search bar, task-based quick links (Renew Driver's License,
+  Apply for Benefits, Register to Vote, Find a School), a live updates feed
+  from state departments, and an accessibility language selector (EN, ES, FR).
+- Services overview page: Organized by resident life stage — New Residents,
+  Families, Students, Seniors, Businesses. Each card links to relevant services
+  with a short description and estimated completion time (e.g., "Driver's License
+  Renewal — ~10 minutes online").
+- Service detail page 1 (Driver's License Renewal): Step-by-step renewal wizard
+  with eligibility checker, required documents checklist, fee breakdown ($35),
+  appointment scheduler with calendar UI, and confirmation email summary.
+- Service detail page 2 (Apply for Benefits): Benefit eligibility screener form
+  (household size, income range, employment status), results page showing
+  qualifying programs (SNAP, Medicaid, Heating Assistance), and a "Start
+  Application" CTA per program.
+- About page: Governor's welcome message with photo, state agency directory,
+  open data and transparency reports, legislative news, and accessibility
+  compliance statement.
+- Contact page: Live chat widget ("Chat with a representative — Mon–Fri 8am–5pm"),
+  helpline numbers by department, multilingual support notice, and a
+  feedback form for website improvement suggestions.
+```
+
 #### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
 ```
 Accessibility (Mandatory):
@@ -215,6 +282,7 @@ cat_10 · Meaningful Sequence and Reading Order Failures
 ---
 
 ###  Social Media
+#### concise prompt
 ```
 Create a new subfolder called `social-media`.
 Build a multi-page social platform mockup.
@@ -243,7 +311,10 @@ Create a modern feed-based interface with:
 - Responsive layout
 
 You may define your own layout structure and UI system.
+```
 
+#### realistic description #1
+```
 Realistic Content Reference:
 Model this platform after "Pulse" — a text-and-image social network
 similar to a blend of Twitter/X and Instagram, used for sharing short posts,
@@ -270,6 +341,40 @@ Page-level content guidance:
   (who can see posts, DM permissions), Notifications (email and push toggles),
   Appearance (dark/light mode toggle), and Danger Zone (Deactivate/Delete Account).
 ```
+
+#### realistic description #2
+```
+Realistic Content Reference:
+Model this platform after "Folia" — a niche creative community platform
+for artists, illustrators, photographers, and designers to share work-in-progress
+posts, get feedback, and discover inspiration, comparable in feel to
+a blend of Behance and Tumblr.
+
+Page-level content guidance:
+- Main feed page: A "Share Your Work" composer with image upload, caption field,
+  and tag input ("Add skills: #illustration #procreate"). Feed displays project
+  posts with large image previews, creator name, discipline tag, and engagement
+  bar (Appreciate, Collect, Comment). A "For You" / "Following" feed toggle
+  appears at the top.
+- Explore page: A visual discovery grid sorted by medium (Digital Art,
+  Photography, Typography, 3D, Motion). Hovering a tile reveals creator name
+  and appreciate count. Include a "Rising Creators" spotlight row and
+  a "Trending Palettes" color swatch section.
+- Notifications page: Tabs for Activity, Feedback Requests, and Collections.
+  Items show "Hana appreciated your piece 'Solstice III' · 4h" with
+  a thumbnail of the referenced work.
+- Messages page: Left panel shows active creative collaborations and DM threads.
+  Right panel shows conversation with inline image sharing, a "Share a Project"
+  shortcut button, and a read receipt indicator.
+- Profile page: Full-width portfolio header, creator bio with medium and tools
+  listed ("Works in: Procreate, Figma, Film Photography"), a curated
+  "Featured Work" pinned section, and a scrollable project grid with
+  view counts and appreciation totals.
+- Settings page: Sections for Profile & Portfolio, Creative Tools (listed skills/software),
+  Visibility (public/private portfolio toggle), Commission Status
+  ("Open for Work" badge toggle), Notifications, and Account Security.
+```
+
 #### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
 ```
 Accessibility (Mandatory):
@@ -327,6 +432,7 @@ cat_10 · Meaningful Sequence and Reading Order Failures
 ---
 
 ### Mass Media
+#### concise prompt
 ```
 Create a new subfolder called `mass-media`.
 Build a multi-page digital news portal mockup.
@@ -355,7 +461,10 @@ Focus on:
 - Mix of serif and sans-serif typography (optional)
 
 Design structure is flexible.
+```
 
+#### realistic description #1
+```
 Realistic Content Reference:
 Model this website after "The Meridian" — an independent digital news outlet
 covering global affairs, politics, technology, and culture,
@@ -380,6 +489,38 @@ Page-level content guidance:
 - Subscription page: Pricing tiers (Free, Digital – $9.99/mo, All-Access – $19.99/mo),
   feature comparison table, testimonials, FAQ accordion, and a sign-up form.
 ```
+
+#### realistic description #2
+```
+Realistic Content Reference:
+Model this website after "Groundwork" — a data-driven investigative journalism
+outlet focused on climate, science, and environmental policy, with a tone
+similar to Inside Climate News or ProPublica.
+
+Page-level content guidance:
+- Homepage: A full-width feature story with an immersive scrolling layout
+  ("The Invisible Flood: How Groundwater Collapse Is Reshaping the American West"),
+  a "Latest Investigations" strip with 3 story cards, topic category navigation
+  (Climate, Energy, Policy, Science, Data), a "By the Numbers" data highlight
+  section showing key statistics as large typographic callouts, and a
+  reader-supported donation CTA banner.
+- Category page (Climate): Lead investigation card with estimated read time
+  and reporter name, story list with topic tags ("Sea Level", "Wildfire",
+  "Carbon Markets"), a "Key Documents" sidebar linking to source PDFs,
+  and a data visualization embed preview with "View Full Report" CTA.
+- Article detail page: Long-form layout with a headline, deck (sub-headline),
+  reporter byline and date, methodology note ("How We Reported This"),
+  embedded charts and maps, pull quotes, footnotes, related investigations strip,
+  and a "Support This Reporting" donation widget at the end.
+- Opinion page: Titled "Perspectives" — features bylined essays from scientists,
+  policymakers, and community voices. Each piece shows a contributor bio card,
+  publication date, and a "Respond to This Piece" letter submission link.
+- Subscription page: Framed as reader support — "Keep Groundwork Independent".
+  Tiers: Free Reader, Supporter ($7/mo), Investigator ($20/mo with newsletter +
+  data access). Includes impact metrics ("Your support funds X hours of reporting"),
+  a recurring vs one-time toggle, and a secure payment form.
+```
+
 #### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
 ```
 Accessibility (Mandatory):
@@ -439,6 +580,7 @@ cat_10 · Meaningful Sequence and Reading Order Failures
 ---
 
 ### Education Platform
+#### concise prompt
 ```
 Create a new subfolder called `edu-portal`.
 Build a multi-page education platform mockup with layered navigation.
@@ -468,7 +610,10 @@ Focus on:
 - Action-driven CTAs (Start Learning, Sign Up, Try Free)
 
 You are free to define components and layout system.
+```
 
+#### realistic description #1
+```
 Realistic Content Reference:
 Model this platform after "LearnPath" — an online education platform offering
 structured courses in technology, business, design, and personal development,
@@ -500,6 +645,46 @@ Page-level content guidance:
   enrolled courses, "Continue Learning" section with resume buttons, achievement badges,
   learning streak tracker, and a "Recommended for You" course strip.
 ```
+
+#### realistic description #2
+```
+Realistic Content Reference:
+Model this platform after "SkillForge" — a vocational and professional
+certification platform targeting adult learners and career-changers,
+offering instructor-led cohort programs and self-paced skill tracks
+in trades, healthcare support, IT, and business administration.
+
+Page-level content guidance:
+- Homepage: Hero with headline ("Your Next Career Starts Here") and a
+  credential-focused sub-message ("Earn industry-recognized certificates
+  in as little as 8 weeks"). Feature a "Find Your Path" quiz CTA,
+  employer partner logos (Google, Mayo Clinic, Deloitte), a "Success Stories"
+  carousel with learner photos and before/after career outcomes, and
+  a urgency nudge ("Cohort starting March 3 — 4 seats left").
+- Courses listing page: Filters by Career Field, Format (Self-Paced / Cohort /
+  Live Online), Duration, Cost (Free / Under $500 / $500+), and
+  Credential Type (Certificate, Badge, CEU). Each course card shows title,
+  format badge, next start date, total hours, cost, and an "Enroll Now" CTA.
+- Course detail page: Show "Medical Administrative Assistant Certificate —
+  8 weeks · Cohort · $349". Sections include what you will learn (bulleted
+  outcomes), weekly schedule breakdown, instructor profile with credentials,
+  required materials, financing options (payment plan, employer reimbursement),
+  alumni outcome stats ("92% job placement within 3 months"), and
+  a live Q&A session schedule.
+- Study/learning tool page: Cohort classroom view with a weekly agenda panel,
+  live session countdown timer, assignment submission portal, peer discussion
+  board per module, and a resource library (slides, worksheets, reading links).
+  Progress shown as "Week 3 of 8 — Medical Billing Fundamentals".
+- Plans/pricing page: Individual enrollment vs Employer Sponsorship vs
+  Non-profit/Government pricing tracks. Includes a "Talk to an Advisor" live
+  chat CTA, scholarship application link, financing calculator
+  (monthly payment estimator), and accreditation badges.
+- Dashboard page: Shows "Your Program: Medical Admin Certificate — Week 3 of 8",
+  upcoming live session reminder with join link, assignment due dates in
+  a mini calendar, peer cohort member avatars, instructor office hours
+  booking button, and a certificate preview ("Projected completion: April 18").
+```
+
 #### Level 2 Accessibility [More detailed, level0 and level1 are provided below]
 ```
 Accessibility (Mandatory):
