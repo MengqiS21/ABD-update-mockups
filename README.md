@@ -43,8 +43,8 @@ Total prompt count:
 | E-commerce    | ✅     | ✅          | ✅                 |
 | Government    | ✅     | ✅          | ✅                 |
 | Social Media  | ✅     | ✅          | ✅                 |
-| Mass Media    | ✅     | ✅          | ✅                   |
-| Education     | ✅      |             |                    |
+| Mass Media    | ✅     | ✅          | ✅                 |
+| Education     | ✅     | ✅          | ✅                 |
 
 ---
 

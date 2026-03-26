@@ -365,7 +365,16 @@
                 </div>
             );
         };
-        
+                const Root = () => {
+            return (
+                <AppLayout activePage="profile">
+                    <ProfilePage />
+                </AppLayout>
+            );
+        };
+
+        const rootElt = document.getElementById('root');
+        const root = ReactDOM.createRoot(rootElt);
         root.render(<Root />);
     </script>
 </body>

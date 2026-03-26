@@ -373,7 +373,16 @@
                 </div>
             );
         };
-        
+                const Root = () => {
+            return (
+                <AppLayout activePage="messages">
+                    <MessagesPage />
+                </AppLayout>
+            );
+        };
+
+        const rootElt = document.getElementById('root');
+        const root = ReactDOM.createRoot(rootElt);
         root.render(<Root />);
     </script>
 </body>
