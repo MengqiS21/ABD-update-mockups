@@ -44,7 +44,7 @@ Total prompt count:
 | Government    | ✅     | ✅          | ✅                 |
 | Social Media  | ✅     | ✅          | ✅                 |
 | Mass Media    | ✅     | ✅          | ✅                   |
-| Education     |       |             |                    |
+| Education     | ✅      |             |                    |
 
 ---
 
