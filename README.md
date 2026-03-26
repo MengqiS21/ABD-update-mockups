@@ -40,10 +40,10 @@ Total prompt count:
 
 | Platform      | Codex | Claude Code | Google Antigravity |
 |---------------|-------|-------------|--------------------|
-| E-commerce    | ✅     |  ✅         | ✅                 |
+| E-commerce    | ✅     | ✅          | ✅                 |
 | Government    | ✅     | ✅          | ✅                 |
-| Social Media  | ✅      |             |                    |
-| Mass Media    |       |             |                    |
+| Social Media  | ✅     | ✅          | ✅                 |
+| Mass Media    | ✅     | ✅          | ✅                   |
 | Education     |       |             |                    |
 
 ---
