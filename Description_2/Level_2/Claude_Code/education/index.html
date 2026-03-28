@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge — Vocational &amp; Professional Certification Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'sf-bg':       '#F8F9FB',
+            'sf-surf':     '#F0F2F7',
+            'sf-border':   '#E2E8F0',
+            'sf-text':     '#1E293B',
+            'sf-muted':    '#64748B',
+            'sf-primary':  '#1E3A5F',
+            'sf-primary-h':'#162D4A',
+            'sf-accent':   '#E85D04',
+            'sf-accent-h': '#C44D04',
+            'sf-success':  '#059669',
+            'sf-warning':  '#D97706',
+            'sf-nav':      '#0F1F35',
+            'sf-gold':     '#F59E0B',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    *, body { font-family: 'Inter', system-ui, sans-serif; }
+    body { background-color: #F8F9FB; color: #1E293B; }
+    :focus-visible { outline: 3px solid #E85D04 !important; outline-offset: 2px !important; }
+    .skip-link { position:absolute;top:-60px;left:8px;background:#1E3A5F;color:#fff;padding:10px 18px;z-index:9999;border-radius:6px;font-weight:700;transition:top 0.15s;text-decoration:none;font-size:14px; }
+    .skip-link:focus { top:8px; }
+    .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+    .nav-link { font-size:14px;font-weight:600;color:#94A3B8;text-decoration:none;padding:6px 2px;transition:color 0.15s; }
+    .nav-link:hover, .nav-link[aria-current="page"] { color:#fff; }
+    .cta-primary { display:inline-flex;align-items:center;padding:13px 28px;background:#E85D04;color:#fff;font-weight:700;font-size:15px;border-radius:8px;text-decoration:none;transition:background 0.15s;border:none;cursor:pointer; }
+    .cta-primary:hover { background:#C44D04; }
+    .cta-outline { display:inline-flex;align-items:center;padding:13px 28px;border:2px solid #E85D04;color:#E85D04;font-weight:700;font-size:15px;border-radius:8px;text-decoration:none;transition:all 0.15s;background:transparent;cursor:pointer; }
+    .cta-outline:hover { background:#E85D04;color:#fff; }
+    .card-hover { transition:box-shadow 0.2s,transform 0.2s; }
+    .card-hover:hover { box-shadow:0 8px 30px rgba(0,0,0,0.12);transform:translateY(-2px); }
+    @keyframes carousel-slide { 0%,100%{opacity:1;transform:translateX(0)} 50%{opacity:1;transform:translateX(0)} }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useRef, useEffect } = React;
+
+    /* ── Header ────────────────────────────────────────────────── */
+    function Header({ current = 'home' }) {
+      const [mobileOpen, setMobileOpen] = useState(false);
+      const NAV = [
+        { key:'home',    label:'Home',       href:'index.html' },
+        { key:'courses', label:'Courses',    href:'courses.html' },
+        { key:'pricing', label:'Pricing',    href:'pricing.html' },
+        { key:'about',   label:'About',      href:'index.html' },
+      ];
+      return (
+        <header className="sticky top-0 z-40 bg-sf-nav shadow-md">
+          <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-6">
+            <a href="index.html" className="flex items-center gap-2 flex-shrink-0" aria-label="SkillForge — home">
+              <div className="w-8 h-8 bg-sf-accent rounded-lg flex items-center justify-center flex-shrink-0" aria-hidden="true">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+              </div>
+              <span className="text-white font-extrabold text-xl tracking-tight">SkillForge</span>
+            </a>
+            <nav aria-label="Main site navigation" className="hidden md:flex items-center gap-6">
+              {NAV.map(n => (
+                <a key={n.key} href={n.href} className="nav-link" aria-current={current===n.key?'page':undefined}>{n.label}</a>
+              ))}
+            </nav>
+            <div className="hidden md:flex items-center gap-3">
+              <a href="dashboard.html" className="text-sm font-semibold text-white/70 hover:text-white transition-colors">Sign In</a>
+              <a href="pricing.html" className="px-4 py-2 bg-sf-accent text-white text-sm font-bold rounded-lg hover:bg-sf-accent-h transition-colors">Start Free</a>
+            </div>
+            <button onClick={() => setMobileOpen(m=>!m)} aria-expanded={mobileOpen} aria-label={mobileOpen?'Close menu':'Open menu'} className="md:hidden p-2 text-white hover:text-sf-gold transition-colors">
+              <svg aria-hidden="true" className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileOpen?'M6 18L18 6M6 6l12 12':'M4 6h16M4 12h16M4 18h16'} />
+              </svg>
+            </button>
+          </div>
+          {mobileOpen && (
+            <div className="md:hidden bg-sf-nav border-t border-white/10 px-4 pb-4">
+              <nav aria-label="Mobile navigation"><ul className="space-y-2 pt-3">
+                {NAV.map(n => <li key={n.key}><a href={n.href} className="block py-2 text-white font-semibold text-sm">{n.label}</a></li>)}
+                <li className="pt-2 flex gap-3">
+                  <a href="dashboard.html" className="flex-1 text-center py-2.5 border border-white/20 text-white text-sm font-semibold rounded-lg">Sign In</a>
+                  <a href="pricing.html" className="flex-1 text-center py-2.5 bg-sf-accent text-white text-sm font-bold rounded-lg">Start Free</a>
+                </li>
+              </ul></nav>
+            </div>
+          )}
+        </header>
+      );
+    }
+
+    /* ── Footer ────────────────────────────────────────────────── */
+    function Footer() {
+      return (
+        <footer className="bg-sf-nav text-white mt-20" aria-label="Site footer">
+          <div className="max-w-7xl mx-auto px-4 py-12">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-10 border-b border-white/10">
+              <div className="col-span-2 md:col-span-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-7 h-7 bg-sf-accent rounded-lg flex items-center justify-center" aria-hidden="true">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
+                  </div>
+                  <span className="font-extrabold text-lg">SkillForge</span>
+                </div>
+                <p className="text-white/40 text-xs leading-relaxed">Vocational &amp; professional certifications for career changers and adult learners.</p>
+              </div>
+              {[
+                { h:'Learn', links:['All Courses','Healthcare','IT &amp; Tech','Trades','Business'] },
+                { h:'Platform', links:['How It Works','Cohort Programs','Self-Paced Tracks','For Employers'] },
+                { h:'Support', links:['Pricing','Scholarships','Financing','Student Services'] },
+                { h:'Company', links:['About Us','Accreditation','Careers','Press'] },
+              ].map(col => (
+                <div key={col.h}>
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-white/50 mb-3">{col.h}</h3>
+                  <ul className="space-y-2">{col.links.map(l => <li key={l}><a href="#" className="text-white/50 text-sm hover:text-white transition-colors" dangerouslySetInnerHTML={{ __html: l }} /></li>)}</ul>
+                </div>
+              ))}
+            </div>
+            <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <p className="text-white/25 text-xs">© {new Date().getFullYear()} SkillForge Inc. All rights reserved.</p>
+              <div className="flex gap-4">{['Privacy','Terms','Accessibility','Cookie Settings'].map(l => <a key={l} href="#" className="text-white/25 text-xs hover:text-white/60 transition-colors">{l}</a>)}</div>
+            </div>
+          </div>
+        </footer>
+      );
+    }
+
+    /* ── Success Stories carousel ──────────────────────────────── */
+    const STORIES = [
+      { name:'Darnell Washington', before:'Warehouse Supervisor', after:'IT Support Specialist', wage:'$48K → $72K', program:'CompTIA A+ & Help Desk Certificate', grad:'from-blue-500 to-indigo-600', quote:'"SkillForge's evening cohort fit around my family schedule. I had an offer before I even graduated."' },
+      { name:'Maria Santos', before:'Retail Manager', after:'Medical Administrative Assistant', wage:'$34K → $52K', program:'Medical Admin Certificate', grad:'from-teal-500 to-emerald-600', quote:'"The instructor was a working MA — every lesson felt directly relevant to what I\'d face on the job."' },
+      { name:'Kevin Park', before:'Restaurant Cook', after:'HVAC Technician', wage:'$29K → $64K', program:'HVAC Installation & Maintenance', grad:'from-orange-400 to-red-500', quote:'"I was skeptical about online trade training. The hands-on simulation modules changed my mind completely."' },
+      { name:'Priya Mehta', before:'Administrative Assistant', after:'Medical Billing Specialist', wage:'$38K → $58K', program:'Medical Billing & Coding Certificate', grad:'from-purple-500 to-pink-600', quote:'"My employer reimbursed 100% of my tuition through SkillForge's employer partnership program."' },
+    ];
+
+    function StoriesCarousel() {
+      const [idx, setIdx] = useState(0);
+      const total = STORIES.length;
+      const story = STORIES[idx];
+
+      useEffect(() => {
+        const t = setInterval(() => setIdx(i => (i+1) % total), 6000);
+        return () => clearInterval(t);
+      }, [total]);
+
+      return (
+        <section aria-labelledby="stories-heading" className="bg-sf-primary text-white py-16 px-4">
+          <div className="max-w-5xl mx-auto">
+            <h2 id="stories-heading" className="text-2xl font-extrabold text-center mb-2">Real Outcomes from Real Learners</h2>
+            <p className="text-center text-white/60 text-sm mb-10">92% of SkillForge graduates are employed in their new field within 3 months of completion.</p>
+            <div className="relative">
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 lg:p-10">
+                <div className="flex flex-col lg:flex-row gap-8 items-start">
+                  <div className="flex-shrink-0">
+                    <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${story.grad} flex items-center justify-center text-white font-extrabold text-2xl`} role="img" aria-label={`${story.name}'s profile photo`}>
+                      {story.name.split(' ').map(w=>w[0]).join('')}
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <blockquote className="text-lg text-white/90 italic leading-relaxed mb-4">{story.quote}</blockquote>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
+                      <div>
+                        <p className="font-bold text-white">{story.name}</p>
+                        <p className="text-xs text-white/50">{story.program}</p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs px-2.5 py-1 bg-white/10 rounded-full text-white/70">{story.before}</span>
+                        <svg aria-hidden="true" className="w-4 h-4 text-sf-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                        <span className="text-xs px-2.5 py-1 bg-sf-accent/30 border border-sf-accent/50 rounded-full text-sf-gold font-semibold">{story.after}</span>
+                      </div>
+                      <span className="text-sm font-bold text-sf-gold">{story.wage}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Carousel controls */}
+              <div className="flex items-center justify-center gap-3 mt-5">
+                {STORIES.map((_, i) => (
+                  <button key={i} onClick={() => setIdx(i)} aria-label={`Go to testimonial ${i+1}: ${STORIES[i].name}`} aria-pressed={idx===i} className={`w-2.5 h-2.5 rounded-full transition-all ${idx===i?'bg-sf-gold scale-125':'bg-white/30 hover:bg-white/60'}`} />
+                ))}
+              </div>
+              <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">Testimonial {idx+1} of {total}: {story.name}, {story.quote}</div>
+            </div>
+          </div>
+        </section>
+      );
+    }
+
+    /* ── Path quiz CTA ─────────────────────────────────────────── */
+    function PathQuiz() {
+      const [step, setStep] = useState(0);
+      const [answers, setAnswers] = useState({});
+      const [result, setResult] = useState(null);
+      const [liveMsg, setLiveMsg] = useState('');
+      const headingRef = useRef(null);
+
+      const QUESTIONS = [
+        { q:'What best describes your goal?', opts:['Change careers entirely','Advance in my current field','Learn a trade skill','Gain a certification for a raise'] },
+        { q:'How much time can you dedicate weekly?', opts:['Less than 5 hours','5–10 hours','10–20 hours','More than 20 hours'] },
+        { q:"What field interests you most?", opts:['Healthcare & Medical','IT & Technology','Trades & Construction','Business & Admin'] },
+      ];
+
+      const RESULTS = {
+        'Healthcare & Medical': { path:'Medical Administrative Assistant Certificate', weeks:8, cost:'$349', href:'course-detail.html' },
+        'IT & Technology': { path:'CompTIA A+ & Help Desk Certificate', weeks:10, cost:'$499', href:'course-detail.html' },
+        'Trades & Construction': { path:'HVAC Installation & Maintenance', weeks:12, cost:'$599', href:'course-detail.html' },
+        'Business & Admin': { path:'Business Administration Certificate', weeks:8, cost:'$299', href:'course-detail.html' },
+      };
+
+      function handleAnswer(opt) {
+        const field = QUESTIONS[step].q;
+        setAnswers(a => ({ ...a, [field]: opt }));
+        if (step === QUESTIONS.length - 1) {
+          const r = RESULTS[opt] || RESULTS['Healthcare & Medical'];
+          setResult(r);
+          setLiveMsg(`Based on your answers, we recommend: ${r.path}`);
+          setTimeout(() => headingRef.current?.focus(), 50);
+        } else {
+          setStep(s => s + 1);
+          setLiveMsg(`Question ${step+2} of ${QUESTIONS.length}`);
+          setTimeout(() => headingRef.current?.focus(), 50);
+        }
+      }
+
+      return (
+        <section aria-labelledby="quiz-heading" className="bg-sf-surf border border-sf-border rounded-2xl p-8 max-w-xl mx-auto text-center">
+          <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">{liveMsg}</div>
+          {result ? (
+            <>
+              <div className="w-14 h-14 bg-sf-success/10 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                <svg className="w-7 h-7 text-sf-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+              </div>
+              <h2 id="quiz-heading" ref={headingRef} tabIndex={-1} className="font-extrabold text-xl text-sf-text mb-2 focus:outline-none">Your Recommended Path</h2>
+              <p className="text-sf-muted text-sm mb-4">Based on your answers, we think this is the best fit:</p>
+              <div className="bg-white border border-sf-border rounded-xl p-4 mb-5 text-left">
+                <p className="font-bold text-sf-primary">{result.path}</p>
+                <p className="text-sm text-sf-muted">{result.weeks} weeks · {result.cost}</p>
+              </div>
+              <a href={result.href} className="cta-primary w-full justify-center">View This Program →</a>
+              <button onClick={() => { setStep(0); setAnswers({}); setResult(null); }} className="mt-3 block w-full text-center text-sm text-sf-muted hover:text-sf-primary transition-colors">Retake quiz</button>
+            </>
+          ) : (
+            <>
+              <div className="flex justify-center gap-1 mb-6">
+                {QUESTIONS.map((_, i) => (
+                  <div key={i} className={`h-1.5 rounded-full flex-1 max-w-12 transition-all ${i <= step ? 'bg-sf-accent' : 'bg-sf-border'}`} aria-hidden="true" />
+                ))}
+              </div>
+              <h2 id="quiz-heading" ref={headingRef} tabIndex={-1} className="font-extrabold text-lg text-sf-text mb-6 focus:outline-none" aria-label={`Question ${step+1} of ${QUESTIONS.length}: ${QUESTIONS[step].q}`}>
+                {QUESTIONS[step].q}
+              </h2>
+              <div className="grid grid-cols-1 gap-2" role="group" aria-label={`Options for: ${QUESTIONS[step].q}`}>
+                {QUESTIONS[step].opts.map(opt => (
+                  <button key={opt} onClick={() => handleAnswer(opt)} className="text-left px-4 py-3 border-2 border-sf-border rounded-xl text-sm font-semibold text-sf-text hover:border-sf-accent hover:text-sf-accent transition-all bg-white">
+                    {opt}
+                  </button>
+                ))}
+              </div>
+              <p className="text-xs text-sf-muted mt-4">{step+1} of {QUESTIONS.length}</p>
+            </>
+          )}
+        </section>
+      );
+    }
+
+    /* ── Course card (mini) ────────────────────────────────────── */
+    function MiniCourseCard({ course }) {
+      return (
+        <article className="bg-white border border-sf-border rounded-xl overflow-hidden card-hover" aria-label={`${course.title}, taught by ${course.instructor}`}>
+          <div className={`h-36 bg-gradient-to-br ${course.grad}`} role="img" aria-label={`${course.title} course thumbnail`} />
+          <div className="p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${course.format === 'Cohort' ? 'bg-sf-primary/10 text-sf-primary' : 'bg-sf-success/10 text-sf-success'}`}>{course.format}</span>
+              <span className="text-xs text-sf-muted">{course.field}</span>
+            </div>
+            <h3 className="font-bold text-sm text-sf-text leading-snug mb-1">
+              <a href="course-detail.html" className="hover:text-sf-accent transition-colors" aria-label={`${course.title} — taught by ${course.instructor}, ${course.cost}`}>{course.title}</a>
+            </h3>
+            <p className="text-xs text-sf-muted mb-2">Instructor: {course.instructor}</p>
+            <div className="flex items-center justify-between">
+              <span className="font-extrabold text-sf-primary text-sm">{course.cost}</span>
+              <span className="text-xs text-sf-muted">{course.weeks} wks · {course.hours}h</span>
+            </div>
+          </div>
+        </article>
+      );
+    }
+
+    const FEATURED_COURSES = [
+      { id:1, title:'Medical Administrative Assistant Certificate', instructor:'Dr. Linda Zhao, RHIA', field:'Healthcare', format:'Cohort', weeks:8, hours:48, cost:'$349', grad:'from-teal-400 to-cyan-600' },
+      { id:2, title:'CompTIA A+ & Help Desk Certificate', instructor:'Marcus Webb, CompTIA', field:'IT & Tech', format:'Self-Paced', weeks:10, hours:60, cost:'$499', grad:'from-blue-500 to-indigo-700' },
+      { id:3, title:'HVAC Installation & Maintenance', instructor:'Robert Flanagan, EPA 608', field:'Trades', format:'Cohort', weeks:12, hours:80, cost:'$599', grad:'from-orange-400 to-red-600' },
+      { id:4, title:'Medical Billing & Coding Certificate', instructor:'Sarah Okonkwo, CPC', field:'Healthcare', format:'Self-Paced', weeks:8, hours:52, cost:'$349', grad:'from-purple-400 to-pink-600' },
+    ];
+
+    /* ── Home page ─────────────────────────────────────────────── */
+    function HomePage() {
+      return (
+        <div className="min-h-screen bg-sf-bg">
+          <Header current="home" />
+
+          <main id="main-content" tabIndex={-1} className="focus:outline-none">
+            {/* Urgency banner */}
+            <div className="bg-sf-accent text-white text-center py-2.5 px-4" role="alert" aria-label="Upcoming cohort availability alert">
+              <p className="text-sm font-semibold">
+                🔔 <strong>Medical Admin cohort starting March 3 — only 4 seats remaining.</strong>
+                <a href="course-detail.html" className="underline ml-2 hover:no-underline font-bold">Reserve your spot →</a>
+              </p>
+            </div>
+
+            {/* Hero */}
+            <section aria-labelledby="hero-heading" className="bg-gradient-to-br from-sf-nav via-sf-primary to-blue-900 text-white py-20 px-4">
+              <div className="max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/10 rounded-full text-xs font-bold text-white/80 mb-4 border border-white/20">
+                      <span className="w-2 h-2 bg-sf-gold rounded-full" aria-hidden="true" />
+                      Accredited · DEAC &amp; NACEP Recognized
+                    </div>
+                    <h1 id="hero-heading" className="text-4xl lg:text-5xl font-black leading-tight mb-4">
+                      Your Next Career<br />Starts Here.
+                    </h1>
+                    <p className="text-white/70 text-lg leading-relaxed mb-6">
+                      Earn industry-recognized certificates in as little as 8 weeks. Instructor-led cohort programs and self-paced skill tracks in trades, healthcare, IT, and business.
+                    </p>
+                    <div className="flex flex-wrap gap-3 mb-8">
+                      <a href="courses.html" className="cta-primary">Browse Courses</a>
+                      <a href="#find-path" className="cta-outline" style={{ borderColor:'rgba(255,255,255,0.4)', color:'#fff' }}>Find My Path →</a>
+                    </div>
+                    <div className="flex flex-wrap items-center gap-5 text-xs text-white/50">
+                      {['42,000+ graduates','92% job placement','8-week programs','$0 down financing'].map(s => (
+                        <div key={s} className="flex items-center gap-1.5">
+                          <svg aria-hidden="true" className="w-4 h-4 text-sf-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                          {s}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="hidden lg:block">
+                    <div className="relative bg-white/5 border border-white/10 rounded-2xl p-6">
+                      <p className="text-xs font-bold uppercase tracking-widest text-sf-gold mb-4">Currently Enrolled</p>
+                      {[
+                        { name:'Jasmine T.', prog:'Medical Admin — Week 5 of 8', prog_pct:62, grad:'from-teal-400 to-cyan-600' },
+                        { name:'Marcus D.', prog:'Help Desk Cert — Week 3 of 10', prog_pct:30, grad:'from-blue-400 to-indigo-600' },
+                        { name:'Rosa V.',   prog:'HVAC Install — Week 8 of 12',  prog_pct:67, grad:'from-orange-400 to-red-600' },
+                      ].map(l => (
+                        <div key={l.name} className="flex items-center gap-3 mb-4 last:mb-0">
+                          <div className={`w-9 h-9 rounded-full bg-gradient-to-br ${l.grad} flex items-center justify-center text-white font-bold text-xs flex-shrink-0`} role="img" aria-label={`${l.name}'s avatar`}>
+                            {l.name.split(' ').map(w=>w[0]).join('')}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-semibold text-white truncate">{l.name}</p>
+                            <p className="text-xs text-white/40 truncate">{l.prog}</p>
+                            <div className="w-full bg-white/10 rounded-full h-1 mt-1">
+                              <div className="bg-sf-gold h-1 rounded-full" style={{ width:`${l.prog_pct}%` }} role="progressbar" aria-valuenow={l.prog_pct} aria-valuemin={0} aria-valuemax={100} aria-label={`${l.name}: ${l.prog_pct}% complete`} />
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Employer partners */}
+            <section aria-labelledby="partners-heading" className="border-b border-sf-border py-10 px-4">
+              <div className="max-w-5xl mx-auto text-center">
+                <h2 id="partners-heading" className="text-xs font-bold uppercase tracking-widest text-sf-muted mb-6">Trusted by employers at</h2>
+                <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12" role="list" aria-label="Employer partner logos">
+                  {['Google','Mayo Clinic','Deloitte','Kaiser Permanente','Amazon Web Services','Home Depot'].map(name => (
+                    <div key={name} role="listitem" className="px-5 py-2 bg-sf-surf border border-sf-border rounded-lg text-sm font-bold text-sf-muted" aria-label={`${name} — employer partner`}>
+                      {name}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Find Your Path quiz */}
+            <section id="find-path" aria-labelledby="path-heading" className="py-16 px-4">
+              <div className="max-w-5xl mx-auto">
+                <div className="text-center mb-10">
+                  <h2 id="path-heading" className="text-2xl font-extrabold text-sf-text mb-2">Find Your Path in 60 Seconds</h2>
+                  <p className="text-sf-muted">Answer 3 quick questions and we'll recommend the right program for your goals.</p>
+                </div>
+                <PathQuiz />
+              </div>
+            </section>
+
+            {/* Featured courses */}
+            <section aria-labelledby="featured-heading" className="py-14 px-4 bg-sf-surf border-t border-sf-border">
+              <div className="max-w-7xl mx-auto">
+                <div className="flex items-center justify-between mb-8">
+                  <h2 id="featured-heading" className="text-2xl font-extrabold text-sf-text">Most Enrolled Programs</h2>
+                  <a href="courses.html" className="text-sm font-semibold text-sf-accent hover:underline">Browse all courses →</a>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5" role="list" aria-label="Featured courses">
+                  {FEATURED_COURSES.map(c => <div key={c.id} role="listitem"><MiniCourseCard course={c} /></div>)}
+                </div>
+              </div>
+            </section>
+
+            {/* Success stories */}
+            <StoriesCarousel />
+
+            {/* Stats */}
+            <section aria-labelledby="stats-heading" className="py-14 px-4">
+              <div className="max-w-5xl mx-auto">
+                <h2 id="stats-heading" className="text-2xl font-extrabold text-center text-sf-text mb-10">SkillForge by the Numbers</h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center" role="list" aria-label="Platform statistics">
+                  {[
+                    { n:'42K+', l:'Graduates' },
+                    { n:'92%', l:'Job placement within 3 months' },
+                    { n:'$28K', l:'Average salary increase' },
+                    { n:'8 weeks', l:'To your first certificate' },
+                  ].map(s => (
+                    <div key={s.l} role="listitem" className="bg-white border border-sf-border rounded-xl p-5">
+                      <p className="text-3xl font-black text-sf-primary mb-1" aria-label={`${s.n} — ${s.l}`}>{s.n}</p>
+                      <p className="text-xs text-sf-muted">{s.l}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* CTA band */}
+            <section aria-labelledby="cta-band-heading" className="bg-sf-accent text-white py-14 px-4 text-center">
+              <div className="max-w-2xl mx-auto">
+                <h2 id="cta-band-heading" className="text-3xl font-black mb-3">Ready to Start Learning?</h2>
+                <p className="text-white/80 mb-6">Enroll today with $0 down. Payment plans available. Employer reimbursement assistance included.</p>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <a href="courses.html" className="px-8 py-3 bg-white text-sf-accent font-bold text-sm rounded-lg hover:bg-sf-surf transition-colors">Browse Programs</a>
+                  <a href="pricing.html" className="px-8 py-3 border-2 border-white text-white font-bold text-sm rounded-lg hover:bg-white hover:text-sf-accent transition-colors">View Pricing</a>
+                </div>
+              </div>
+            </section>
+          </main>
+
+          <Footer />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<HomePage />);
+  </script>
+</body>
+</html>
