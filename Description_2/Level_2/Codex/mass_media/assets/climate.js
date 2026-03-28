@@ -1,8 +1,8 @@
 const { html, PageShell, StoryCard, climateStories, keyDocuments, announce } = window.Groundwork;
 
 function ClimatePage() {
-  const [selectedTag, setSelectedTag] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [selectedTag, setSelectedTag] = React.useState("All");
+  const [visibleCount, setVisibleCount] = React.useState(3);
   const tags = ["All", "Sea Level", "Wildfire", "Carbon Markets", "Water"];
   const filteredStories = climateStories.filter((story) => selectedTag === "All" || story.tag === selectedTag);
   const visibleStories = filteredStories.slice(0, visibleCount);

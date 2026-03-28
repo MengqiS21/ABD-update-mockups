@@ -21,12 +21,12 @@ function FAQItem({ item, isOpen, onToggle }) {
 }
 
 function SupportPage() {
-  const [billingMode, setBillingMode] = useState("recurring");
-  const [selectedPlan, setSelectedPlan] = useState("supporter");
-  const [newsletterStatus, setNewsletterStatus] = useState("");
-  const [form, setForm] = useState({ name: "", email: "", card: "" });
-  const [errors, setErrors] = useState({});
-  const [faqOpen, setFaqOpen] = useState("faq-1");
+  const [billingMode, setBillingMode] = React.useState("recurring");
+  const [selectedPlan, setSelectedPlan] = React.useState("supporter");
+  const [newsletterStatus, setNewsletterStatus] = React.useState("");
+  const [form, setForm] = React.useState({ name: "", email: "", card: "" });
+  const [errors, setErrors] = React.useState({});
+  const [faqOpen, setFaqOpen] = React.useState("faq-1");
 
   const plans = [
     { id: "free", name: "Free Reader", price: "$0", detail: "Access to free investigations and public newsletters." },
@@ -40,7 +40,7 @@ function SupportPage() {
     { id: "faq-3", question: "Is payment handled securely?", answer: "This mockup presents a secure payment form pattern with labeled fields, keyboard navigation, and linked error messaging." },
   ];
 
-  const impact = useMemo(() => {
+  const impact = React.useMemo(() => {
     if (selectedPlan === "investigator") return "Your support funds about 11 hours of reporting each month.";
     if (selectedPlan === "supporter") return "Your support funds about 4 hours of reporting each month.";
     return "Free readers still expand Groundwork's reach and tip pipeline.";
@@ -67,6 +67,8 @@ function SupportPage() {
     >
       <section aria-labelledby="support-tiers" className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
+          <h2 id="support-tiers" className="text-3xl font-serif text-ink">Membership Tiers</h2>
+          <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">Choose a plan and billing mode to support Groundwork's reporting.</p>
           <div className="inline-flex rounded-full border border-slate-200 bg-white p-1" role="group" aria-label="Billing frequency">
             ${[
               { id: "recurring", label: "Recurring" },
@@ -92,7 +94,7 @@ function SupportPage() {
               <article key=${plan.id} className=${`rounded-[1.75rem] border p-6 ${selectedPlan === plan.id ? "border-ink bg-white shadow-sm" : "border-slate-200 bg-fog"}`}>
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
                   <div>
-                    <h2 id="support-tiers" className="text-2xl font-serif text-ink">${plan.name}</h2>
+                    <h3 className="text-2xl font-serif text-ink">${plan.name}</h3>
                     <p className="mt-2 text-sm leading-7 text-slate-600">${plan.detail}</p>
                   </div>
                   <div className="text-left sm:text-right">
@@ -210,8 +212,9 @@ function SupportPage() {
               item=${item}
               isOpen=${faqOpen === item.id}
               onToggle=${() => {
-                setFaqOpen(faqOpen === item.id ? "" : item.id);
-                announce(`${item.question} ${faqOpen === item.id ? "collapsed" : "expanded"}.`);
+                const nextOpen = faqOpen === item.id ? "" : item.id;
+                setFaqOpen(nextOpen);
+                announce(`${item.question} ${nextOpen ? "expanded" : "collapsed"}.`);
               }}
             />
           `)}

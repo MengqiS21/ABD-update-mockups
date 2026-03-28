@@ -13,7 +13,6 @@ function ArticlePage() {
       <article className="mt-10">
         <header className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-rust">Water, policy, and infrastructure</p>
-          <h1 className="mt-4 text-4xl font-serif leading-tight text-ink lg:text-6xl">The Invisible Flood: How Groundwater Collapse Is Reshaping the American West</h1>
           <p className="mt-5 text-xl leading-8 text-slate-600">New satellite analysis and county pump logs reveal a growing mismatch between what states report, what farmers extract, and what towns can safely depend on.</p>
           <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-slate-500">
             <div className="flex items-center gap-3">
