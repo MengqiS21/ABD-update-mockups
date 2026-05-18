@@ -759,4 +759,26 @@ Accessibility (Mandatory):
 - Semantic HTML structure with appropriate ARIA labels
 - All images include descriptive alt text
 - Form inputs have associated labels
+
+```
+
+## SVG Input
+```
+When the mockup requires an image but no suitable image is available, 
+fetch and inline an appropriate SVG from the Font Awesome 7.x library:
+  Base URL: https://raw.githubusercontent.com/FortAwesome/Font-Awesome/7.x/svgs/
+  Subfolders: regular/, solid/, brands/
+  
+Workflow:
+1. Identify what the image should represent (e.g., user avatar → person icon, 
+   product photo → image/box icon, map → location-dot icon)
+2. Construct the raw file URL:
+   https://raw.githubusercontent.com/FortAwesome/Font-Awesome/7.x/svgs/{subfolder}/{icon-name}.svg
+3. Fetch the SVG content and inline it directly into the HTML/JSX
+4. Style it to fill the image placeholder (width, height, color via currentColor or fill)
+5. Add aria-label or aria-hidden as appropriate for accessibility context
+
+Do NOT use <img src="..."> pointing to GitHub — always inline the SVG markup.
+Do NOT use placeholder services (picsum, placehold.it, etc.).
+Only fall back to SVG icons when a real image is genuinely unavailable.
 ```

@@ -12,6 +12,8 @@ Prompt structure per category:
 [accessibility level 0: null — no requirements]
 [accessibility level 1: concise general requirements]
 [accessibility level 2: full requirements with category-specific detailed examples]
+
+[svg icon fallback rule]
 ```
 
 Each actual prompt sent to an agent combines:
