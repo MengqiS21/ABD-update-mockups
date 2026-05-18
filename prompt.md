@@ -762,6 +762,15 @@ Accessibility (Mandatory):
 
 ```
 
+## Image Sourcing Rule
+```
+When the mockup needs an image, use LoremFlickr as the primary source:
+  <img src="https://loremflickr.com/{width}/{height}/{keyword}?random={n}">
+  - Replace {keyword} with a word that matches the image's intended content
+  - Use different {n} values (1, 2, 3...) so images don't repeat across the page
+  - Fall back to Font Awesome inlined SVG only for icons or UI elements with no photographic equivalent
+  ```
+
 ## SVG Input
 ```
 When the mockup requires an image but no suitable image is available, 

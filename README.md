@@ -13,6 +13,8 @@ Prompt structure per category:
 [accessibility level 1: concise general requirements]
 [accessibility level 2: full requirements with category-specific detailed examples]
 
+[image sourcing rule]
+
 [svg icon fallback rule]
 ```
 
