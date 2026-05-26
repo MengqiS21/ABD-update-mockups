@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart (3 items) – NovaMart</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .empty-cart-msg {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+    .empty-cart-msg svg { width: 64px; height: 64px; fill: var(--border); margin: 0 auto 16px; display: block; }
+    .cart-security {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8125rem;
+      color: var(--muted);
+      justify-content: center;
+      margin-top: 8px;
+    }
+    .cart-security svg { width: 14px; height: 14px; fill: var(--green); flex-shrink: 0; }
+    .continue-link {
+      display: block;
+      text-align: center;
+      margin-top: 12px;
+      font-size: .9rem;
+      color: var(--primary);
+    }
+    .promo-success {
+      color: var(--green);
+      font-size: .875rem;
+      margin-top: 6px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .promo-success svg { width: 14px; height: 14px; fill: currentColor; }
+    .saved-for-later {
+      background: var(--surface);
+      border-radius: var(--r-md);
+      box-shadow: var(--shadow-sm);
+      margin-top: 24px;
+      overflow: hidden;
+    }
+    .saved-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.0625rem;
+      font-weight: 700;
+    }
+    .payment-methods-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+      align-items: center;
+    }
+    .payment-icon {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 4px 8px;
+      font-size: .75rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- ARIA live region for dynamic announcements (cat_7) -->
+  <div id="aria-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+  <div id="summary-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+  <!-- ══ HEADER ══════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="NovaMart – Return to homepage">
+        <span class="logo-text">Nova<span>Mart</span></span>
+      </a>
+      <form class="search-form" role="search" aria-label="Search NovaMart">
+        <label for="site-search" class="sr-only">Search products, brands, and more</label>
+        <input type="search" id="site-search" name="q" placeholder="Search products, brands, and more…" autocomplete="off">
+        <button type="submit" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+          Search
+        </button>
+      </form>
+      <nav class="header-actions" aria-label="Account and cart navigation">
+        <a href="account.html" aria-label="My Account">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="currentColor"/></svg>
+          <span aria-hidden="true">Account</span>
+        </a>
+        <a href="cart.html" aria-label="Shopping cart, 3 items" aria-current="page">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span aria-hidden="true">Cart <span class="cart-badge cart-count">3</span></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══ CATEGORY NAV ════════════════════════════════════════ -->
+  <nav class="category-nav" aria-label="Shop by department">
+    <div class="container">
+      <ul role="list">
+        <li><a href="products.html?cat=all">All Departments</a></li>
+        <li><a href="products.html?cat=electronics">Electronics</a></li>
+        <li><a href="products.html?cat=kitchen">Kitchen</a></li>
+        <li><a href="products.html?cat=clothing">Clothing</a></li>
+        <li><a href="products.html?cat=sports">Sports &amp; Outdoors</a></li>
+        <li><a href="products.html?cat=deals">Today's Deals</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══ MAIN ════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- Breadcrumb (cat_3) -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <div class="container">
+        <ol role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><span aria-current="page">Shopping Cart</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <div class="container" style="padding: 24px 0 48px;">
+      <h1 style="font-size:1.625rem; font-weight:800; margin-bottom:24px;">
+        Shopping Cart
+        <span style="font-size:1rem; font-weight:400; color:var(--muted);">(3 items)</span>
+      </h1>
+
+      <div class="cart-layout">
+
+        <!-- ── Cart Items Panel ── -->
+        <div>
+          <div class="cart-items-panel" aria-label="Items in your cart">
+            <div class="cart-items-header">
+              <h2>Your Items</h2>
+              <button
+                class="btn btn-sm"
+                style="color:var(--muted); background:none; border:1px solid var(--border);"
+                aria-label="Save all items for later"
+              >Save All for Later</button>
+            </div>
+
+            <!-- Cart Item 1 (cat_10: logical DOM order: image → info → qty → price) -->
+            <article class="cart-item" data-item-total data-item-price="279.99" aria-label="Cart item: Sony WH-1000XM5 Headphones">
+              <div class="cart-item-img">
+                <a href="product-detail.html" aria-label="View Sony WH-1000XM5 Headphones product page">
+                  <img src="https://loremflickr.com/200/200/headphones?random=301" alt="Sony WH-1000XM5 Wireless Headphones in black">
+                </a>
+              </div>
+              <div class="cart-item-info">
+                <h3><a href="product-detail.html">Sony WH-1000XM5 Wireless Noise-Canceling Headphones</a></h3>
+                <p class="cart-item-meta">Color: Black &nbsp;|&nbsp; <span style="color:var(--green);">In Stock</span></p>
+                <p class="cart-item-meta">Sold by NovaMart Electronics</p>
+                <div class="cart-item-actions">
+                  <!-- Quantity (cat_4: keyboard; cat_7: live announce) -->
+                  <div class="qty-control" role="group" aria-label="Quantity for Sony WH-1000XM5 Headphones" data-item-id="sony-wh1000xm5">
+                    <button data-qty="dec" aria-label="Decrease quantity of Sony WH-1000XM5 Headphones" disabled>−</button>
+                    <input
+                      type="number"
+                      value="1"
+                      min="1"
+                      max="10"
+                      aria-label="Quantity of Sony WH-1000XM5 Headphones, currently 1"
+                    >
+                    <button data-qty="inc" aria-label="Increase quantity of Sony WH-1000XM5 Headphones">+</button>
+                  </div>
+                  <!-- Remove (cat_1: descriptive label) -->
+                  <button
+                    class="remove-btn"
+                    data-item-id="sony-wh1000xm5"
+                    data-item-name="Sony WH-1000XM5 Headphones"
+                    aria-label="Remove Sony WH-1000XM5 Headphones from cart"
+                  >Remove</button>
+                  <button
+                    class="wishlist-btn"
+                    aria-pressed="false"
+                    data-product-name="Sony WH-1000XM5 Headphones"
+                    aria-label="Save Sony WH-1000XM5 Headphones to wishlist"
+                    style="position:static; background:none; border:none; width:auto; height:auto; padding:0; color:var(--primary); font-size:.875rem; font-weight:600; text-decoration:underline;"
+                  >Save for Later</button>
+                </div>
+              </div>
+              <div class="cart-item-price" aria-label="Price: $279.99">
+                $<span class="item-total-display">279.99</span>
+              </div>
+            </article>
+
+            <!-- Cart Item 2 -->
+            <article class="cart-item" data-item-total data-item-price="89.99" aria-label="Cart item: Instant Pot Duo 7-in-1">
+              <div class="cart-item-img">
+                <a href="products.html" aria-label="View Instant Pot Duo 7-in-1 product page">
+                  <img src="https://loremflickr.com/200/200/instant-pot?random=302" alt="Instant Pot Duo 7-in-1 electric pressure cooker in stainless steel">
+                </a>
+              </div>
+              <div class="cart-item-info">
+                <h3><a href="products.html">Instant Pot Duo 7-in-1 Electric Pressure Cooker (6 Qt)</a></h3>
+                <p class="cart-item-meta">Size: 6 Quart &nbsp;|&nbsp; <span style="color:var(--green);">In Stock</span></p>
+                <p class="cart-item-meta">Sold by NovaMart Kitchen</p>
+                <div class="cart-item-actions">
+                  <div class="qty-control" role="group" aria-label="Quantity for Instant Pot Duo 7-in-1">
+                    <button data-qty="dec" aria-label="Decrease quantity of Instant Pot Duo 7-in-1">−</button>
+                    <input
+                      type="number"
+                      value="2"
+                      min="1"
+                      max="10"
+                      aria-label="Quantity of Instant Pot Duo 7-in-1, currently 2"
+                    >
+                    <button data-qty="inc" aria-label="Increase quantity of Instant Pot Duo 7-in-1">+</button>
+                  </div>
+                  <button
+                    class="remove-btn"
+                    data-item-id="instant-pot-duo"
+                    data-item-name="Instant Pot Duo 7-in-1"
+                    aria-label="Remove Instant Pot Duo 7-in-1 from cart"
+                  >Remove</button>
+                  <button
+                    class="wishlist-btn"
+                    aria-pressed="false"
+                    data-product-name="Instant Pot Duo 7-in-1"
+                    aria-label="Save Instant Pot Duo 7-in-1 to wishlist"
+                    style="position:static; background:none; border:none; width:auto; height:auto; padding:0; color:var(--primary); font-size:.875rem; font-weight:600; text-decoration:underline;"
+                  >Save for Later</button>
+                </div>
+              </div>
+              <div class="cart-item-price" aria-label="Price: $179.98 for 2">
+                $<span class="item-total-display">179.98</span>
+              </div>
+            </article>
+
+            <!-- Cart Item 3 -->
+            <article class="cart-item" data-item-total data-item-price="129.99" aria-label="Cart item: Nike Air Max 270">
+              <div class="cart-item-img">
+                <a href="products.html" aria-label="View Nike Air Max 270 product page">
+                  <img src="https://loremflickr.com/200/200/sneakers?random=303" alt="Nike Air Max 270 running shoes in black and white">
+                </a>
+              </div>
+              <div class="cart-item-info">
+                <h3><a href="products.html">Nike Air Max 270 Running Shoes</a></h3>
+                <p class="cart-item-meta">Size: 10 US &nbsp;|&nbsp; Color: Black/White &nbsp;|&nbsp; <span style="color:var(--green);">In Stock</span></p>
+                <p class="cart-item-meta">Sold by NovaMart Fashion</p>
+                <div class="cart-item-actions">
+                  <div class="qty-control" role="group" aria-label="Quantity for Nike Air Max 270">
+                    <button data-qty="dec" aria-label="Decrease quantity of Nike Air Max 270" disabled>−</button>
+                    <input
+                      type="number"
+                      value="1"
+                      min="1"
+                      max="10"
+                      aria-label="Quantity of Nike Air Max 270, currently 1"
+                    >
+                    <button data-qty="inc" aria-label="Increase quantity of Nike Air Max 270">+</button>
+                  </div>
+                  <button
+                    class="remove-btn"
+                    data-item-id="nike-airmax270"
+                    data-item-name="Nike Air Max 270"
+                    aria-label="Remove Nike Air Max 270 from cart"
+                  >Remove</button>
+                  <button
+                    class="wishlist-btn"
+                    aria-pressed="false"
+                    data-product-name="Nike Air Max 270"
+                    aria-label="Save Nike Air Max 270 to wishlist"
+                    style="position:static; background:none; border:none; width:auto; height:auto; padding:0; color:var(--primary); font-size:.875rem; font-weight:600; text-decoration:underline;"
+                  >Save for Later</button>
+                </div>
+              </div>
+              <div class="cart-item-price" aria-label="Price: $129.99">
+                $<span class="item-total-display">129.99</span>
+              </div>
+            </article>
+
+          </div><!-- /.cart-items-panel -->
+
+          <!-- Saved for Later -->
+          <div class="saved-for-later">
+            <h2 class="saved-header">Saved for Later (1 item)</h2>
+            <div style="padding:20px;">
+              <article class="cart-item" aria-label="Saved item: Fitbit Charge 5">
+                <div class="cart-item-img">
+                  <img src="https://loremflickr.com/200/200/smartwatch?random=304" alt="Fitbit Charge 5 fitness tracker in black">
+                </div>
+                <div class="cart-item-info">
+                  <h3><a href="products.html?cat=sports">Fitbit Charge 5 Advanced Fitness Tracker</a></h3>
+                  <p class="cart-item-meta">Color: Black &nbsp;|&nbsp; <span style="color:var(--green);">In Stock</span></p>
+                  <div class="price-row" style="margin-top:4px;"><span class="price-current">$99.99</span><span class="price-original" aria-label="Was $119.95">$119.95</span></div>
+                  <div class="cart-item-actions" style="margin-top:8px;">
+                    <button
+                      class="btn btn-sm btn-primary"
+                      data-add-to-cart="fitbit-charge5"
+                      data-product-name="Fitbit Charge 5"
+                      data-product-price="99.99"
+                      aria-label="Move Fitbit Charge 5 to cart"
+                    >Move to Cart</button>
+                    <button
+                      class="remove-btn"
+                      data-item-id="fitbit-charge5"
+                      data-item-name="Fitbit Charge 5"
+                      aria-label="Remove Fitbit Charge 5 from saved items"
+                    >Remove</button>
+                  </div>
+                </div>
+                <div class="cart-item-price" aria-label="Price: $99.99">$99.99</div>
+              </article>
+            </div>
+          </div>
+
+        </div><!-- /cart items column -->
+
+        <!-- ── Order Summary Panel ── -->
+        <aside class="order-summary" aria-label="Order summary">
+          <h2>Order Summary</h2>
+
+          <div class="summary-rows" aria-live="polite" aria-label="Order total details">
+            <div class="summary-row">
+              <span>Subtotal (4 items):</span>
+              <span class="summary-subtotal" aria-label="Subtotal: $589.96">$589.96</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping &amp; handling:</span>
+              <span class="summary-shipping" aria-label="Shipping: Free">FREE</span>
+            </div>
+            <div class="summary-row">
+              <span>Estimated tax:</span>
+              <span class="summary-tax" aria-label="Estimated tax: $47.20">$47.20</span>
+            </div>
+            <div class="summary-row">
+              <span style="color:var(--green); font-size:.875rem;">Promo discount:</span>
+              <span style="color:var(--green);" id="promo-discount">—</span>
+            </div>
+            <div class="summary-row total">
+              <span>Order Total:</span>
+              <span class="summary-total" aria-label="Order total: $637.16">$637.16</span>
+            </div>
+          </div>
+
+          <!-- Free shipping message -->
+          <p style="font-size:.875rem; color:var(--green); font-weight:600; text-align:center; padding:8px 0;">
+            <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="var(--green)" style="display:inline; margin-right:4px; vertical-align:middle;"><path d="M9 16.17L5.53 12.7a1 1 0 0 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.11a1 1 0 0 0-1.41-1.41L9 16.17z"/></svg>
+            Your order qualifies for FREE shipping!
+          </p>
+
+          <!-- Promo Code (cat_9: error handling, aria-required) -->
+          <form class="promo-form" aria-label="Apply promo code" novalidate>
+            <label for="promo-input">Promo Code</label>
+            <div class="promo-input-group">
+              <input
+                type="text"
+                id="promo-input"
+                name="promo"
+                placeholder="Enter code (e.g. SAVE10)"
+                autocomplete="off"
+                aria-label="Enter promo code"
+                aria-describedby="promo-error promo-hint"
+              >
+              <button type="submit" class="btn btn-outline btn-sm" aria-label="Apply promo code">Apply</button>
+            </div>
+            <p id="promo-hint" style="font-size:.8125rem; color:var(--muted); margin-top:4px;">Try: SAVE10, WELCOME20, or NOVA15</p>
+            <!-- Error (cat_9: descriptive, text-based) -->
+            <div id="promo-error" class="field-error" hidden role="alert" aria-live="assertive">
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+              <span></span>
+            </div>
+            <!-- Success (cat_7: announced) -->
+            <p class="promo-success" hidden>
+              <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 16.17L5.53 12.7a1 1 0 0 0-1.41 1.41l4.18 4.18a1 1 0 0 0 1.41 0L20.29 7.11a1 1 0 0 0-1.41-1.41L9 16.17z"/></svg>
+            </p>
+          </form>
+
+          <!-- Checkout CTA (cat_1: descriptive) -->
+          <a
+            href="#"
+            class="btn btn-primary btn-lg btn-full"
+            aria-label="Proceed to checkout — order total $637.16"
+            style="margin-top:8px;"
+          >Proceed to Checkout</a>
+
+          <p class="cart-security">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Secure 256-bit SSL checkout
+          </p>
+          <a href="products.html" class="continue-link" aria-label="Continue shopping — return to product listing">← Continue Shopping</a>
+
+          <!-- Accepted payments (cat_1) -->
+          <div class="payment-methods-row" aria-label="Accepted payment methods">
+            <span class="sr-only">We accept:</span>
+            <span class="payment-icon" aria-label="Visa">VISA</span>
+            <span class="payment-icon" aria-label="Mastercard">MC</span>
+            <span class="payment-icon" aria-label="American Express">AMEX</span>
+            <span class="payment-icon" aria-label="Discover">DISC</span>
+            <span class="payment-icon" aria-label="PayPal">PayPal</span>
+          </div>
+        </aside>
+
+      </div><!-- /.cart-layout -->
+    </div><!-- /.container -->
+
+  </main>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h3>NovaMart</h3><ul role="list"><li><a href="#">About Us</a></li></ul></div>
+        <div class="footer-col"><h3>Help &amp; Support</h3><ul role="list"><li><a href="#">Help Center</a></li><li><a href="#">Returns</a></li></ul></div>
+        <div class="footer-col"><h3>Shop</h3><ul role="list"><li><a href="products.html">All Products</a></li></ul></div>
+        <div class="footer-col"><h3>Policies</h3><ul role="list"><li><a href="#">Privacy Policy</a></li><li><a href="#">Accessibility</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 NovaMart, Inc.</p></div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite" aria-relevant="additions"></div>
+  <script src="app.js"></script>
+  <script>
+    // Override updateOrderSummary for hardcoded cart page values
+    // (real cart quantities are managed by qty controls)
+    document.addEventListener('DOMContentLoaded', () => {
+      // Pre-set qty-control initial states
+      document.querySelectorAll('.qty-control').forEach(ctrl => {
+        const decBtn = ctrl.querySelector('[data-qty="dec"]');
+        const input = ctrl.querySelector('input[type="number"]');
+        if (input && parseInt(input.value) <= 1) {
+          if (decBtn) decBtn.disabled = true;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Products – NovaMart</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .mobile-filter-toggle {
+      display: none;
+      width: 100%;
+      margin-bottom: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 10px 16px;
+      font-size: .9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: left;
+      color: var(--text);
+    }
+    @media (max-width: 900px) {
+      .mobile-filter-toggle { display: flex; align-items: center; gap: 8px; }
+      .filters-sidebar { display: none; }
+      .filters-sidebar.open { display: block; }
+    }
+    .view-toggle { display: flex; gap: 4px; }
+    .view-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-sm);
+      padding: 6px 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: background var(--trans);
+    }
+    .view-btn[aria-pressed="true"] { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .view-btn svg { width: 18px; height: 18px; fill: currentColor; }
+    /* Star rating input */
+    .star-rating-filter { display: flex; flex-direction: column; gap: 4px; }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="aria-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+  <div id="results-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+  <!-- ══ HEADER ══════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="NovaMart – Return to homepage">
+        <span class="logo-text">Nova<span>Mart</span></span>
+      </a>
+      <form class="search-form" role="search" aria-label="Search NovaMart">
+        <label for="site-search" class="sr-only">Search products, brands, and more</label>
+        <input type="search" id="site-search" name="q" placeholder="Search products, brands, and more…" autocomplete="off">
+        <button type="submit" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+          Search
+        </button>
+      </form>
+      <nav class="header-actions" aria-label="Account and cart navigation">
+        <a href="account.html" aria-label="My Account">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="currentColor"/></svg>
+          <span aria-hidden="true">Account</span>
+        </a>
+        <a href="cart.html" aria-label="Shopping cart, 0 items">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span aria-hidden="true">Cart <span class="cart-badge cart-count">0</span></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══ CATEGORY NAV ════════════════════════════════════════ -->
+  <nav class="category-nav" aria-label="Shop by department">
+    <div class="container">
+      <ul role="list">
+        <li><a href="products.html?cat=all" aria-current="page">All Departments</a></li>
+        <li><a href="products.html?cat=electronics">Electronics</a></li>
+        <li><a href="products.html?cat=kitchen">Kitchen</a></li>
+        <li><a href="products.html?cat=clothing">Clothing</a></li>
+        <li><a href="products.html?cat=sports">Sports &amp; Outdoors</a></li>
+        <li><a href="products.html?cat=home">Home &amp; Garden</a></li>
+        <li><a href="products.html?cat=deals">Today's Deals</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══ MAIN ════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- Breadcrumb (cat_3) -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <div class="container">
+        <ol role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><span aria-current="page">All Products</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- Page Heading (cat_3: h1) -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>All Products</h1>
+        <p>Explore our full catalog — electronics, kitchen, clothing, sports, and more.</p>
+      </div>
+    </section>
+
+    <div class="container" style="padding-top:24px; padding-bottom:40px;">
+
+      <!-- Mobile filter toggle -->
+      <button
+        class="mobile-filter-toggle"
+        aria-expanded="false"
+        aria-controls="filter-sidebar"
+        id="mobile-filter-btn"
+      >
+        <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+        Filters &amp; Sort
+      </button>
+
+      <div class="products-layout">
+
+        <!-- ── FILTERS SIDEBAR (cat_2: fieldset/legend for each group) ── -->
+        <aside class="filters-sidebar" id="filter-sidebar" aria-label="Product filters">
+          <h2>Filters</h2>
+          <form id="filter-form" aria-label="Filter products">
+
+            <!-- Department (cat_2: fieldset/legend) -->
+            <div class="filter-group">
+              <fieldset>
+                <legend>Department</legend>
+                <label class="filter-option"><input type="checkbox" name="dept" value="electronics"> Electronics</label>
+                <label class="filter-option"><input type="checkbox" name="dept" value="kitchen"> Kitchen</label>
+                <label class="filter-option"><input type="checkbox" name="dept" value="clothing"> Clothing</label>
+                <label class="filter-option"><input type="checkbox" name="dept" value="sports"> Sports &amp; Outdoors</label>
+                <label class="filter-option"><input type="checkbox" name="dept" value="home"> Home &amp; Garden</label>
+              </fieldset>
+            </div>
+
+            <!-- Brand (cat_2: fieldset/legend) -->
+            <div class="filter-group">
+              <fieldset>
+                <legend>Brand</legend>
+                <label class="filter-option"><input type="checkbox" name="brand" value="sony"> Sony</label>
+                <label class="filter-option"><input type="checkbox" name="brand" value="samsung"> Samsung</label>
+                <label class="filter-option"><input type="checkbox" name="brand" value="apple"> Apple</label>
+                <label class="filter-option"><input type="checkbox" name="brand" value="nike"> Nike</label>
+                <label class="filter-option"><input type="checkbox" name="brand" value="adidas"> Adidas</label>
+                <label class="filter-option"><input type="checkbox" name="brand" value="instant-pot"> Instant Pot</label>
+                <label class="filter-option"><input type="checkbox" name="brand" value="kitchenaid"> KitchenAid</label>
+                <label class="filter-option"><input type="checkbox" name="brand" value="dyson"> Dyson</label>
+              </fieldset>
+            </div>
+
+            <!-- Price Range (cat_9: labeled inputs) -->
+            <div class="filter-group">
+              <fieldset>
+                <legend>Price Range</legend>
+                <div class="price-range-inputs">
+                  <div class="form-field" style="flex:1">
+                    <label for="price-min">Min ($)</label>
+                    <input type="number" id="price-min" name="price_min" min="0" max="10000" value="" placeholder="0" aria-label="Minimum price in dollars">
+                  </div>
+                  <span aria-hidden="true" style="padding-top:24px;">–</span>
+                  <div class="form-field" style="flex:1">
+                    <label for="price-max">Max ($)</label>
+                    <input type="number" id="price-max" name="price_max" min="0" max="10000" value="" placeholder="1000" aria-label="Maximum price in dollars">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- Rating (cat_2: fieldset/legend; cat_4: radio buttons) -->
+            <div class="filter-group">
+              <fieldset>
+                <legend>Customer Rating</legend>
+                <div class="star-rating-filter">
+                  <label class="filter-option">
+                    <input type="radio" name="rating" value="4">
+                    <span aria-hidden="true">★★★★☆</span>
+                    <span class="sr-only">4 stars and up</span>
+                    <span aria-hidden="true">&amp; Up</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="radio" name="rating" value="3">
+                    <span aria-hidden="true">★★★☆☆</span>
+                    <span class="sr-only">3 stars and up</span>
+                    <span aria-hidden="true">&amp; Up</span>
+                  </label>
+                  <label class="filter-option">
+                    <input type="radio" name="rating" value="2">
+                    <span aria-hidden="true">★★☆☆☆</span>
+                    <span class="sr-only">2 stars and up</span>
+                    <span aria-hidden="true">&amp; Up</span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- Availability (cat_2: fieldset/legend) -->
+            <div class="filter-group">
+              <fieldset>
+                <legend>Availability</legend>
+                <label class="filter-option"><input type="checkbox" name="avail" value="instock"> In Stock</label>
+                <label class="filter-option"><input type="checkbox" name="avail" value="prime"> Free Shipping</label>
+                <label class="filter-option"><input type="checkbox" name="avail" value="deals"> On Sale</label>
+              </fieldset>
+            </div>
+
+            <button type="button" class="filter-clear-all" aria-label="Clear all active filters">Clear All Filters</button>
+          </form>
+        </aside>
+
+        <!-- ── PRODUCT GRID AREA ── -->
+        <div>
+          <!-- Sort + Results bar (cat_2: proper labels) -->
+          <div class="results-bar" role="region" aria-label="Search results controls">
+            <p class="results-count" id="results-count" aria-live="polite" aria-atomic="true">
+              Showing <strong>24</strong> products
+            </p>
+            <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+              <!-- Sort controls (cat_2: fieldset) -->
+              <fieldset style="border:none; padding:0; margin:0; display:flex; align-items:center; gap:8px;">
+                <legend class="sr-only">Sort products</legend>
+                <label for="sort-select" style="font-size:.9375rem; font-weight:500; white-space:nowrap;">Sort by:</label>
+                <select id="sort-select" name="sort" aria-label="Sort products by">
+                  <option value="best">Best Match</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Customer Rating</option>
+                  <option value="newest">Newest Arrivals</option>
+                  <option value="deals">Biggest Discounts</option>
+                </select>
+              </fieldset>
+              <!-- View toggle -->
+              <div class="view-toggle" role="group" aria-label="Change product view">
+                <button class="view-btn" aria-pressed="true" aria-label="Grid view" id="grid-view-btn">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" fill="currentColor"/><rect x="14" y="3" width="7" height="7" fill="currentColor"/><rect x="3" y="14" width="7" height="7" fill="currentColor"/><rect x="14" y="14" width="7" height="7" fill="currentColor"/></svg>
+                </button>
+                <button class="view-btn" aria-pressed="false" aria-label="List view" id="list-view-btn">
+                  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/><line x1="8" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2"/><line x1="8" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2"/><line x1="3" y1="6" x2="3.01" y2="6" stroke="currentColor" stroke-width="2"/><line x1="3" y1="12" x2="3.01" y2="12" stroke="currentColor" stroke-width="2"/><line x1="3" y1="18" x2="3.01" y2="18" stroke="currentColor" stroke-width="2"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Grid (cat_10: logical DOM order) -->
+          <div class="product-grid" id="product-grid" aria-label="Product results">
+
+            <!-- Product 1 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="20% off">-20%</span>
+                <img src="https://loremflickr.com/300/225/headphones?random=101" alt="Sony WH-1000XM5 Wireless Headphones in black">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Sony WH-1000XM5 Headphones" aria-label="Save Sony WH-1000XM5 Headphones to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Sony</p>
+                <h3><a href="product-detail.html">WH-1000XM5 Wireless Headphones</a></h3>
+                <div class="stars" aria-label="Rating: 4.8 out of 5 stars, 2847 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(2,847)</span></div>
+                <div class="price-row"><span class="price-current">$279.99</span><span class="price-original" aria-label="Was $349.99">$349.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="sony-wh1000xm5" data-product-name="Sony WH-1000XM5 Headphones" data-product-price="279.99" aria-label="Add Sony WH-1000XM5 Headphones to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/television?random=102" alt="Samsung 55-inch Class 4K Ultra HD Smart TV">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Samsung 55-inch 4K Smart TV" aria-label="Save Samsung 55-inch 4K Smart TV to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Samsung</p>
+                <h3><a href="products.html">55" Class 4K Ultra HD Smart TV</a></h3>
+                <div class="stars" aria-label="Rating: 4.6 out of 5 stars, 7234 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(7,234)</span></div>
+                <div class="price-row"><span class="price-current">$599.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="samsung-tv-55" data-product-name="Samsung 55-inch 4K Smart TV" data-product-price="599.99" aria-label="Add Samsung 55-inch 4K Smart TV to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="10% off">-10%</span>
+                <img src="https://loremflickr.com/300/225/airpods?random=103" alt="Apple AirPods Pro 2nd generation in white">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Apple AirPods Pro 2nd Gen" aria-label="Save Apple AirPods Pro 2nd Gen to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Apple</p>
+                <h3><a href="products.html">AirPods Pro (2nd Generation)</a></h3>
+                <div class="stars" aria-label="Rating: 4.7 out of 5 stars, 11298 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(11,298)</span></div>
+                <div class="price-row"><span class="price-current">$199.99</span><span class="price-original" aria-label="Was $224.99">$224.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="apple-airpods-pro2" data-product-name="Apple AirPods Pro 2nd Gen" data-product-price="199.99" aria-label="Add Apple AirPods Pro 2nd Gen to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="25% off">-25%</span>
+                <img src="https://loremflickr.com/300/225/vacuum?random=104" alt="Dyson V15 Detect cordless vacuum cleaner in purple">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Dyson V15 Detect Vacuum" aria-label="Save Dyson V15 Detect Vacuum to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Dyson</p>
+                <h3><a href="products.html">V15 Detect Cordless Vacuum Cleaner</a></h3>
+                <div class="stars" aria-label="Rating: 4.9 out of 5 stars, 4521 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(4,521)</span></div>
+                <div class="price-row"><span class="price-current">$649.99</span><span class="price-original" aria-label="Was $869.99">$869.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="dyson-v15" data-product-name="Dyson V15 Detect Vacuum" data-product-price="649.99" aria-label="Add Dyson V15 Detect Vacuum to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="35% off">-35%</span>
+                <img src="https://loremflickr.com/300/225/instant-pot?random=105" alt="Instant Pot Duo 7-in-1 electric pressure cooker">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Instant Pot Duo 7-in-1" aria-label="Save Instant Pot Duo 7-in-1 to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Instant Pot</p>
+                <h3><a href="products.html">Duo 7-in-1 Electric Pressure Cooker (6 Qt)</a></h3>
+                <div class="stars" aria-label="Rating: 4.7 out of 5 stars, 18439 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(18,439)</span></div>
+                <div class="price-row"><span class="price-current">$89.99</span><span class="price-original" aria-label="Was $139.99">$139.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="instant-pot-duo" data-product-name="Instant Pot Duo 7-in-1" data-product-price="89.99" aria-label="Add Instant Pot Duo 7-in-1 to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/mixer?random=106" alt="KitchenAid Artisan Series 5-quart stand mixer in red">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="KitchenAid Artisan Stand Mixer" aria-label="Save KitchenAid Artisan Stand Mixer to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">KitchenAid</p>
+                <h3><a href="products.html">Artisan Series 5-Qt. Stand Mixer</a></h3>
+                <div class="stars" aria-label="Rating: 4.8 out of 5 stars, 9876 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(9,876)</span></div>
+                <div class="price-row"><span class="price-current">$349.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="kitchenaid-mixer" data-product-name="KitchenAid Artisan Stand Mixer" data-product-price="349.99" aria-label="Add KitchenAid Artisan Stand Mixer to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 7 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="22% off">-22%</span>
+                <img src="https://loremflickr.com/300/225/airfryer?random=107" alt="Ninja Air Fryer XL with 5.5-quart capacity in black">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Ninja Air Fryer XL" aria-label="Save Ninja Air Fryer XL to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Ninja</p>
+                <h3><a href="products.html">Air Fryer XL (5.5-Qt, Black)</a></h3>
+                <div class="stars" aria-label="Rating: 4.6 out of 5 stars, 22104 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(22,104)</span></div>
+                <div class="price-row"><span class="price-current">$99.99</span><span class="price-original" aria-label="Was $129.99">$129.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="ninja-airfryer-xl" data-product-name="Ninja Air Fryer XL" data-product-price="99.99" aria-label="Add Ninja Air Fryer XL to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 8 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/coffeemachine?random=108" alt="Cuisinart 14-cup programmable coffee maker in stainless steel">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Cuisinart 14-Cup Coffee Maker" aria-label="Save Cuisinart 14-Cup Coffee Maker to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Cuisinart</p>
+                <h3><a href="products.html">14-Cup Programmable Coffee Maker</a></h3>
+                <div class="stars" aria-label="Rating: 4.4 out of 5 stars, 14320 reviews"><span class="stars-visual" aria-hidden="true">★★★★☆</span><span class="stars-count">(14,320)</span></div>
+                <div class="price-row"><span class="price-current">$79.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="cuisinart-coffee" data-product-name="Cuisinart 14-Cup Coffee Maker" data-product-price="79.99" aria-label="Add Cuisinart 14-Cup Coffee Maker to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 9 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="25% off">-25%</span>
+                <img src="https://loremflickr.com/300/225/sneakers?random=109" alt="Nike Air Max 270 running shoes in black and white">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Nike Air Max 270" aria-label="Save Nike Air Max 270 to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Nike</p>
+                <h3><a href="products.html?cat=clothing">Air Max 270 Running Shoes</a></h3>
+                <div class="stars" aria-label="Rating: 4.5 out of 5 stars, 5621 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(5,621)</span></div>
+                <div class="price-row"><span class="price-current">$129.99</span><span class="price-original" aria-label="Was $174.99">$174.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="nike-airmax270" data-product-name="Nike Air Max 270" data-product-price="129.99" aria-label="Add Nike Air Max 270 to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 10 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/jeans?random=110" alt="Levi's 501 Original Fit men's jeans in dark wash">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Levi's 501 Original Jeans" aria-label="Save Levi's 501 Original Jeans to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Levi's</p>
+                <h3><a href="products.html?cat=clothing">501 Original Fit Men's Jeans</a></h3>
+                <div class="stars" aria-label="Rating: 4.3 out of 5 stars, 8752 reviews"><span class="stars-visual" aria-hidden="true">★★★★☆</span><span class="stars-count">(8,752)</span></div>
+                <div class="price-row"><span class="price-current">$59.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="levis-501" data-product-name="Levi's 501 Original Jeans" data-product-price="59.99" aria-label="Add Levi's 501 Original Jeans to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 11 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="15% off">-15%</span>
+                <img src="https://loremflickr.com/300/225/jacket?random=111" alt="The North Face Thermoball Eco jacket in black">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="The North Face Thermoball Jacket" aria-label="Save The North Face Thermoball Jacket to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">The North Face</p>
+                <h3><a href="products.html?cat=clothing">Thermoball Eco Jacket</a></h3>
+                <div class="stars" aria-label="Rating: 4.6 out of 5 stars, 3241 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(3,241)</span></div>
+                <div class="price-row"><span class="price-current">$160.99</span><span class="price-original" aria-label="Was $189.99">$189.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="tnf-thermoball" data-product-name="The North Face Thermoball Jacket" data-product-price="160.99" aria-label="Add The North Face Thermoball Jacket to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 12 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/adidas?random=112" alt="Adidas Ultraboost 22 running shoes in cloud white">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Adidas Ultraboost 22" aria-label="Save Adidas Ultraboost 22 to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Adidas</p>
+                <h3><a href="products.html?cat=clothing">Ultraboost 22 Running Shoes</a></h3>
+                <div class="stars" aria-label="Rating: 4.5 out of 5 stars, 4107 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(4,107)</span></div>
+                <div class="price-row"><span class="price-current">$149.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="adidas-ultraboost22" data-product-name="Adidas Ultraboost 22" data-product-price="149.99" aria-label="Add Adidas Ultraboost 22 to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 13 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="15% off">-15%</span>
+                <img src="https://loremflickr.com/300/225/smartwatch?random=113" alt="Fitbit Charge 5 fitness tracker in black">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Fitbit Charge 5" aria-label="Save Fitbit Charge 5 to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Fitbit</p>
+                <h3><a href="products.html?cat=sports">Charge 5 Advanced Fitness Tracker</a></h3>
+                <div class="stars" aria-label="Rating: 4.4 out of 5 stars, 9108 reviews"><span class="stars-visual" aria-hidden="true">★★★★☆</span><span class="stars-count">(9,108)</span></div>
+                <div class="price-row"><span class="price-current">$99.99</span><span class="price-original" aria-label="Was $119.95">$119.95</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="fitbit-charge5" data-product-name="Fitbit Charge 5" data-product-price="99.99" aria-label="Add Fitbit Charge 5 to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 14 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="20% off">-20%</span>
+                <img src="https://loremflickr.com/300/225/dumbbell?random=114" alt="Bowflex SelectTech 552 adjustable dumbbells, pair">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Bowflex SelectTech 552 Dumbbells" aria-label="Save Bowflex SelectTech 552 Dumbbells to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Bowflex</p>
+                <h3><a href="products.html?cat=sports">SelectTech 552 Adjustable Dumbbells</a></h3>
+                <div class="stars" aria-label="Rating: 4.7 out of 5 stars, 6532 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(6,532)</span></div>
+                <div class="price-row"><span class="price-current">$299.99</span><span class="price-original" aria-label="Was $379.99">$379.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="bowflex-dumbbells" data-product-name="Bowflex SelectTech 552 Dumbbells" data-product-price="299.99" aria-label="Add Bowflex SelectTech 552 Dumbbells to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 15 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/waterbottle?random=115" alt="Hydro Flask 32-oz wide-mouth water bottle in pacific blue">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Hydro Flask 32-oz Water Bottle" aria-label="Save Hydro Flask 32-oz Water Bottle to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Hydro Flask</p>
+                <h3><a href="products.html?cat=sports">32-oz Wide-Mouth Water Bottle</a></h3>
+                <div class="stars" aria-label="Rating: 4.8 out of 5 stars, 12043 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(12,043)</span></div>
+                <div class="price-row"><span class="price-current">$44.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="hydroflask-32oz" data-product-name="Hydro Flask 32-oz Water Bottle" data-product-price="44.99" aria-label="Add Hydro Flask 32-oz Water Bottle to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 16 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="12% off">-12%</span>
+                <img src="https://loremflickr.com/300/225/speaker?random=116" alt="Bose SoundLink Flex Bluetooth portable speaker in black">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Bose SoundLink Flex Speaker" aria-label="Save Bose SoundLink Flex Speaker to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Bose</p>
+                <h3><a href="products.html">SoundLink Flex Bluetooth Speaker</a></h3>
+                <div class="stars" aria-label="Rating: 4.7 out of 5 stars, 8891 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(8,891)</span></div>
+                <div class="price-row"><span class="price-current">$129.99</span><span class="price-original" aria-label="Was $149.00">$149.00</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="bose-soundlink-flex" data-product-name="Bose SoundLink Flex Speaker" data-product-price="129.99" aria-label="Add Bose SoundLink Flex Speaker to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 17 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/ipad?random=117" alt="Apple iPad Air 5th generation in starlight silver">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Apple iPad Air 5th Gen" aria-label="Save Apple iPad Air 5th Gen to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Apple</p>
+                <h3><a href="products.html">iPad Air (5th Gen, 10.9", Wi-Fi, 64GB)</a></h3>
+                <div class="stars" aria-label="Rating: 4.7 out of 5 stars, 15432 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(15,432)</span></div>
+                <div class="price-row"><span class="price-current">$599.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="apple-ipad-air5" data-product-name="Apple iPad Air 5th Gen" data-product-price="599.99" aria-label="Add Apple iPad Air 5th Gen to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 18 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="18% off">-18%</span>
+                <img src="https://loremflickr.com/300/225/monitor?random=118" alt="LG 27-inch QHD IPS monitor in silver and black">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="LG 27-inch QHD Monitor" aria-label="Save LG 27-inch QHD Monitor to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">LG</p>
+                <h3><a href="products.html">27" QHD IPS Monitor (2560×1440)</a></h3>
+                <div class="stars" aria-label="Rating: 4.5 out of 5 stars, 3892 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(3,892)</span></div>
+                <div class="price-row"><span class="price-current">$279.99</span><span class="price-original" aria-label="Was $349.99">$349.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="lg-27-qhd" data-product-name="LG 27-inch QHD Monitor" data-product-price="279.99" aria-label="Add LG 27-inch QHD Monitor to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 19 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/keyboard?random=119" alt="Logitech MX Keys wireless illuminated keyboard in graphite">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Logitech MX Keys Keyboard" aria-label="Save Logitech MX Keys Keyboard to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Logitech</p>
+                <h3><a href="products.html">MX Keys Wireless Illuminated Keyboard</a></h3>
+                <div class="stars" aria-label="Rating: 4.6 out of 5 stars, 7123 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(7,123)</span></div>
+                <div class="price-row"><span class="price-current">$109.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="logitech-mxkeys" data-product-name="Logitech MX Keys Keyboard" data-product-price="109.99" aria-label="Add Logitech MX Keys Keyboard to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 20 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="30% off">-30%</span>
+                <img src="https://loremflickr.com/300/225/blender?random=120" alt="Vitamix E310 Explorian blender in black">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Vitamix E310 Blender" aria-label="Save Vitamix E310 Blender to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Vitamix</p>
+                <h3><a href="products.html?cat=kitchen">E310 Explorian Blender, 48 oz</a></h3>
+                <div class="stars" aria-label="Rating: 4.9 out of 5 stars, 3872 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(3,872)</span></div>
+                <div class="price-row"><span class="price-current">$314.99</span><span class="price-original" aria-label="Was $449.95">$449.95</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="vitamix-e310" data-product-name="Vitamix E310 Blender" data-product-price="314.99" aria-label="Add Vitamix E310 Blender to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 21 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/skillet?random=121" alt="Lodge 12-inch cast iron skillet pre-seasoned">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Lodge 12-inch Cast Iron Skillet" aria-label="Save Lodge 12-inch Cast Iron Skillet to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Lodge</p>
+                <h3><a href="products.html?cat=kitchen">12" Pre-Seasoned Cast Iron Skillet</a></h3>
+                <div class="stars" aria-label="Rating: 4.8 out of 5 stars, 33210 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(33,210)</span></div>
+                <div class="price-row"><span class="price-current">$34.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="lodge-skillet-12" data-product-name="Lodge 12-inch Cast Iron Skillet" data-product-price="34.99" aria-label="Add Lodge 12-inch Cast Iron Skillet to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 22 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="20% off">-20%</span>
+                <img src="https://loremflickr.com/300/225/fleece?random=122" alt="Patagonia Better Sweater fleece jacket in stone blue">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Patagonia Better Sweater Fleece" aria-label="Save Patagonia Better Sweater Fleece to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Patagonia</p>
+                <h3><a href="products.html?cat=clothing">Better Sweater Fleece Jacket</a></h3>
+                <div class="stars" aria-label="Rating: 4.7 out of 5 stars, 2814 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(2,814)</span></div>
+                <div class="price-row"><span class="price-current">$111.99</span><span class="price-original" aria-label="Was $139.99">$139.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="patagonia-fleece" data-product-name="Patagonia Better Sweater Fleece" data-product-price="111.99" aria-label="Add Patagonia Better Sweater Fleece to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 23 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <img src="https://loremflickr.com/300/225/yogamat?random=123" alt="Lululemon The Reversible Mat 5mm yoga mat in blue">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Lululemon Reversible Yoga Mat" aria-label="Save Lululemon Reversible Yoga Mat to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Lululemon</p>
+                <h3><a href="products.html?cat=sports">The Reversible Mat 5mm Yoga Mat</a></h3>
+                <div class="stars" aria-label="Rating: 4.6 out of 5 stars, 4587 reviews"><span class="stars-visual" aria-hidden="true">★★★★★</span><span class="stars-count">(4,587)</span></div>
+                <div class="price-row"><span class="price-current">$88.00</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="lululemon-mat" data-product-name="Lululemon Reversible Yoga Mat" data-product-price="88.00" aria-label="Add Lululemon Reversible Yoga Mat to cart">Add to Cart</button>
+              </div>
+            </article>
+
+            <!-- Product 24 -->
+            <article class="product-card">
+              <div class="product-card-img">
+                <span class="badge" aria-label="10% off">-10%</span>
+                <img src="https://loremflickr.com/300/225/shorts?random=124" alt="Under Armour HeatGear compression shorts in black">
+                <button class="wishlist-btn" aria-pressed="false" data-product-name="Under Armour HeatGear Shorts" aria-label="Save Under Armour HeatGear Shorts to wishlist"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+              </div>
+              <div class="product-card-body">
+                <p class="product-brand">Under Armour</p>
+                <h3><a href="products.html?cat=clothing">HeatGear Compression Training Shorts</a></h3>
+                <div class="stars" aria-label="Rating: 4.3 out of 5 stars, 6201 reviews"><span class="stars-visual" aria-hidden="true">★★★★☆</span><span class="stars-count">(6,201)</span></div>
+                <div class="price-row"><span class="price-current">$31.49</span><span class="price-original" aria-label="Was $34.99">$34.99</span></div>
+              </div>
+              <div class="product-card-footer">
+                <button class="btn btn-primary btn-full" data-add-to-cart="ua-heatgear-shorts" data-product-name="Under Armour HeatGear Shorts" data-product-price="31.49" aria-label="Add Under Armour HeatGear Shorts to cart">Add to Cart</button>
+              </div>
+            </article>
+
+          </div><!-- /#product-grid -->
+
+          <!-- Pagination (cat_4: keyboard accessible) -->
+          <nav class="pagination" aria-label="Product results pages">
+            <button disabled aria-label="Previous page, unavailable">&#8592;</button>
+            <button aria-current="page" aria-label="Page 1, current page">1</button>
+            <button aria-label="Go to page 2">2</button>
+            <button aria-label="Go to page 3">3</button>
+            <button aria-label="Go to page 4">4</button>
+            <span aria-hidden="true" style="padding:0 4px;">…</span>
+            <button aria-label="Go to page 12">12</button>
+            <button aria-label="Next page, page 2">&#8594;</button>
+          </nav>
+
+        </div><!-- /grid area -->
+      </div><!-- /.products-layout -->
+    </div><!-- /.container -->
+  </main>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h3>NovaMart</h3><ul role="list"><li><a href="#">About Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li></ul></div>
+        <div class="footer-col"><h3>Help &amp; Support</h3><ul role="list"><li><a href="#">Help Center</a></li><li><a href="#">Track Order</a></li><li><a href="#">Returns</a></li></ul></div>
+        <div class="footer-col"><h3>Shop</h3><ul role="list"><li><a href="products.html?cat=electronics">Electronics</a></li><li><a href="products.html?cat=kitchen">Kitchen</a></li><li><a href="products.html?cat=clothing">Clothing</a></li></ul></div>
+        <div class="footer-col"><h3>Policies</h3><ul role="list"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li><li><a href="#">Accessibility</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 NovaMart, Inc.</p></div>
+    </div>
+  </footer>
+
+  <div class="toast-container" aria-live="polite" aria-relevant="additions"></div>
+  <script src="app.js"></script>
+  <script>
+    // Mobile filter toggle
+    document.getElementById('mobile-filter-btn')?.addEventListener('click', function() {
+      const sidebar = document.getElementById('filter-sidebar');
+      const open = sidebar.classList.toggle('open');
+      this.setAttribute('aria-expanded', String(open));
+    });
+    // View toggle
+    document.getElementById('grid-view-btn')?.addEventListener('click', function() {
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('list-view-btn').setAttribute('aria-pressed', 'false');
+    });
+    document.getElementById('list-view-btn')?.addEventListener('click', function() {
+      this.setAttribute('aria-pressed', 'true');
+      document.getElementById('grid-view-btn').setAttribute('aria-pressed', 'false');
+    });
+  </script>
+</body>
+</html>

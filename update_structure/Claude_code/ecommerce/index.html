@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaMart – Electronics, Home Goods & Apparel</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .trending-section { padding: 40px 0; }
+    .featured-banner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .featured-banner-card {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      position: relative;
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+    }
+    .featured-banner-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .featured-banner-card .inner {
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(transparent, rgba(0,0,0,.7));
+      width: 100%;
+      padding: 16px;
+      color: #fff;
+    }
+    .featured-banner-card h3 { font-size: 1.125rem; font-weight: 700; }
+    .featured-banner-card p { font-size: .875rem; opacity: .9; }
+    @media (max-width: 640px) {
+      .featured-banner { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Navigation (cat_2, cat_4) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ARIA Live Region for dynamic announcements (cat_7) -->
+  <div id="aria-announce" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+  <div id="summary-live" aria-live="polite" aria-atomic="true" class="sr-only"></div>
+
+  <!-- ══ HEADER (cat_1: descriptive nav labels) ══════════════ -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <!-- Logo (cat_1) -->
+      <a href="index.html" class="logo" aria-label="NovaMart – Return to homepage">
+        <span class="logo-text">Nova<span>Mart</span></span>
+      </a>
+
+      <!-- Search (cat_9) -->
+      <form class="search-form" role="search" aria-label="Search NovaMart">
+        <label for="site-search" class="sr-only">Search products, brands, and more</label>
+        <input
+          type="search"
+          id="site-search"
+          name="q"
+          placeholder="Search products, brands, and more…"
+          autocomplete="off"
+          aria-label="Search products, brands, and more"
+        >
+        <button type="submit" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+          Search
+        </button>
+      </form>
+
+      <!-- Header actions (cat_1) -->
+      <nav class="header-actions" aria-label="Account and cart navigation">
+        <a href="account.html" aria-label="My Account">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" fill="currentColor"/></svg>
+          <span aria-hidden="true">Account</span>
+        </a>
+        <a href="cart.html" aria-label="Shopping cart, 0 items">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span aria-hidden="true">Cart <span class="cart-badge cart-count">0</span></span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══ CATEGORY NAV (cat_2: nav landmark) ═════════════════ -->
+  <nav class="category-nav" aria-label="Shop by department">
+    <div class="container">
+      <ul role="list">
+        <li><a href="products.html?cat=all" aria-current="page">All Departments</a></li>
+        <li><a href="products.html?cat=electronics">Electronics</a></li>
+        <li><a href="products.html?cat=kitchen">Kitchen</a></li>
+        <li><a href="products.html?cat=clothing">Clothing</a></li>
+        <li><a href="products.html?cat=sports">Sports &amp; Outdoors</a></li>
+        <li><a href="products.html?cat=home">Home &amp; Garden</a></li>
+        <li><a href="products.html?cat=deals">Today's Deals</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══ MAIN CONTENT ════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- Hero Carousel (cat_8: pause control; cat_7: live; cat_4: keyboard) -->
+    <section class="hero" aria-label="Promotional offers" aria-roledescription="carousel">
+      <!-- Live region for slide announcements -->
+      <div class="carousel-live sr-only" aria-live="polite" aria-atomic="true"></div>
+
+      <!-- Pause button (cat_8) -->
+      <button class="carousel-pause" aria-pressed="false" aria-label="Pause banner rotation">
+        <svg class="pause-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" fill="currentColor"/><rect x="14" y="4" width="4" height="16" fill="currentColor"/></svg>
+        <span class="pause-label">Pause</span>
+      </button>
+
+      <!-- Previous / Next (cat_4) -->
+      <button class="carousel-arrow carousel-prev" aria-label="Previous promotional banner">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="carousel-arrow carousel-next" aria-label="Next promotional banner">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <!-- Slides (cat_2: role=group) -->
+      <div class="carousel-track" aria-live="off">
+
+        <!-- Slide 1 -->
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3: Flash Sale on Electronics" aria-hidden="true">
+          <img src="https://loremflickr.com/1400/420/electronics?random=10" alt="">
+          <div class="slide-content">
+            <span class="slide-label">Flash Sale</span>
+            <h2>Up to 50% off Electronics</h2>
+            <p>Shop headphones, smart TVs, tablets, and more at unbeatable prices.</p>
+            <a href="products.html?cat=electronics" class="btn btn-primary btn-lg">Shop Electronics Deals</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3: New Arrivals in Kitchen" aria-hidden="true">
+          <img src="https://loremflickr.com/1400/420/kitchen?random=20" alt="">
+          <div class="slide-content">
+            <span class="slide-label">New Arrivals</span>
+            <h2>Upgrade Your Kitchen</h2>
+            <p>Discover the latest air fryers, stand mixers, and coffee makers.</p>
+            <a href="products.html?cat=kitchen" class="btn btn-primary btn-lg">Explore Kitchen</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3: Summer Fashion Collection" aria-hidden="true">
+          <img src="https://loremflickr.com/1400/420/fashion?random=30" alt="">
+          <div class="slide-content">
+            <span class="slide-label">Summer Collection</span>
+            <h2>Style for Every Occasion</h2>
+            <p>Fresh looks from top brands — sneakers, jackets, and more.</p>
+            <a href="products.html?cat=clothing" class="btn btn-primary btn-lg">Shop Fashion</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide dots (cat_4) -->
+      <div class="carousel-controls" role="tablist" aria-label="Slide navigation">
+        <button class="carousel-dot" role="tab" aria-selected="true" aria-label="Go to slide 1"></button>
+        <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to slide 2"></button>
+        <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to slide 3"></button>
+      </div>
+    </section>
+
+    <!-- ── Shop by Category (cat_3: h2 heading) ── -->
+    <section class="section trending-section" aria-labelledby="categories-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="categories-heading">Shop by Category</h2>
+          <a href="products.html" aria-label="View all product categories">View All</a>
+        </div>
+        <ul class="category-grid" role="list">
+          <li>
+            <a href="products.html?cat=electronics" class="category-card" aria-label="Shop Electronics">
+              <img src="https://loremflickr.com/120/120/electronics?random=1" alt="">
+              <span>Electronics</span>
+            </a>
+          </li>
+          <li>
+            <a href="products.html?cat=kitchen" class="category-card" aria-label="Shop Kitchen">
+              <img src="https://loremflickr.com/120/120/kitchen?random=2" alt="">
+              <span>Kitchen</span>
+            </a>
+          </li>
+          <li>
+            <a href="products.html?cat=clothing" class="category-card" aria-label="Shop Clothing">
+              <img src="https://loremflickr.com/120/120/clothing?random=3" alt="">
+              <span>Clothing</span>
+            </a>
+          </li>
+          <li>
+            <a href="products.html?cat=sports" class="category-card" aria-label="Shop Sports and Outdoors">
+              <img src="https://loremflickr.com/120/120/sport?random=4" alt="">
+              <span>Sports &amp; Outdoors</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Featured Banners ── -->
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container">
+        <h2 id="featured-heading" class="sr-only">Featured Promotions</h2>
+        <div class="featured-banner" role="list">
+          <article role="listitem" class="featured-banner-card">
+            <img src="https://loremflickr.com/600/200/headphones?random=5" alt="">
+            <div class="inner">
+              <h3>Premium Audio</h3>
+              <p>Sony, Bose &amp; Beats — up to 35% off</p>
+              <a href="products.html?cat=electronics" class="btn btn-primary btn-sm" style="margin-top:8px">Shop Audio</a>
+            </div>
+          </article>
+          <article role="listitem" class="featured-banner-card">
+            <img src="https://loremflickr.com/600/200/fitness?random=6" alt="">
+            <div class="inner">
+              <h3>Home Fitness</h3>
+              <p>Build your gym at home — big savings</p>
+              <a href="products.html?cat=sports" class="btn btn-primary btn-sm" style="margin-top:8px">Shop Fitness</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Today's Deals (cat_3: h2; cat_10: logical tab order) ── -->
+    <section class="section" aria-labelledby="deals-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="deals-heading">Today's Deals</h2>
+          <a href="products.html?cat=deals" aria-label="See all of today's deals">See All Deals</a>
+        </div>
+
+        <div class="deals-scroller" aria-label="Today's deals — scroll to browse" role="list">
+
+          <!-- Deal Card 1 -->
+          <article class="product-card" role="listitem">
+            <div class="product-card-img">
+              <span class="badge" aria-label="20% off">-20%</span>
+              <img src="https://loremflickr.com/300/225/headphones?random=11" alt="Sony WH-1000XM5 Headphones in black">
+              <button
+                class="wishlist-btn"
+                aria-pressed="false"
+                data-product-name="Sony WH-1000XM5 Headphones"
+                aria-label="Save Sony WH-1000XM5 Headphones to wishlist"
+              >
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+              </button>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand">Sony</p>
+              <h3><a href="product-detail.html">WH-1000XM5 Wireless Headphones</a></h3>
+              <div class="stars" aria-label="Rating: 4.8 out of 5 stars, 2847 reviews">
+                <span class="stars-visual" aria-hidden="true">★★★★★</span>
+                <span class="stars-count">(2,847)</span>
+              </div>
+              <div class="price-row">
+                <span class="price-current">$279.99</span>
+                <span class="price-original" aria-label="Was $349.99">$349.99</span>
+                <span class="price-save">Save $70</span>
+              </div>
+            </div>
+            <div class="product-card-footer">
+              <button
+                class="btn btn-primary btn-full"
+                data-add-to-cart="sony-wh1000xm5"
+                data-product-name="Sony WH-1000XM5 Headphones"
+                data-product-price="279.99"
+                aria-label="Add Sony WH-1000XM5 Headphones to cart"
+              >Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Deal Card 2 -->
+          <article class="product-card" role="listitem">
+            <div class="product-card-img">
+              <span class="badge" aria-label="35% off">-35%</span>
+              <img src="https://loremflickr.com/300/225/instant-pot?random=12" alt="Instant Pot Duo 7-in-1 pressure cooker">
+              <button
+                class="wishlist-btn"
+                aria-pressed="false"
+                data-product-name="Instant Pot Duo 7-in-1"
+                aria-label="Save Instant Pot Duo 7-in-1 to wishlist"
+              >
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+              </button>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand">Instant Pot</p>
+              <h3><a href="products.html">Duo 7-in-1 Electric Pressure Cooker (6 Qt)</a></h3>
+              <div class="stars" aria-label="Rating: 4.7 out of 5 stars, 18439 reviews">
+                <span class="stars-visual" aria-hidden="true">★★★★★</span>
+                <span class="stars-count">(18,439)</span>
+              </div>
+              <div class="price-row">
+                <span class="price-current">$89.99</span>
+                <span class="price-original" aria-label="Was $139.99">$139.99</span>
+                <span class="price-save">Save $50</span>
+              </div>
+            </div>
+            <div class="product-card-footer">
+              <button
+                class="btn btn-primary btn-full"
+                data-add-to-cart="instant-pot-duo"
+                data-product-name="Instant Pot Duo 7-in-1"
+                data-product-price="89.99"
+                aria-label="Add Instant Pot Duo 7-in-1 to cart"
+              >Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Deal Card 3 -->
+          <article class="product-card" role="listitem">
+            <div class="product-card-img">
+              <span class="badge" aria-label="25% off">-25%</span>
+              <img src="https://loremflickr.com/300/225/sneakers?random=13" alt="Nike Air Max 270 sneakers in black and white">
+              <button
+                class="wishlist-btn"
+                aria-pressed="false"
+                data-product-name="Nike Air Max 270"
+                aria-label="Save Nike Air Max 270 to wishlist"
+              >
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+              </button>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand">Nike</p>
+              <h3><a href="products.html?cat=clothing">Air Max 270 Running Shoes</a></h3>
+              <div class="stars" aria-label="Rating: 4.5 out of 5 stars, 5621 reviews">
+                <span class="stars-visual" aria-hidden="true">★★★★★</span>
+                <span class="stars-count">(5,621)</span>
+              </div>
+              <div class="price-row">
+                <span class="price-current">$129.99</span>
+                <span class="price-original" aria-label="Was $174.99">$174.99</span>
+                <span class="price-save">Save $45</span>
+              </div>
+            </div>
+            <div class="product-card-footer">
+              <button
+                class="btn btn-primary btn-full"
+                data-add-to-cart="nike-air-max-270"
+                data-product-name="Nike Air Max 270"
+                data-product-price="129.99"
+                aria-label="Add Nike Air Max 270 to cart"
+              >Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Deal Card 4 -->
+          <article class="product-card" role="listitem">
+            <div class="product-card-img">
+              <span class="badge" aria-label="15% off">-15%</span>
+              <img src="https://loremflickr.com/300/225/smartwatch?random=14" alt="Fitbit Charge 5 fitness tracker in black">
+              <button
+                class="wishlist-btn"
+                aria-pressed="false"
+                data-product-name="Fitbit Charge 5"
+                aria-label="Save Fitbit Charge 5 to wishlist"
+              >
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+              </button>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand">Fitbit</p>
+              <h3><a href="products.html?cat=sports">Charge 5 Advanced Fitness Tracker</a></h3>
+              <div class="stars" aria-label="Rating: 4.4 out of 5 stars, 9108 reviews">
+                <span class="stars-visual" aria-hidden="true">★★★★☆</span>
+                <span class="stars-count">(9,108)</span>
+              </div>
+              <div class="price-row">
+                <span class="price-current">$99.99</span>
+                <span class="price-original" aria-label="Was $119.95">$119.95</span>
+                <span class="price-save">Save $20</span>
+              </div>
+            </div>
+            <div class="product-card-footer">
+              <button
+                class="btn btn-primary btn-full"
+                data-add-to-cart="fitbit-charge5"
+                data-product-name="Fitbit Charge 5"
+                data-product-price="99.99"
+                aria-label="Add Fitbit Charge 5 to cart"
+              >Add to Cart</button>
+            </div>
+          </article>
+
+          <!-- Deal Card 5 -->
+          <article class="product-card" role="listitem">
+            <div class="product-card-img">
+              <span class="badge" aria-label="30% off">-30%</span>
+              <img src="https://loremflickr.com/300/225/blender?random=15" alt="Vitamix E310 Explorian blender in black">
+              <button
+                class="wishlist-btn"
+                aria-pressed="false"
+                data-product-name="Vitamix E310 Blender"
+                aria-label="Save Vitamix E310 Blender to wishlist"
+              >
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+              </button>
+            </div>
+            <div class="product-card-body">
+              <p class="product-brand">Vitamix</p>
+              <h3><a href="products.html?cat=kitchen">E310 Explorian Blender</a></h3>
+              <div class="stars" aria-label="Rating: 4.9 out of 5 stars, 3872 reviews">
+                <span class="stars-visual" aria-hidden="true">★★★★★</span>
+                <span class="stars-count">(3,872)</span>
+              </div>
+              <div class="price-row">
+                <span class="price-current">$314.99</span>
+                <span class="price-original" aria-label="Was $449.95">$449.95</span>
+                <span class="price-save">Save $135</span>
+              </div>
+            </div>
+            <div class="product-card-footer">
+              <button
+                class="btn btn-primary btn-full"
+                data-add-to-cart="vitamix-e310"
+                data-product-name="Vitamix E310 Blender"
+                data-product-price="314.99"
+                aria-label="Add Vitamix E310 Blender to cart"
+              >Add to Cart</button>
+            </div>
+          </article>
+
+        </div><!-- /.deals-scroller -->
+      </div>
+    </section>
+
+    <!-- ── Trust Badges ── -->
+    <section class="section" aria-labelledby="trust-heading" style="background:var(--surface); padding:32px 0;">
+      <div class="container">
+        <h2 id="trust-heading" class="sr-only">Why Shop with NovaMart</h2>
+        <ul role="list" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px; text-align:center;">
+          <li style="display:flex; flex-direction:column; align-items:center; gap:8px; color:var(--muted); font-size:.9375rem;">
+            <svg aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <strong style="color:var(--text)">Free Shipping Over $50</strong>
+            <span>On millions of eligible items</span>
+          </li>
+          <li style="display:flex; flex-direction:column; align-items:center; gap:8px; color:var(--muted); font-size:.9375rem;">
+            <svg aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <strong style="color:var(--text)">Easy 30-Day Returns</strong>
+            <span>Hassle-free returns &amp; exchanges</span>
+          </li>
+          <li style="display:flex; flex-direction:column; align-items:center; gap:8px; color:var(--muted); font-size:.9375rem;">
+            <svg aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <strong style="color:var(--text)">Secure Checkout</strong>
+            <span>256-bit SSL encryption</span>
+          </li>
+          <li style="display:flex; flex-direction:column; align-items:center; gap:8px; color:var(--muted); font-size:.9375rem;">
+            <svg aria-hidden="true" focusable="false" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <strong style="color:var(--text)">24/7 Support</strong>
+            <span>Live chat &amp; phone support</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER (cat_2: footer landmark) ════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>NovaMart</h3>
+          <ul role="list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Investor Relations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Help &amp; Support</h3>
+          <ul role="list">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Returns &amp; Exchanges</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul role="list">
+            <li><a href="products.html?cat=electronics">Electronics</a></li>
+            <li><a href="products.html?cat=kitchen">Kitchen</a></li>
+            <li><a href="products.html?cat=clothing">Clothing</a></li>
+            <li><a href="products.html?cat=sports">Sports</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Policies</h3>
+          <ul role="list">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NovaMart, Inc. All rights reserved.</p>
+        <p>Made with care for all customers.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast container (populated by JS) -->
+  <div class="toast-container" aria-live="polite" aria-relevant="additions"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
