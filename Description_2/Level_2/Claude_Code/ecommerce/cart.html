@@ -234,8 +234,8 @@
                           <div className="flex gap-4">
                             {/* Product image */}
                             <a href="product-detail.html" aria-label={`View details for ${item.name}`} className="flex-shrink-0">
-                              <div className={`w-24 h-28 sm:w-28 sm:h-36 rounded-xl bg-gradient-to-br ${item.grad} flex items-center justify-center overflow-hidden relative`} role="img" aria-label={`${item.name} product image`}>
-                                <div aria-hidden="true" className="absolute inset-0 opacity-10" style={{backgroundImage:'repeating-linear-gradient(45deg,#000 0,#000 1px,transparent 0,transparent 6px)'}}></div>
+                              <div className="w-24 h-28 sm:w-28 sm:h-36 rounded-xl overflow-hidden relative flex-shrink-0">
+                                <img src={`https://loremflickr.com/112/144/fashion?random=${item.id}`} alt={`${item.name} product image`} className="w-full h-full object-cover" />
                               </div>
                             </a>
 

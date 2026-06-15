@@ -107,6 +107,14 @@ window.Folia = (() => {
     { title: "Signal Draft", views: "4.9k", appreciates: "417" },
   ];
 
+  function artworkStyle(keyword, n) {
+    return {
+      backgroundImage: `linear-gradient(145deg, rgba(255,255,255,0.14), rgba(15,23,42,0.2)), url("https://loremflickr.com/900/675/${keyword}?random=${n}")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    };
+  }
+
   function Logo() {
     return html`
       <a href="./index.html" className="flex items-center gap-3">
@@ -272,7 +280,7 @@ window.Folia = (() => {
           <p className="text-2xl font-semibold tracking-tight text-slate-950">${post.title}</p>
           <p className="mt-3 text-sm leading-7 text-slate-600">${post.caption}</p>
         </div>
-        <div className=${`artwork-panel ${post.mood} relative mt-5 aspect-[4/3] overflow-hidden rounded-[1.75rem]`}></div>
+        <div className=${`artwork-panel ${post.mood} relative mt-5 aspect-[4/3] overflow-hidden rounded-[1.75rem]`} style=${artworkStyle(post.discipline.toLowerCase(), 520 + posts.indexOf(post))}></div>
         <div className="mt-4 flex flex-wrap gap-2">
           ${post.tags.map((tag) => html`<span key=${tag} className="rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-600">${tag}</span>`)}
         </div>
@@ -320,5 +328,6 @@ window.Folia = (() => {
     FeedToggle,
     PostCard,
     RightRail,
+    artworkStyle,
   };
 })();

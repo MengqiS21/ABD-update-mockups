@@ -182,7 +182,7 @@ function Overview({ setSection }) {
         <div className="space-y-3">
           {ORDERS.slice(0,3).map((o,i)=>(
             <div key={i} className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition">
-              <img src={`https://picsum.photos/seed/${o.img}/60/60`} alt="" className="w-12 h-12 rounded-lg object-cover"/>
+              <img src={`https://loremflickr.com/60/60/product?random=${o.img}`} alt="" className="w-12 h-12 rounded-lg object-cover"/>
               <div className="flex-1 min-w-0">
                 <p className="text-xs text-gray-500">{o.id}</p>
                 <p className="text-sm font-medium text-gray-800 truncate">{o.items[0]}</p>
@@ -234,7 +234,7 @@ function OrderHistory() {
             <div className="p-4 flex items-center justify-between cursor-pointer hover:bg-gray-50 transition"
                  onClick={()=>setExpanded(expanded===i?null:i)}>
               <div className="flex items-center gap-4">
-                <img src={`https://picsum.photos/seed/${o.img}/60/60`} alt="" className="w-12 h-12 rounded-lg object-cover"/>
+                <img src={`https://loremflickr.com/60/60/product?random=${o.img}`} alt="" className="w-12 h-12 rounded-lg object-cover"/>
                 <div>
                   <p className="text-xs text-gray-400">Order #{o.id}</p>
                   <p className="font-semibold text-sm text-gray-900">{o.items[0]}</p>
@@ -252,7 +252,7 @@ function OrderHistory() {
             {expanded===i && (
               <div className="border-t border-gray-100 p-4 bg-gray-50">
                 <div className="flex gap-4 mb-4">
-                  <img src={`https://picsum.photos/seed/${o.img}/100/100`} alt="" className="w-20 h-20 rounded-xl object-cover"/>
+                  <img src={`https://loremflickr.com/100/100/product?random=${o.img}`} alt="" className="w-20 h-20 rounded-xl object-cover"/>
                   <div>
                     <p className="font-semibold text-sm">{o.items[0]}</p>
                     <p className="text-xs text-gray-500 mt-1">Qty: 1</p>
@@ -429,7 +429,7 @@ function Wishlist() {
             {items.map((item,i)=>(
               <div key={i} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-4 flex gap-4 group hover:shadow-md transition">
                 <a href="product-detail.html">
-                  <img src={`https://picsum.photos/seed/${item.seed}/100/100`} alt={item.name}
+                  <img src={`https://loremflickr.com/100/100/product?random=${item.seed}`} alt={item.name}
                        className="w-20 h-20 rounded-xl object-cover group-hover:scale-105 transition-transform duration-200"/>
                 </a>
                 <div className="flex-1 min-w-0">

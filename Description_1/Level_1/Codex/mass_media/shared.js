@@ -14,7 +14,7 @@
       title: "Regional powers recalibrate as Red Sea security enters a new phase",
       byline: "By Leila Hassan",
       summary: "Diplomats say the emergency session signals a broader effort to contain shipping disruptions before they reshape energy and trade routes.",
-      image: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1600&q=80",
+      image: "https://loremflickr.com/1600/900/summit?random=51",
       alt: "Large assembly hall with delegates seated for an international summit"
     },
     {
@@ -40,7 +40,7 @@
       byline: "Rania El-Sayed",
       time: "18 min ago",
       summary: "Envoys say the next 48 hours could determine whether shipping insurers widen restrictions across key routes.",
-      image: "https://images.unsplash.com/photo-1518544866330-95a8f1cd6d50?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/cargoship?random=52",
       alt: "Cargo ships moving through a narrow sea passage at sunset"
     },
     {
@@ -48,7 +48,7 @@
       byline: "Jonas Weber",
       time: "44 min ago",
       summary: "Officials remain divided over whether a coordinated reserve release would calm markets or deepen longer-term exposure.",
-      image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/governmentbuilding?random=53",
       alt: "Nighttime skyline with government buildings lit against the sky"
     },
     {
@@ -56,7 +56,7 @@
       byline: "Marisol Vega",
       time: "1 hr ago",
       summary: "Mayors are asking for flexible funding as emergency housing costs outpace national relief formulas.",
-      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/flood?random=54",
       alt: "Flooded street with responders moving through water"
     },
     {
@@ -64,7 +64,7 @@
       byline: "Kojo Mensah",
       time: "2 hrs ago",
       summary: "Investors are following labor force growth, but planners warn that transport bottlenecks could undercut the boom.",
-      image: "https://images.unsplash.com/photo-1484318571209-661cf29a69c3?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/citytraffic?random=55",
       alt: "Busy city avenue lined with tall buildings and traffic"
     },
     {
@@ -72,7 +72,7 @@
       byline: "Naomi Kwan",
       time: "3 hrs ago",
       summary: "The latest round centers on satellite data sharing and port inspection standards.",
-      image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/harbor?random=56",
       alt: "Coastal waters with boats near a harbor at dawn"
     },
     {
@@ -80,7 +80,7 @@
       byline: "Thomas Reid",
       time: "5 hrs ago",
       summary: "Delays in processing and transport are beginning to alter where emergency stocks can be positioned.",
-      image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/bordercrossing?random=57",
       alt: "Border crossing area with trucks queued along a road"
     },
     {
@@ -88,7 +88,7 @@
       byline: "Camila Duarte",
       time: "7 hrs ago",
       summary: "Markets reacted cautiously as policymakers stressed the need to preserve inflation credibility.",
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/worldmap?random=58",
       alt: "Global map visualization projected on a dark wall"
     }
   ];
@@ -97,19 +97,19 @@
     {
       name: "Nadia Ellison",
       role: "Columnist, Global Affairs",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/columnist?random=59",
       alt: "Portrait of columnist Nadia Ellison"
     },
     {
       name: "Micah Sterling",
       role: "Columnist, Politics",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/headshot?random=60",
       alt: "Portrait of columnist Micah Sterling"
     },
     {
       name: "Ari Park",
       role: "Columnist, Culture",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/portrait?random=61",
       alt: "Portrait of columnist Ari Park"
     }
   ];

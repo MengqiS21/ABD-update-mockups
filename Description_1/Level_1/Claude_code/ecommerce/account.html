@@ -229,7 +229,7 @@
                   <ul className="space-y-3" aria-label={`Items in order ${order.id}`}>
                     {order.items.map((item, i) => (
                       <li key={i} className="flex items-center gap-3">
-                        <img src={`https://picsum.photos/seed/${item.img}/64/64`} alt={item.alt} width="64" height="64"
+                        <img src={`https://loremflickr.com/64/64/${item.img}?random=1`} alt={item.alt} width="64" height="64"
                           className="w-14 h-14 object-cover rounded-lg border border-gray-200 shrink-0" />
                         <div className="flex-1 min-w-0">
                           <a href="product-detail.html" className="text-sm font-medium text-gray-900 hover:text-brand-600 focus-visible:text-brand-600 focus-visible:outline-none block truncate">{item.name}</a>
@@ -406,7 +406,7 @@
                   <li key={item.id}>
                     <article className="bg-white rounded-xl border border-gray-200 p-4 flex gap-4">
                       <a href="product-detail.html" className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded-xl" aria-label={`View ${item.name}`}>
-                        <img src={`https://picsum.photos/seed/${item.img}/100/100`} alt={item.alt} width="100" height="100"
+                        <img src={`https://loremflickr.com/100/100/${item.img}?random=1`} alt={item.alt} width="100" height="100"
                           className="w-24 h-24 object-cover rounded-xl" />
                       </a>
                       <div className="flex-1 min-w-0">

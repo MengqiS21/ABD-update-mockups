@@ -503,11 +503,11 @@
               <div className="lg:col-span-2 space-y-6">
                 {[
                   { author:'Maya T.', location:'Portland, OR', size:'S', stars:5, date:'March 12, 2025', verified:true, title:'Best linen shirt I own', body:'I\'ve been looking for the perfect oversized linen shirt for years. This is genuinely it. The weight is perfect — not too sheer, not too heavy. The sage green colour is exactly as shown. Sizing: I\'m usually a 6 and the S fits perfectly oversized.',
-                    photo: 'rev1' },
+                    photo: 1 },
                   { author:'Jordan R.', location:'Austin, TX', size:'M', stars:5, date:'March 8, 2025', verified:true, title:'Sustainable and stunning', body:'I was hesitant buying linen online but the quality is incredible. You can tell this is a well-made garment. It\'s been through the wash twice and it keeps getting softer. Worth every penny.',
                     photo: null },
                   { author:'Priya K.', location:'Chicago, IL', size:'XS', stars:4, date:'Feb 28, 2025', verified:true, title:'Love it, goes with everything', body:'Bought in sage green and ordering the sand too. Fits are true to the oversized description — I\'m petite and took XS which sits nicely as a mini-dress length. Only minor note: the buttons are small, but they\'re very pretty.',
-                    photo: 'rev3' },
+                    photo: 3 },
                 ].map((r, i) => (
                   <article key={i} className="bg-white rounded-2xl p-5 border border-border">
                     <div className="flex items-start justify-between gap-3 mb-3">
@@ -526,7 +526,7 @@
                     <p className="text-sm text-muted leading-relaxed">{r.body}</p>
                     {r.photo && (
                       <div className="mt-3">
-                        <img src={`https://picsum.photos/seed/${r.photo}/150/150`}
+                        <img src={`https://loremflickr.com/150/150/fashion?random=${r.photo}`}
                              alt={`Customer photo by ${r.author} wearing the Oversized Linen Shirt`}
                              className="w-20 h-20 object-cover rounded-lg border border-border" />
                       </div>
@@ -543,10 +543,10 @@
     /* ── Complete the Look ── */
     function CompleteTheLook() {
       const items = [
-        { name:'Wide Leg Organic Denim', price:145, seed:'ctl1' },
-        { name:'Hemp Canvas Tote',        price:55,  seed:'ctl2' },
-        { name:'Linen Blend Trousers',    price:112, seed:'ctl3' },
-        { name:'Recycled Knit Beanie',    price:32,  seed:'ctl4' },
+        { name:'Wide Leg Organic Denim', price:145, seed:21 },
+        { name:'Hemp Canvas Tote',        price:55,  seed:22 },
+        { name:'Linen Blend Trousers',    price:112, seed:23 },
+        { name:'Recycled Knit Beanie',    price:32,  seed:24 },
       ];
       return (
         <section aria-labelledby="look-heading" className="mt-20">
@@ -557,7 +557,7 @@
                 <a href="product-detail.html" className="group block focus-visible:ring-2 focus-visible:ring-forest rounded-2xl"
                    aria-label={`${p.name}, $${p.price}`}>
                   <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-border mb-3">
-                    <img src={`https://picsum.photos/seed/${p.seed}/250/350`} alt={p.name}
+                    <img src={`https://loremflickr.com/250/350/clothing?random=${p.seed}`} alt={p.name}
                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <p className="font-semibold text-sm text-charcoal group-hover:text-forest transition-colors">{p.name}</p>
@@ -575,10 +575,10 @@
       const [sizeGuideOpen, setSizeGuideOpen] = useState(false);
 
       const images = [
-        { src:'https://picsum.photos/seed/detail-main/600/800',   alt:'Model wearing sage green Oversized Linen Shirt, front view, styled with wide-leg trousers' },
-        { src:'https://picsum.photos/seed/detail-back/600/800',   alt:'Oversized Linen Shirt back view showing dropped shoulders and relaxed silhouette' },
-        { src:'https://picsum.photos/seed/detail-detail/600/800', alt:'Close-up of natural corozo nut buttons and chest pocket on Oversized Linen Shirt' },
-        { src:'https://picsum.photos/seed/detail-worn/600/800',   alt:'Model sitting outdoors wearing the Oversized Linen Shirt open over a white tank top' },
+        { src:'https://loremflickr.com/600/800/fashion?random=20', alt:'Model wearing sage green Oversized Linen Shirt, front view, styled with wide-leg trousers' },
+        { src:'https://loremflickr.com/600/800/fashion?random=21', alt:'Oversized Linen Shirt back view showing dropped shoulders and relaxed silhouette' },
+        { src:'https://loremflickr.com/600/800/fashion?random=22', alt:'Close-up of natural corozo nut buttons and chest pocket on Oversized Linen Shirt' },
+        { src:'https://loremflickr.com/600/800/fashion?random=23', alt:'Model sitting outdoors wearing the Oversized Linen Shirt open over a white tank top' },
       ];
 
       return (

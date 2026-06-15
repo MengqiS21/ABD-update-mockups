@@ -6,10 +6,10 @@ function ProductPage() {
   const [selectedSize, setSelectedSize] = React.useState("M");
   const [selectedImage, setSelectedImage] = React.useState(0);
   const gallery = [
-    "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1200&q=80",
+    "https://loremflickr.com/1200/900/fashion?random=26",
+    "https://loremflickr.com/1200/900/shirt?random=27",
+    "https://loremflickr.com/1200/900/streetwear?random=28",
+    "https://loremflickr.com/1200/900/trousers?random=29",
   ];
   const suggestions = productCatalog.slice(4, 8);
   const detailTabs = [

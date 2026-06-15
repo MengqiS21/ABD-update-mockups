@@ -300,21 +300,21 @@
 
     const SAMPLE_COMMENTS = [
       {
-        avatar: 'https://picsum.photos/seed/user1/100/100',
+        avatar: 'https://loremflickr.com/100/100/portrait?random=1',
         username: 'maritime_watcher',
         date: 'March 15, 2026',
         text: "Excellent piece. The economic ripple effects are still being underestimated. Our firm's supply chain costs are up 23% since January. The insurance premiums alone are staggering.",
         likes: 47,
       },
       {
-        avatar: 'https://picsum.photos/seed/user2/100/100',
+        avatar: 'https://loremflickr.com/100/100/portrait?random=2',
         username: 'geopolitics_analyst',
         date: 'March 15, 2026',
         text: "Khalil's framing of the Houthi strategy as part of a broader Iranian deterrence calculus is exactly right. The question is whether US naval presence raises or lowers the deterrence threshold.",
         likes: 31,
       },
       {
-        avatar: 'https://picsum.photos/seed/user3/100/100',
+        avatar: 'https://loremflickr.com/100/100/portrait?random=3',
         username: 'trade_economist',
         date: 'March 14, 2026',
         text: "The Cape rerouting also accelerates the push for alternative overland trade corridors — India-Middle East-Europe corridor suddenly looks much more attractive to logistics planners.",
@@ -409,7 +409,7 @@
                 {/* Byline row */}
                 <div className="flex flex-col sm:flex-row sm:items-center gap-4 pb-6 border-b border-gray-200">
                   <img
-                    src="https://picsum.photos/seed/amirkhalil/200/200"
+                    src="https://loremflickr.com/200/200/portrait?random=4"
                     alt="Portrait of Amir Khalil, Middle East Correspondent"
                     className="w-12 h-12 rounded-full object-cover border-2 border-gray-200 flex-shrink-0"
                   />
@@ -450,7 +450,7 @@
               {/* Hero Image */}
               <figure className="max-w-4xl mx-auto mb-10">
                 <img
-                  src="https://picsum.photos/seed/redsea2/1200/600"
+                  src="https://loremflickr.com/1200/600/ocean?random=1"
                   alt="USS Carney destroyer firing anti-drone missiles in the Red Sea as commercial vessels shelter nearby, December 2025"
                   className="w-full rounded-xl object-cover"
                   style={{maxHeight: '500px'}}
@@ -521,7 +521,7 @@
                 {/* Author Bio */}
                 <div className="mt-10 p-6 bg-slate-50 border border-gray-200 rounded-xl flex gap-5 items-start">
                   <img
-                    src="https://picsum.photos/seed/amirkhalil/200/200"
+                    src="https://loremflickr.com/200/200/portrait?random=4"
                     alt="Portrait of Amir Khalil, Middle East Correspondent"
                     className="w-20 h-20 rounded-full object-cover flex-shrink-0 border-2 border-white shadow"
                   />
@@ -590,7 +590,7 @@
                     <article key={i} className="group">
                       <a href="#" className="block overflow-hidden rounded-lg mb-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500">
                         <img
-                          src={`https://picsum.photos/seed/${story.seed}/400/260`}
+                          src={`https://loremflickr.com/400/260/${story.seed}?random=${i+1}`}
                           alt={story.alt}
                           loading="lazy"
                           className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300"

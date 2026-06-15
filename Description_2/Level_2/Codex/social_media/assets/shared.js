@@ -18,11 +18,11 @@ const Folia = (() => {
       id: "solstice",
       creator: "Maya Lin",
       handle: "@mayadraws",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=240&q=80",
+      avatar: "https://loremflickr.com/240/240/person?random=43",
       discipline: "Illustration",
       title: "Solstice III",
       caption: "Color roughs for a summer poster series. I’m pressure-testing grain textures before I commit to finals.",
-      image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/900/illustration?random=51",
       alt: "Painterly orange and teal illustration drafts pinned to a studio wall",
       tags: ["#illustration", "#procreate", "#posterdesign"],
       appreciates: 42,
@@ -37,11 +37,11 @@ const Folia = (() => {
       id: "quiet-frame",
       creator: "Noah Vega",
       handle: "@noahvega",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=80",
+      avatar: "https://loremflickr.com/240/240/person?random=44",
       discipline: "Photography",
       title: "Quiet Frame Study",
       caption: "Pulling contrast back so the signage glow feels earned. Curious whether the crop should stay asymmetrical.",
-      image: "https://images.unsplash.com/photo-1494256997604-768d1f608cac?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/900/street?random=52",
       alt: "Nighttime street photograph with neon signage and a cyclist passing by",
       tags: ["#photography", "#street", "#colorgrading"],
       appreciates: 67,
@@ -56,12 +56,12 @@ const Folia = (() => {
       id: "kinetic-loop",
       creator: "Taro West",
       handle: "@tarowest",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=240&q=80",
+      avatar: "https://loremflickr.com/240/240/person?random=53",
       discipline: "Motion",
       title: "Kinetic Type Loop",
       caption: "Muted motion test for a title card package. Playback stays subtle to avoid aggressive flashing.",
       video: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-      poster: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      poster: "https://loremflickr.com/1200/800/motion?random=67",
       alt: "Preview still of abstract petals used as a motion background",
       tags: ["#motion", "#typography", "#aftereffects"],
       appreciates: 28,
@@ -75,12 +75,12 @@ const Folia = (() => {
   ];
 
   const exploreTiles = [
-    { medium: "Digital Art", creator: "Lena Ortiz", appreciates: 210, image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" },
-    { medium: "Photography", creator: "Rin Park", appreciates: 184, image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80" },
-    { medium: "Typography", creator: "Milo Hayes", appreciates: 143, image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" },
-    { medium: "3D", creator: "Ari Bloom", appreciates: 126, image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80" },
-    { medium: "Motion", creator: "Sachi Yu", appreciates: 171, image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80" },
-    { medium: "Digital Art", creator: "Hana Seo", appreciates: 198, image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80" },
+    { medium: "Digital Art", creator: "Lena Ortiz", appreciates: 210, image: "https://loremflickr.com/900/700/art?random=54" },
+    { medium: "Photography", creator: "Rin Park", appreciates: 184, image: "https://loremflickr.com/900/700/photography?random=55" },
+    { medium: "Typography", creator: "Milo Hayes", appreciates: 143, image: "https://loremflickr.com/900/700/typography?random=56" },
+    { medium: "3D", creator: "Ari Bloom", appreciates: 126, image: "https://loremflickr.com/900/700/abstract?random=57" },
+    { medium: "Motion", creator: "Sachi Yu", appreciates: 171, image: "https://loremflickr.com/900/700/motion?random=58" },
+    { medium: "Digital Art", creator: "Hana Seo", appreciates: 198, image: "https://loremflickr.com/900/700/art?random=59" },
   ];
 
   const risingCreators = [
@@ -141,7 +141,7 @@ const Folia = (() => {
 
   const featuredWorks = [
     { title: "Solstice III", views: "18.4K", appreciates: 842, image: posts[0].image },
-    { title: "Paper Garden", views: "11.2K", appreciates: 654, image: "https://images.unsplash.com/photo-1515405295579-ba7b45403062?auto=format&fit=crop&w=1200&q=80" },
+    { title: "Paper Garden", views: "11.2K", appreciates: 654, image: "https://loremflickr.com/1200/900/collage?random=60" },
     { title: "Low Light Notes", views: "9.8K", appreciates: 491, image: posts[1].image },
   ];
 

@@ -395,9 +395,9 @@
     /* ── Saved Outfits Panel ── */
     function SavedOutfits() {
       const outfits = [
-        { name:'Spring Office Look', items:3, seed:'outfit1', date:'Mar 15, 2025' },
-        { name:'Weekend Casual',     items:4, seed:'outfit2', date:'Feb 20, 2025' },
-        { name:'Summer Minimalist',  items:2, seed:'outfit3', date:'Jan 30, 2025' },
+        { name:'Spring Office Look', items:3, seed:1, date:'Mar 15, 2025' },
+        { name:'Weekend Casual',     items:4, seed:2, date:'Feb 20, 2025' },
+        { name:'Summer Minimalist',  items:2, seed:3, date:'Jan 30, 2025' },
       ];
 
       return (
@@ -421,7 +421,7 @@
                 <li key={outfit.name}>
                   <article className="bg-white rounded-2xl border border-border overflow-hidden group hover:shadow-md transition-shadow">
                     <div className="relative aspect-[4/3] bg-border overflow-hidden">
-                      <img src={`https://picsum.photos/seed/${outfit.seed}/400/300`}
+                      <img src={`https://loremflickr.com/400/300/fashion?random=${outfit.seed}`}
                            alt={`Saved outfit: ${outfit.name}`}
                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" aria-hidden="true" />

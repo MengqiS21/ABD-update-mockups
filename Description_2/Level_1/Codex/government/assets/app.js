@@ -415,7 +415,7 @@ function aboutPage() {
       <div class="grid gap-6 xl:grid-cols-[1fr_1fr]">
         <article class="panel rounded-[2rem] p-6">
           <div class="flex flex-col gap-5 md:flex-row">
-            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360'%3E%3Crect width='360' height='360' rx='40' fill='%23184e59'/%3E%3Ccircle cx='180' cy='130' r='62' fill='%23f2d3b0'/%3E%3Cpath d='M88 294c24-54 70-82 92-82s68 28 92 82' fill='%23d9e5e4'/%3E%3Cpath d='M118 110c14-42 112-52 128 8-10-14-32-24-65-24-29 0-49 6-63 16z' fill='%230f3840'/%3E%3C/svg%3E" alt="Illustrated portrait representing the governor's welcome message" class="h-52 w-52 rounded-[2rem] object-cover" />
+            <img src="https://loremflickr.com/360/360/portrait?random=89" alt="Illustrated portrait representing the governor's welcome message" class="h-52 w-52 rounded-[2rem] object-cover" />
             <div>
               <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--primary)]">Governor's message</p>
               <h2 class="mt-2 font-display text-2xl font-bold">Welcome to Vermont's online resident services</h2>

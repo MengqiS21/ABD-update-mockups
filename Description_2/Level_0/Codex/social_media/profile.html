@@ -17,7 +17,7 @@
     <script src="https://unpkg.com/htm@3.1.1/dist/htm.umd.js"></script>
     <script src="./shared.js"></script>
     <script>
-      const { html, AppShell, Card, featuredWorks, projectGrid } = window.Folia;
+      const { html, AppShell, Card, featuredWorks, projectGrid, artworkStyle } = window.Folia;
 
       function PortfolioHeader() {
         return html`
@@ -51,7 +51,7 @@
               ${featuredWorks.map(
                 (work, index) => html`
                   <div key=${work.title} className="rounded-[1.75rem] bg-white p-4">
-                    <div className=${`artwork-panel ${index === 1 ? "alt-b" : index === 2 ? "alt-c" : "alt-a"} relative aspect-[4/3] overflow-hidden rounded-[1.5rem]`}></div>
+                    <div className=${`artwork-panel ${index === 1 ? "alt-b" : index === 2 ? "alt-c" : "alt-a"} relative aspect-[4/3] overflow-hidden rounded-[1.5rem]`} style=${artworkStyle("illustration", 540 + index)}></div>
                     <p className="mt-4 text-lg font-semibold text-slate-900">${work.title}</p>
                     <p className="mt-1 text-sm text-slate-500">${work.views}</p>
                     <p className="mt-1 text-sm text-slate-500">${work.stats}</p>
@@ -77,7 +77,7 @@
               ${projectGrid.map(
                 (project, index) => html`
                   <div key=${project.title} className="rounded-[1.75rem] bg-white p-4">
-                    <div className=${`artwork-panel ${index % 3 === 1 ? "alt-b" : index % 3 === 2 ? "alt-c" : "alt-a"} relative aspect-[4/5] overflow-hidden rounded-[1.5rem]`}></div>
+                    <div className=${`artwork-panel ${index % 3 === 1 ? "alt-b" : index % 3 === 2 ? "alt-c" : "alt-a"} relative aspect-[4/5] overflow-hidden rounded-[1.5rem]`} style=${artworkStyle("artwork", 550 + index)}></div>
                     <div className="mt-4 flex items-start justify-between gap-3">
                       <div>
                         <p className="font-semibold text-slate-900">${project.title}</p>

@@ -13,9 +13,10 @@ body {
 
 .hero-grid {
   background:
-    radial-gradient(circle at 18% 20%, rgba(113, 190, 255, 0.34), transparent 23%),
-    radial-gradient(circle at 82% 18%, rgba(72, 214, 181, 0.2), transparent 22%),
-    linear-gradient(135deg, rgba(10, 26, 54, 0.98), rgba(20, 53, 92, 0.92));
+    linear-gradient(135deg, rgba(10, 26, 54, 0.72), rgba(20, 53, 92, 0.82)),
+    url("https://loremflickr.com/1600/1000/classroom?random=401");
+  background-size: cover;
+  background-position: center;
 }
 
 .glass-panel {
@@ -48,14 +49,46 @@ body {
 
 .course-illustration {
   background:
-    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.5), transparent 22%),
-    linear-gradient(145deg, #d9ecff 0%, #edf5ff 48%, #bfe8da 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(20, 32, 51, 0.16)),
+    url("https://loremflickr.com/400/400/students?random=402");
+  background-size: cover;
+  background-position: center;
+}
+
+article:nth-child(2n) .course-illustration,
+.course-illustration:nth-child(2n) {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(20, 32, 51, 0.16)),
+    url("https://loremflickr.com/400/400/training?random=404");
+}
+
+article:nth-child(3n) .course-illustration,
+.course-illustration:nth-child(3n) {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(20, 32, 51, 0.16)),
+    url("https://loremflickr.com/400/400/learning?random=405");
 }
 
 .story-portrait {
   background:
-    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.5), transparent 18%),
-    linear-gradient(145deg, #bed7ff 0%, #e6f0ff 45%, #d7f4eb 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(20, 32, 51, 0.22)),
+    url("https://loremflickr.com/600/440/student?random=403");
+  background-size: cover;
+  background-position: center;
+}
+
+.story-portrait:nth-child(2n),
+article:nth-child(2n) .story-portrait {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(20, 32, 51, 0.22)),
+    url("https://loremflickr.com/600/440/graduate?random=406");
+}
+
+.story-portrait:nth-child(3n),
+article:nth-child(3n) .story-portrait {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(20, 32, 51, 0.22)),
+    url("https://loremflickr.com/600/440/student?random=407");
 }
 
 .badge-glow {

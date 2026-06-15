@@ -396,7 +396,7 @@ function ArticlePage() {
       h("div", { className: "mt-8 grid gap-8 lg:grid-cols-[0.72fr_0.28fr]" },
         h("div", { className: "space-y-8" },
           h("img", {
-            src: "https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=1500&q=80",
+            src: "https://loremflickr.com/1600/900/farmland?random=60",
             alt: "Dry agricultural basin with irrigation geometry and hazy mountains in the distance",
             className: "h-[25rem] w-full rounded-[2rem] object-cover"
           }),

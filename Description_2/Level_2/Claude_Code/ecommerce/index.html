@@ -247,10 +247,8 @@
       return (
         <article className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group" aria-label={product.name}>
           <a href="product-detail.html" aria-label={`View details for ${product.name} in ${product.color}`} className="block">
-            <div className={`bg-gradient-to-br ${grad} aspect-[3/4] flex items-center justify-center relative overflow-hidden`} role="img" aria-label={`${product.name} product photo`}>
-              {/* Fabric texture overlay */}
-              <div className="absolute inset-0 opacity-10" style={{backgroundImage:'repeating-linear-gradient(45deg,#000 0,#000 1px,transparent 0,transparent 50%)',backgroundSize:'6px 6px'}} aria-hidden="true"></div>
-              <svg aria-hidden="true" className="w-16 h-16 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z" /></svg>
+            <div className="aspect-[3/4] relative overflow-hidden">
+              <img src={`https://loremflickr.com/300/400/fashion?random=${product.id}`} alt={`${product.name} product photo`} className="w-full h-full object-cover" />
               {product.badge && (
                 <span className="absolute top-3 left-3 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full" aria-label={`Badge: ${product.badge}`}>{product.badge}</span>
               )}
@@ -288,10 +286,10 @@
     ];
 
     const MOODS = [
-      { label: 'Minimalist', desc: 'Clean lines, quiet luxury',  grad: 'from-stone-200 to-stone-400' },
-      { label: 'Streetwear', desc: 'Bold, expressive, urban',    grad: 'from-slate-700 to-slate-900' },
-      { label: 'Workwear',   desc: 'Sharp, polished, confident', grad: 'from-th-green to-teal-800'   },
-      { label: 'Weekend',    desc: 'Easy, breezy, effortless',   grad: 'from-amber-200 to-orange-300' },
+      { label: 'Minimalist', desc: 'Clean lines, quiet luxury',  grad: 'from-stone-200 to-stone-400',  imgKeyword: 'minimalist', imgN: 16 },
+      { label: 'Streetwear', desc: 'Bold, expressive, urban',    grad: 'from-slate-700 to-slate-900',  imgKeyword: 'streetwear', imgN: 17 },
+      { label: 'Workwear',   desc: 'Sharp, polished, confident', grad: 'from-th-green to-teal-800',    imgKeyword: 'office',     imgN: 18 },
+      { label: 'Weekend',    desc: 'Easy, breezy, effortless',   grad: 'from-amber-200 to-orange-300', imgKeyword: 'casual',     imgN: 19 },
     ];
 
     function HomePage() {
@@ -371,9 +369,10 @@
                   <a
                     key={mood.label}
                     href="products.html"
-                    className={`relative rounded-2xl overflow-hidden aspect-[4/5] flex flex-col justify-end p-6 bg-gradient-to-br ${mood.grad} group focus:outline-none`}
+                    className="relative rounded-2xl overflow-hidden aspect-[4/5] flex flex-col justify-end p-6 group focus:outline-none"
                     aria-label={`Shop ${mood.label} style — ${mood.desc}`}
                   >
+                    <img src={`https://loremflickr.com/300/375/${mood.imgKeyword}?random=${mood.imgN}`} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
                     <div aria-hidden="true" className="absolute inset-0 bg-black/25 group-hover:bg-black/35 transition-colors"></div>
                     <div className="relative">
                       <p className="text-white font-bold text-lg">{mood.label}</p>
@@ -476,12 +475,12 @@
                   <div
                     key={i}
                     role="listitem"
-                    className={`aspect-square rounded-lg bg-gradient-to-br ${GRADIENTS[i]} cursor-pointer hover:opacity-90 transition-opacity relative overflow-hidden`}
+                    className="aspect-square rounded-lg cursor-pointer hover:opacity-90 transition-opacity relative overflow-hidden"
                     aria-label={`Customer style photo ${i + 1}`}
                     tabIndex={0}
                     onKeyDown={e => e.key === 'Enter' && null}
                   >
-                    <div aria-hidden="true" className="absolute inset-0 opacity-10" style={{backgroundImage:'repeating-linear-gradient(45deg,#000 0,#000 1px,transparent 0,transparent 6px)'}}></div>
+                    <img src={`https://loremflickr.com/200/200/fashion?random=${i + 10}`} alt={`Customer style photo ${i + 1}`} className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>

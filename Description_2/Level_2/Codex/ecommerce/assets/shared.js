@@ -11,37 +11,37 @@ const ThreadHouse = (() => {
   ];
 
   const productCatalog = [
-    { id: 1, name: "Oversized Linen Shirt", category: "Shirts", price: 89, color: "Sage Green", material: "Organic Cotton", stock: "Low Stock", image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" },
-    { id: 2, name: "Boxy Utility Jacket", category: "Outerwear", price: 148, color: "Clay", material: "Recycled Polyester", stock: "New", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80" },
-    { id: 3, name: "Wide-Leg Hemp Trousers", category: "Pants", price: 112, color: "Sand", material: "Organic Cotton", stock: "Low Stock", image: "https://images.unsplash.com/photo-1506629905607-d9c297d15d0a?auto=format&fit=crop&w=800&q=80" },
-    { id: 4, name: "Ribbed Tank Dress", category: "Dresses", price: 76, color: "Ink", material: "Organic Cotton", stock: "Best Seller", image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80" },
-    { id: 5, name: "Canvas Crossbody", category: "Accessories", price: 58, color: "Ochre", material: "Recycled Polyester", stock: "Low Stock", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80" },
-    { id: 6, name: "Soft Structure Blazer", category: "Outerwear", price: 154, color: "Moss", material: "Organic Cotton", stock: "New", image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" },
-    { id: 7, name: "Everyday Jersey Tee", category: "Tops", price: 42, color: "Cloud", material: "Organic Cotton", stock: "Low Stock", image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" },
-    { id: 8, name: "Modular Cargo Skirt", category: "Skirts", price: 94, color: "Olive", material: "Recycled Polyester", stock: "New", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" },
-    { id: 9, name: "Lightweight Knit Polo", category: "Tops", price: 68, color: "Stone", material: "Organic Cotton", stock: "Best Seller", image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" },
-    { id: 10, name: "Panelled Denim Set", category: "Sets", price: 167, color: "Indigo", material: "Organic Cotton", stock: "Low Stock", image: "https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=800&q=80" },
-    { id: 11, name: "Slip Midi Dress", category: "Dresses", price: 120, color: "Cocoa", material: "Recycled Polyester", stock: "New", image: "https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&w=800&q=80" },
-    { id: 12, name: "Structured Tote", category: "Accessories", price: 84, color: "Black", material: "Recycled Polyester", stock: "Best Seller", image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800&q=80" },
-    { id: 13, name: "Reversible Bomber", category: "Outerwear", price: 174, color: "Forest", material: "Recycled Polyester", stock: "Low Stock", image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80" },
-    { id: 14, name: "Pleated Resort Shirt", category: "Shirts", price: 96, color: "Shell", material: "Organic Cotton", stock: "New", image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" },
-    { id: 15, name: "Tailored Shorts", category: "Pants", price: 73, color: "Slate", material: "Organic Cotton", stock: "Best Seller", image: "https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=800&q=80" },
-    { id: 16, name: "Layering Mesh Top", category: "Tops", price: 54, color: "Rose", material: "Recycled Polyester", stock: "New", image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" },
-    { id: 17, name: "Relaxed Pleat Pants", category: "Pants", price: 110, color: "Espresso", material: "Organic Cotton", stock: "Low Stock", image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=800&q=80" },
-    { id: 18, name: "Patchwork Cardigan", category: "Knitwear", price: 132, color: "Berry", material: "Organic Cotton", stock: "New", image: "https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=800&q=80" },
-    { id: 19, name: "Studio Track Jacket", category: "Outerwear", price: 118, color: "Navy", material: "Recycled Polyester", stock: "Low Stock", image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" },
-    { id: 20, name: "Organic Cotton Hoodie", category: "Tops", price: 88, color: "Mist", material: "Organic Cotton", stock: "Best Seller", image: "https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=800&q=80" },
-    { id: 21, name: "Minimalist Hoop Set", category: "Accessories", price: 39, color: "Gold", material: "Recycled Polyester", stock: "New", image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80" },
-    { id: 22, name: "Workwear Jumpsuit", category: "Sets", price: 156, color: "Charcoal", material: "Organic Cotton", stock: "Low Stock", image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80" },
-    { id: 23, name: "Weekend Knit Shorts", category: "Pants", price: 61, color: "Sunwash", material: "Organic Cotton", stock: "New", image: "https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=800&q=80" },
-    { id: 24, name: "Convertible Bucket Bag", category: "Accessories", price: 102, color: "Plum", material: "Recycled Polyester", stock: "Low Stock", image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" },
+    { id: 1, name: "Oversized Linen Shirt", category: "Shirts", price: 89, color: "Sage Green", material: "Organic Cotton", stock: "Low Stock", image: "https://loremflickr.com/800/1000/fashion?random=1" },
+    { id: 2, name: "Boxy Utility Jacket", category: "Outerwear", price: 148, color: "Clay", material: "Recycled Polyester", stock: "New", image: "https://loremflickr.com/800/1000/jacket?random=2" },
+    { id: 3, name: "Wide-Leg Hemp Trousers", category: "Pants", price: 112, color: "Sand", material: "Organic Cotton", stock: "Low Stock", image: "https://loremflickr.com/800/1000/pants?random=3" },
+    { id: 4, name: "Ribbed Tank Dress", category: "Dresses", price: 76, color: "Ink", material: "Organic Cotton", stock: "Best Seller", image: "https://loremflickr.com/800/1000/dress?random=4" },
+    { id: 5, name: "Canvas Crossbody", category: "Accessories", price: 58, color: "Ochre", material: "Recycled Polyester", stock: "Low Stock", image: "https://loremflickr.com/800/1000/bag?random=5" },
+    { id: 6, name: "Soft Structure Blazer", category: "Outerwear", price: 154, color: "Moss", material: "Organic Cotton", stock: "New", image: "https://loremflickr.com/800/1000/blazer?random=6" },
+    { id: 7, name: "Everyday Jersey Tee", category: "Tops", price: 42, color: "Cloud", material: "Organic Cotton", stock: "Low Stock", image: "https://loremflickr.com/800/1000/shirt?random=7" },
+    { id: 8, name: "Modular Cargo Skirt", category: "Skirts", price: 94, color: "Olive", material: "Recycled Polyester", stock: "New", image: "https://loremflickr.com/800/1000/skirt?random=8" },
+    { id: 9, name: "Lightweight Knit Polo", category: "Tops", price: 68, color: "Stone", material: "Organic Cotton", stock: "Best Seller", image: "https://loremflickr.com/800/1000/polo?random=9" },
+    { id: 10, name: "Panelled Denim Set", category: "Sets", price: 167, color: "Indigo", material: "Organic Cotton", stock: "Low Stock", image: "https://loremflickr.com/800/1000/denim?random=10" },
+    { id: 11, name: "Slip Midi Dress", category: "Dresses", price: 120, color: "Cocoa", material: "Recycled Polyester", stock: "New", image: "https://loremflickr.com/800/1000/dress?random=11" },
+    { id: 12, name: "Structured Tote", category: "Accessories", price: 84, color: "Black", material: "Recycled Polyester", stock: "Best Seller", image: "https://loremflickr.com/800/1000/tote?random=12" },
+    { id: 13, name: "Reversible Bomber", category: "Outerwear", price: 174, color: "Forest", material: "Recycled Polyester", stock: "Low Stock", image: "https://loremflickr.com/800/1000/bomber?random=13" },
+    { id: 14, name: "Pleated Resort Shirt", category: "Shirts", price: 96, color: "Shell", material: "Organic Cotton", stock: "New", image: "https://loremflickr.com/800/1000/resort?random=62" },
+    { id: 15, name: "Tailored Shorts", category: "Pants", price: 73, color: "Slate", material: "Organic Cotton", stock: "Best Seller", image: "https://loremflickr.com/800/1000/shorts?random=14" },
+    { id: 16, name: "Layering Mesh Top", category: "Tops", price: 54, color: "Rose", material: "Recycled Polyester", stock: "New", image: "https://loremflickr.com/800/1000/top?random=63" },
+    { id: 17, name: "Relaxed Pleat Pants", category: "Pants", price: 110, color: "Espresso", material: "Organic Cotton", stock: "Low Stock", image: "https://loremflickr.com/800/1000/trousers?random=15" },
+    { id: 18, name: "Patchwork Cardigan", category: "Knitwear", price: 132, color: "Berry", material: "Organic Cotton", stock: "New", image: "https://loremflickr.com/800/1000/cardigan?random=16" },
+    { id: 19, name: "Studio Track Jacket", category: "Outerwear", price: 118, color: "Navy", material: "Recycled Polyester", stock: "Low Stock", image: "https://loremflickr.com/800/1000/jacket?random=17" },
+    { id: 20, name: "Organic Cotton Hoodie", category: "Tops", price: 88, color: "Mist", material: "Organic Cotton", stock: "Best Seller", image: "https://loremflickr.com/800/1000/hoodie?random=18" },
+    { id: 21, name: "Minimalist Hoop Set", category: "Accessories", price: 39, color: "Gold", material: "Recycled Polyester", stock: "New", image: "https://loremflickr.com/800/1000/jewelry?random=19" },
+    { id: 22, name: "Workwear Jumpsuit", category: "Sets", price: 156, color: "Charcoal", material: "Organic Cotton", stock: "Low Stock", image: "https://loremflickr.com/800/1000/jumpsuit?random=64" },
+    { id: 23, name: "Weekend Knit Shorts", category: "Pants", price: 61, color: "Sunwash", material: "Organic Cotton", stock: "New", image: "https://loremflickr.com/800/1000/knitwear?random=65" },
+    { id: 24, name: "Convertible Bucket Bag", category: "Accessories", price: 102, color: "Plum", material: "Recycled Polyester", stock: "Low Stock", image: "https://loremflickr.com/800/1000/handbag?random=20" },
   ];
 
   const moodTiles = [
-    { title: "Minimalist", description: "Neutral layers with clean lines and polished textures.", image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" },
-    { title: "Streetwear", description: "Volume, utility shapes, and statement accessories.", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" },
-    { title: "Workwear", description: "Tailored separates made for studio-to-office days.", image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80" },
-    { title: "Weekend", description: "Soft essentials and off-duty staples with a relaxed fit.", image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" },
+    { title: "Minimalist", description: "Neutral layers with clean lines and polished textures.", image: "https://loremflickr.com/900/700/minimalist?random=21" },
+    { title: "Streetwear", description: "Volume, utility shapes, and statement accessories.", image: "https://loremflickr.com/900/700/streetwear?random=22" },
+    { title: "Workwear", description: "Tailored separates made for studio-to-office days.", image: "https://loremflickr.com/900/700/workwear?random=23" },
+    { title: "Weekend", description: "Soft essentials and off-duty staples with a relaxed fit.", image: "https://loremflickr.com/900/700/weekend?random=24" },
   ];
 
   function announce(message) {
@@ -306,4 +306,3 @@ const ThreadHouse = (() => {
 })();
 
 window.ThreadHouse = ThreadHouse;
-

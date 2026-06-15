@@ -16,7 +16,7 @@ function CoursePage() {
           <section className="mt-8 panel rounded-[2rem] border border-white/70 p-5 shadow-sm" aria-labelledby="instructor-heading">
             <h2 id="instructor-heading" className="text-3xl font-semibold text-slate-950">Instructor</h2>
             <div className="mt-5 flex items-center gap-4">
-              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80" alt="Dr. Nina Park" className="h-16 w-16 rounded-full object-cover" />
+              <img src="https://loremflickr.com/400/400/teacher%20portrait?random=7" alt="Dr. Nina Park" className="h-16 w-16 rounded-full object-cover" />
               <div>
                 <h3 className="text-xl font-semibold text-slate-900">Dr. Nina Park</h3>
                 <p className="mt-1 text-sm leading-6 text-slate-600">Data scientist and university lecturer focused on applied analytics, experimentation, and curriculum design.</p>

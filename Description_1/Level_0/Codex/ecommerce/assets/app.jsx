@@ -27,7 +27,7 @@ const products = [
     brand: "Sony",
     category: "Electronics",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/headphones?random=1",
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const products = [
     brand: "Samsung",
     category: "Electronics",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/television?random=2",
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const products = [
     brand: "Dyson",
     category: "Home",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/vacuum?random=3",
   },
   {
     id: 4,
@@ -66,7 +66,7 @@ const products = [
     brand: "KitchenAid",
     category: "Kitchen",
     availability: "Low Stock",
-    image: "https://images.unsplash.com/photo-1574781330855-d0db8cc6a79c?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/mixer?random=4",
   },
   {
     id: 5,
@@ -79,7 +79,7 @@ const products = [
     brand: "Nike",
     category: "Sports",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/sneakers?random=5",
   },
   {
     id: 6,
@@ -92,7 +92,7 @@ const products = [
     brand: "Levi's",
     category: "Clothing",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/jacket?random=6",
   },
   {
     id: 7,
@@ -105,7 +105,7 @@ const products = [
     brand: "Apple",
     category: "Electronics",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1579586337278-3f436f25d4d6?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/smartwatch?random=7",
   },
   {
     id: 8,
@@ -118,7 +118,7 @@ const products = [
     brand: "Instant Pot",
     category: "Kitchen",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1585515656973-9e8549fc2d0b?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/cooker?random=8",
   },
   {
     id: 9,
@@ -131,7 +131,7 @@ const products = [
     brand: "Adidas",
     category: "Clothing",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/hoodie?random=9",
   },
   {
     id: 10,
@@ -144,7 +144,7 @@ const products = [
     brand: "YETI",
     category: "Home",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/mug?random=10",
   },
   {
     id: 11,
@@ -157,7 +157,7 @@ const products = [
     brand: "Canon",
     category: "Electronics",
     availability: "Low Stock",
-    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/camera?random=11",
   },
   {
     id: 12,
@@ -170,7 +170,7 @@ const products = [
     brand: "Bose",
     category: "Electronics",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/speaker?random=12",
   },
   {
     id: 13,
@@ -183,7 +183,7 @@ const products = [
     brand: "Shark",
     category: "Home",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/purifier?random=13",
   },
   {
     id: 14,
@@ -196,7 +196,7 @@ const products = [
     brand: "Ninja",
     category: "Kitchen",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/blender?random=14",
   },
   {
     id: 15,
@@ -209,7 +209,7 @@ const products = [
     brand: "The North Face",
     category: "Sports",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/backpack?random=15",
   },
   {
     id: 16,
@@ -222,7 +222,7 @@ const products = [
     brand: "LG",
     category: "Electronics",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/monitor?random=16",
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ const products = [
     brand: "Hydro Flask",
     category: "Sports",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/bottle?random=17",
   },
   {
     id: 18,
@@ -248,7 +248,7 @@ const products = [
     brand: "Breville",
     category: "Kitchen",
     availability: "Low Stock",
-    image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/espresso?random=18",
   },
   {
     id: 19,
@@ -261,7 +261,7 @@ const products = [
     brand: "Patagonia",
     category: "Clothing",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1548883354-94bcfe321cbb?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/coat?random=19",
   },
   {
     id: 20,
@@ -274,7 +274,7 @@ const products = [
     brand: "Fitbit",
     category: "Sports",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/fitness?random=20",
   },
   {
     id: 21,
@@ -287,7 +287,7 @@ const products = [
     brand: "HP",
     category: "Electronics",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/laptop?random=21",
   },
   {
     id: 22,
@@ -300,7 +300,7 @@ const products = [
     brand: "T-fal",
     category: "Kitchen",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1584990347449-a71f3cd43482?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/cookware?random=22",
   },
   {
     id: 23,
@@ -313,7 +313,7 @@ const products = [
     brand: "Puma",
     category: "Clothing",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/shirt?random=23",
   },
   {
     id: 24,
@@ -326,7 +326,7 @@ const products = [
     brand: "Anker",
     category: "Electronics",
     availability: "In Stock",
-    image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=900&q=80",
+    image: "https://loremflickr.com/900/700/charger?random=24",
   },
 ];
 

@@ -246,7 +246,7 @@ function ProductCard({ product }) {
   return (
     <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex flex-col group">
       <div className="relative bg-gray-50 h-44 flex items-center justify-center overflow-hidden rounded-t-xl">
-        <img src={`https://picsum.photos/seed/${product.seed}/300/200`} alt={product.name}
+        <img src={`https://loremflickr.com/300/200/electronics?random=${product.seed}`} alt={product.name}
              className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300" />
         {product.badge && (
           <span className={`absolute top-2 left-2 text-xs font-bold px-2 py-0.5 rounded-full ${product.badge==='Sale'?'bg-red-500 text-white':product.badge==='New'?'bg-green-500 text-white':'bg-yellow-400 text-blue-900'}`}>
@@ -372,7 +372,7 @@ function App() {
                 : <div className="space-y-3">
                     {filtered.map(p=>(
                       <div key={p.id} className="bg-white rounded-xl border border-gray-100 shadow-sm flex gap-4 p-4 hover:shadow-md transition">
-                        <img src={`https://picsum.photos/seed/${p.seed}/120/100`} alt={p.name}
+                        <img src={`https://loremflickr.com/120/100/electronics?random=${p.seed}`} alt={p.name}
                              className="w-28 h-24 object-cover rounded-lg flex-shrink-0"/>
                         <div className="flex-1">
                           <p className="text-xs text-blue-600 font-medium">{p.brand}</p>

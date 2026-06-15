@@ -35,7 +35,7 @@ const courses = [
     duration: "24 hours",
     level: "Intermediate",
     category: "Data Science",
-    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/coding?random=101",
     blurb: "Build practical data pipelines, visualize results, and work with NumPy, pandas, and model-ready datasets.",
   },
   {
@@ -48,7 +48,7 @@ const courses = [
     duration: "18 hours",
     level: "Beginner",
     category: "Web Development",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/coding?random=102",
     blurb: "Learn HTML, CSS, React patterns, and shipping workflows through portfolio-grade projects.",
   },
   {
@@ -61,7 +61,7 @@ const courses = [
     duration: "16 hours",
     level: "Advanced",
     category: "Business",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/meeting?random=103",
     blurb: "Tie product strategy to execution with roadmaps, stakeholder management, and market analysis.",
   },
   {
@@ -74,7 +74,7 @@ const courses = [
     duration: "20 hours",
     level: "Intermediate",
     category: "UX Design",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/design?random=104",
     blurb: "Move from research synthesis to interaction patterns and design systems with real client briefs.",
   },
   {
@@ -87,7 +87,7 @@ const courses = [
     duration: "12 hours",
     level: "Beginner",
     category: "Photography",
-    image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/photography?random=105",
     blurb: "Understand composition, lighting, editing basics, and portfolio curation across multiple shooting scenarios.",
   },
   {
@@ -100,7 +100,7 @@ const courses = [
     duration: "14 hours",
     level: "Intermediate",
     category: "Data Science",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/analytics?random=106",
     blurb: "Write production-ready queries and translate business questions into defensible metrics.",
   },
 ];
@@ -543,7 +543,7 @@ function CourseDetailPage() {
             <div className="mt-6 rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm">
               <div className="flex items-center gap-4">
                 <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80"
+                  src="https://loremflickr.com/400/400/portrait?random=107"
                   alt="Instructor"
                   className="h-16 w-16 rounded-2xl object-cover"
                 />

@@ -264,7 +264,9 @@
       return (
         <article className="group" aria-label={story.title}>
           <a href={story.href} className="article-card block" aria-label={story.title}>
-            <div className={`bg-gradient-to-br ${story.imgGrad} ${size === 'large' ? 'h-56' : 'h-40'} rounded-sm mb-3`} role="img" aria-label={story.imgAlt || story.title} />
+            <div className={`${size === 'large' ? 'h-56' : 'h-40'} rounded-sm mb-3 overflow-hidden`}>
+              <img src={`https://loremflickr.com/600/${size === 'large' ? '224' : '160'}/${story.imgKeyword || 'nature'}?random=${story.id}`} alt={story.imgAlt || story.title} className="w-full h-full object-cover" />
+            </div>
           </a>
           <div>
             <div className="flex items-center gap-2 mb-1.5">
@@ -350,28 +352,28 @@
         deck:'A two-year investigation documents how military training contaminated drinking water across 14 Indigenous communities in the Southwest.',
         author:'Camille Okafor', date:'March 25, 2026', dateIso:'2026-03-25', readTime:18,
         category:'Investigations', isNew:true, href:'article.html',
-        imgGrad:'from-slate-500 via-slate-600 to-gray-800', imgAlt:'Aerial view of military base near tribal land',
+        imgGrad:'from-slate-500 via-slate-600 to-gray-800', imgAlt:'Aerial view of military base near tribal land', imgKeyword:'military',
       },
       {
         id:2, title:'The Methane Loophole: Natural Gas "Flaring Credits" Let Drillers Avoid Accountability',
         deck:'Industry-crafted exemptions in Biden-era rules remain unchanged — and emissions monitors say the gap is growing.',
         author:'David Reinholt', date:'March 22, 2026', dateIso:'2026-03-22', readTime:12,
         category:'Energy', href:'article.html',
-        imgGrad:'from-orange-500 via-amber-600 to-yellow-700', imgAlt:'Gas flaring at oil facility at night',
+        imgGrad:'from-orange-500 via-amber-600 to-yellow-700', imgAlt:'Gas flaring at oil facility at night', imgKeyword:'oilfield',
       },
       {
         id:3, title:'The Counties That Climate Change Is Quietly Buying Out — And What Happens to the People Who Stay',
         deck:'Federal managed-retreat programs have relocated thousands. Reporting on who gets left behind.',
         author:'Sofia Lindgren', date:'March 19, 2026', dateIso:'2026-03-19', readTime:14,
         category:'Climate', href:'article.html',
-        imgGrad:'from-blue-400 via-teal-500 to-cyan-600', imgAlt:'Flooded neighborhood with FEMA buyout signs',
+        imgGrad:'from-blue-400 via-teal-500 to-cyan-600', imgAlt:'Flooded neighborhood with FEMA buyout signs', imgKeyword:'flood',
       },
     ];
 
     const MORE_STORIES = [
-      { id:4, title:'Inside the "Carbon Cowboys": How Offset Markets Failed Small Landowners', author:'James Adeyemi', date:'Mar 18', dateIso:'2026-03-18', readTime:10, category:'Climate', href:'article.html', imgGrad:'from-green-600 to-emerald-800', imgAlt:'Forest with carbon offset markers' },
-      { id:5, title:'Arctic Permafrost Is Thawing 70 Years Early. Scientists Don\'t Know Why.', author:'Priya Vásquez', date:'Mar 15', dateIso:'2026-03-15', readTime:8, category:'Science', href:'article.html', imgGrad:'from-sky-200 via-blue-300 to-indigo-400', imgAlt:'Melting permafrost in Arctic tundra' },
-      { id:6, title:'How Drought Has Quietly Ended Colorado\'s 100-Year Farming Legacy', author:'Tom Brackfield', date:'Mar 12', dateIso:'2026-03-12', readTime:11, category:'Policy', href:'article.html', imgGrad:'from-amber-700 via-orange-700 to-red-800', imgAlt:'Dried Colorado farmland from the air' },
+      { id:4, title:'Inside the "Carbon Cowboys": How Offset Markets Failed Small Landowners', author:'James Adeyemi', date:'Mar 18', dateIso:'2026-03-18', readTime:10, category:'Climate', href:'article.html', imgGrad:'from-green-600 to-emerald-800', imgAlt:'Forest with carbon offset markers', imgKeyword:'forest' },
+      { id:5, title:'Arctic Permafrost Is Thawing 70 Years Early. Scientists Don\'t Know Why.', author:'Priya Vásquez', date:'Mar 15', dateIso:'2026-03-15', readTime:8, category:'Science', href:'article.html', imgGrad:'from-sky-200 via-blue-300 to-indigo-400', imgAlt:'Melting permafrost in Arctic tundra', imgKeyword:'arctic' },
+      { id:6, title:'How Drought Has Quietly Ended Colorado\'s 100-Year Farming Legacy', author:'Tom Brackfield', date:'Mar 12', dateIso:'2026-03-12', readTime:11, category:'Policy', href:'article.html', imgGrad:'from-amber-700 via-orange-700 to-red-800', imgAlt:'Dried Colorado farmland from the air', imgKeyword:'drought' },
     ];
 
     /* ── Home page ─────────────────────────────────────────────── */
@@ -393,7 +395,8 @@
                   {/* Main hero */}
                   <div className="lg:col-span-3 border-r-0 lg:border-r border-gw-border lg:pr-8">
                     <a href="article.html" className="group block" aria-label="The Invisible Flood: How Groundwater Collapse Is Reshaping the American West">
-                      <div className="h-72 lg:h-80 bg-gradient-to-br from-blue-900 via-teal-800 to-emerald-900 mb-5 relative rounded-sm overflow-hidden" role="img" aria-label="Aerial image of cracked, dry American West landscape">
+                      <div className="h-72 lg:h-80 mb-5 relative rounded-sm overflow-hidden">
+                        <img src="https://loremflickr.com/800/320/drought?random=10" alt="Aerial image of cracked, dry American West landscape" className="w-full h-full object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden="true" />
                         <div className="absolute bottom-4 left-4 right-4">
                           <span className="text-xs font-bold uppercase tracking-widest text-gw-gold font-sans">Feature Investigation</span>

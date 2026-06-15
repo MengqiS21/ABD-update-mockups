@@ -182,7 +182,9 @@
           </div>
           {/* Thumbnail */}
           {notif.thumbGrad && (
-            <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${notif.thumbGrad} flex-shrink-0`} role="img" aria-label={`Thumbnail for "${notif.work}"`} />
+            <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0" role="img" aria-label={`Thumbnail for "${notif.work}"`}>
+              <img src={`https://loremflickr.com/48/48/art?random=${notif.id + 40}`} alt={`Thumbnail for "${notif.work}"`} className="w-full h-full object-cover" />
+            </div>
           )}
           {/* Mark read */}
           {notif.unread && (

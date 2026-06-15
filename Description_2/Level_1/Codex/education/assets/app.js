@@ -251,15 +251,15 @@ function homePage() {
           <h2 id="success-stories" class="font-display mt-3 text-3xl font-bold text-[var(--sf-navy)]">Real learners, visible outcomes</h2>
           <div class="mt-6 grid gap-5 lg:grid-cols-3">
             <article class="overflow-hidden rounded-[1.75rem] bg-slate-900 text-white">
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80" alt="Portrait of adult learner Latoya Jenkins smiling in a bright office" class="h-56 w-full object-cover">
+              <img src="https://loremflickr.com/900/700/student?random=56" alt="Portrait of adult learner Latoya Jenkins smiling in a bright office" class="h-56 w-full object-cover">
               <div class="p-5"><p class="text-sm uppercase tracking-[0.16em] text-blue-100">Latoya Jenkins</p><h3 class="mt-2 text-xl font-bold">Retail supervisor to medical admin specialist</h3><p class="mt-3 text-sm text-slate-200">$9/hr wage increase in 12 weeks</p></div>
             </article>
             <article class="overflow-hidden rounded-[1.75rem] bg-slate-900 text-white">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Portrait of Ethan Cruz in a casual work shirt seated near a laptop" class="h-56 w-full object-cover">
+              <img src="https://loremflickr.com/900/700/student?random=57" alt="Portrait of Ethan Cruz in a casual work shirt seated near a laptop" class="h-56 w-full object-cover">
               <div class="p-5"><p class="text-sm uppercase tracking-[0.16em] text-blue-100">Ethan Cruz</p><h3 class="mt-2 text-xl font-bold">Warehouse lead to IT support technician</h3><p class="mt-3 text-sm text-slate-200">CompTIA-ready in 10 weeks</p></div>
             </article>
             <article class="overflow-hidden rounded-[1.75rem] bg-slate-900 text-white">
-              <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=80" alt="Portrait of Janelle Morris in a training center with notebooks on a desk" class="h-56 w-full object-cover">
+              <img src="https://loremflickr.com/900/700/student?random=58" alt="Portrait of Janelle Morris in a training center with notebooks on a desk" class="h-56 w-full object-cover">
               <div class="p-5"><p class="text-sm uppercase tracking-[0.16em] text-blue-100">Janelle Morris</p><h3 class="mt-2 text-xl font-bold">Caregiver to billing and coding assistant</h3><p class="mt-3 text-sm text-slate-200">Hired by a partner clinic before graduation</p></div>
             </article>
           </div>
@@ -354,7 +354,7 @@ function courseDetailPage() {
             </div>
           </section>
           <section class="grid gap-8 lg:grid-cols-2">
-            <div class="surface-panel soft-shadow rounded-[2rem] border border-white/80 p-6"><h2 class="text-2xl font-bold text-[var(--sf-navy)]">Instructor profile</h2><div class="mt-5 flex items-start gap-4"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Instructor Dr. Alicia Warren wearing a navy blazer in a clinic setting" class="h-24 w-24 rounded-[1.5rem] object-cover"><div><p class="text-lg font-bold text-slate-900">Dr. Alicia Warren, MHA, CPC</p><p class="mt-2 text-sm leading-7 text-slate-600">15 years in ambulatory care operations, former clinic administrator, certified professional coder, and lead curriculum advisor for allied health pathways.</p></div></div></div>
+            <div class="surface-panel soft-shadow rounded-[2rem] border border-white/80 p-6"><h2 class="text-2xl font-bold text-[var(--sf-navy)]">Instructor profile</h2><div class="mt-5 flex items-start gap-4"><img src="https://loremflickr.com/900/700/instructor?random=59" alt="Instructor Dr. Alicia Warren wearing a navy blazer in a clinic setting" class="h-24 w-24 rounded-[1.5rem] object-cover"><div><p class="text-lg font-bold text-slate-900">Dr. Alicia Warren, MHA, CPC</p><p class="mt-2 text-sm leading-7 text-slate-600">15 years in ambulatory care operations, former clinic administrator, certified professional coder, and lead curriculum advisor for allied health pathways.</p></div></div></div>
             <div class="surface-panel soft-shadow rounded-[2rem] border border-white/80 p-6"><h2 class="text-2xl font-bold text-[var(--sf-navy)]">Required materials</h2><ul class="mt-5 space-y-3 text-sm leading-7 text-slate-700"><li>Reliable internet connection and webcam for live cohort sessions.</li><li>Notebook or digital note-taking tool for workflow simulations.</li><li>Access to browser-based EHR practice environment provided by SkillForge.</li></ul></div>
           </section>
         </div>

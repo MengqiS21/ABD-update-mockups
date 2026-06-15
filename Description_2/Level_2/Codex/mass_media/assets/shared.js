@@ -79,7 +79,7 @@ const Groundwork = (() => {
       date: "April 18, 2025",
       bio: "Moreno studies how prolonged smoke exposure changes respiratory outcomes for agricultural workers.",
       href: "./article.html",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=240&q=80",
+      avatar: "https://loremflickr.com/240/240/person?random=43",
     },
     {
       title: "A mayor's case for climate adaptation budgets that outlast election cycles",
@@ -88,7 +88,7 @@ const Groundwork = (() => {
       date: "April 16, 2025",
       bio: "Bell led municipal infrastructure planning after repeated inland flooding and winter storm failures.",
       href: "./article.html",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=240&q=80",
+      avatar: "https://loremflickr.com/240/240/person?random=44",
     },
     {
       title: "Community air monitors should be treated like public health infrastructure",
@@ -97,7 +97,7 @@ const Groundwork = (() => {
       date: "April 11, 2025",
       bio: "Jefferson works with fence-line communities tracking petrochemical emissions and emergency alerts.",
       href: "./article.html",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=240&q=80",
+      avatar: "https://loremflickr.com/240/240/person?random=45",
     },
   ];
 

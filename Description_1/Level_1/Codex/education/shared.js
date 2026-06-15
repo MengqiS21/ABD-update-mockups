@@ -26,7 +26,7 @@
       duration: "24 hours",
       level: "Intermediate",
       category: "Data Science",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/datascience?random=25",
       alt: "Laptop displaying code and charts on a work desk"
     },
     {
@@ -38,7 +38,7 @@
       duration: "18 hours",
       level: "Beginner",
       category: "Web Development",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/webdevelopment?random=26",
       alt: "Developer workstation with code editor open across dual monitors"
     },
     {
@@ -50,7 +50,7 @@
       duration: "14 hours",
       level: "Intermediate",
       category: "UX Design",
-      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/uxdesign?random=27",
       alt: "Design team reviewing sticky notes and wireframes on a wall"
     },
     {
@@ -62,7 +62,7 @@
       duration: "9 hours",
       level: "Beginner",
       category: "Business",
-      image: "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/businessmeeting?random=28",
       alt: "Professional team meeting around a conference table"
     },
     {
@@ -74,7 +74,7 @@
       duration: "11 hours",
       level: "Advanced",
       category: "Photography",
-      image: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/photographer?random=29",
       alt: "Photographer holding a camera during golden hour outdoors"
     },
     {
@@ -86,7 +86,7 @@
       duration: "16 hours",
       level: "Beginner",
       category: "Data Science",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/analytics?random=30",
       alt: "Analytics dashboard and laptop screen showing charts and metrics"
     }
   ];

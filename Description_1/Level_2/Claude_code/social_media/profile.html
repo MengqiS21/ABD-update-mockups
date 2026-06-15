@@ -67,7 +67,7 @@ function Sidebar({ activePage = 'profile' }) {
         <IconPlus /> New Post
       </button>
       <a href="profile.html" className="mt-6 flex items-center gap-3 px-2 py-2 rounded-xl hover:bg-gray-50">
-        <img src="https://i.pravatar.cc/40?img=11" alt="Alex Johnson — your profile" className="w-9 h-9 rounded-full object-cover" />
+        <img src="https://loremflickr.com/40/40/portrait?random=11" alt="Alex Johnson — your profile" className="w-9 h-9 rounded-full object-cover" />
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-gray-900 truncate">Alex Johnson</p>
           <p className="text-xs text-gray-500 truncate">@alexj</p>
@@ -107,12 +107,12 @@ const POSTS = [
 ];
 
 const MEDIA_POSTS = [
-  { id: 1, img: 'https://picsum.photos/seed/alex1/300/300', alt: 'Conference stage with presentation slides on accessibility' },
-  { id: 2, img: 'https://picsum.photos/seed/alex2/300/300', alt: 'Developer workspace with multiple monitors showing code' },
-  { id: 3, img: 'https://picsum.photos/seed/alex3/300/300', alt: 'Group photo from tech meetup event' },
-  { id: 4, img: 'https://picsum.photos/seed/alex4/300/300', alt: 'Aerial view of city skyline at golden hour' },
-  { id: 5, img: 'https://picsum.photos/seed/alex5/300/300', alt: 'Close-up of whiteboard with technical diagram' },
-  { id: 6, img: 'https://picsum.photos/seed/alex6/300/300', alt: 'Coffee and laptop on wooden table in a cafe' },
+  { id: 1, img: 'https://loremflickr.com/300/300/conference?random=24', alt: 'Conference stage with presentation slides on accessibility' },
+  { id: 2, img: 'https://loremflickr.com/300/300/computer?random=25', alt: 'Developer workspace with multiple monitors showing code' },
+  { id: 3, img: 'https://loremflickr.com/300/300/meetup?random=26', alt: 'Group photo from tech meetup event' },
+  { id: 4, img: 'https://loremflickr.com/300/300/city?random=27', alt: 'Aerial view of city skyline at golden hour' },
+  { id: 5, img: 'https://loremflickr.com/300/300/whiteboard?random=28', alt: 'Close-up of whiteboard with technical diagram' },
+  { id: 6, img: 'https://loremflickr.com/300/300/coffee?random=29', alt: 'Coffee and laptop on wooden table in a cafe' },
 ];
 
 function PostItem({ post }) {
@@ -210,14 +210,14 @@ function ProfilePage() {
     <main id="main-content" className="max-w-2xl mx-auto" aria-label="Alex Johnson's profile">
       {/* Cover photo */}
       <div className="relative h-40 sm:h-52 bg-gradient-to-br from-indigo-400 via-purple-500 to-pink-400 overflow-hidden">
-        <img src="https://picsum.photos/seed/cover/1200/400" alt="Alex Johnson's cover photo — city skyline at dusk" className="w-full h-full object-cover opacity-70" />
+        <img src="https://loremflickr.com/1200/400/city?random=30" alt="Alex Johnson's cover photo — city skyline at dusk" className="w-full h-full object-cover opacity-70" />
       </div>
 
       {/* Profile header */}
       <section aria-label="Profile information" className="bg-white border-b border-gray-100 px-4 pb-4">
         <div className="flex items-end justify-between -mt-12 sm:-mt-16 mb-3">
           <div className="relative">
-            <img src="https://i.pravatar.cc/128?img=11" alt="Alex Johnson's profile photo" className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-white object-cover shadow-md" />
+            <img src="https://loremflickr.com/128/128/portrait?random=11" alt="Alex Johnson's profile photo" className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-white object-cover shadow-md" />
             <span className="absolute bottom-1 right-1 w-5 h-5 bg-green-400 rounded-full border-2 border-white" aria-label="Online" title="Online"></span>
           </div>
           <div className="flex gap-2 mt-14">

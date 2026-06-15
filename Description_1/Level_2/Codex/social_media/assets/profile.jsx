@@ -11,7 +11,7 @@ function ProfilePage() {
         <div className="bg-white px-6 pb-6 pt-0 text-slate-900">
           <div className="-mt-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Alex Rivera avatar" className="h-24 w-24 rounded-full border-4 border-white object-cover" />
+              <img src="https://loremflickr.com/400/400/person%20portrait?random=37" alt="Alex Rivera avatar" className="h-24 w-24 rounded-full border-4 border-white object-cover" />
               <h1 className="mt-4 text-4xl font-semibold">Alex Rivera</h1>
               <p className="mt-1 text-sm text-slate-500">@alexr</p>
               <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">Writer covering internet culture, civic systems, and design-heavy social products.</p>

@@ -4,10 +4,10 @@ window.PulseData = (() => {
       id: "post-1",
       displayName: "Maya Chen",
       handle: "@maya",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80",
+      avatar: "https://loremflickr.com/400/400/person%20portrait?random=27",
       timestamp: "12m",
       text: "Spent the morning at the waterfront climate summit. The best sessions were the ones led by local organizers who translated policy into neighborhood action.",
-      image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/520/climate%20summit?random=28",
       likes: 42,
       comments: 8,
       shares: 5,
@@ -17,7 +17,7 @@ window.PulseData = (() => {
       id: "post-2",
       displayName: "Owen Park",
       handle: "@owenpark",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
+      avatar: "https://loremflickr.com/400/400/person%20portrait?random=29",
       timestamp: "38m",
       text: "Everyone is talking about AI hiring freezes, but the better story is how teams are redesigning roles. That shift is going to outlast the headlines.",
       image: "",
@@ -30,10 +30,10 @@ window.PulseData = (() => {
       id: "post-3",
       displayName: "Sara Imani",
       handle: "@sarai",
-      avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80",
+      avatar: "https://loremflickr.com/400/400/person%20portrait?random=30",
       timestamp: "1h",
       text: "Photo dump from tonight’s street food market. The mango chili skewers were worth the wait.",
-      image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/520/street%20food%20market?random=31",
       likes: 267,
       comments: 33,
       shares: 19,
@@ -43,7 +43,7 @@ window.PulseData = (() => {
       id: "post-4",
       displayName: "Leo Martínez",
       handle: "@leom",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
+      avatar: "https://loremflickr.com/400/400/person%20portrait?random=32",
       timestamp: "2h",
       text: "World Cup city prep is accelerating. Transit maps, pop-up fan zones, and late-night service plans all dropped today.",
       image: "",
@@ -66,25 +66,25 @@ window.PulseData = (() => {
     {
       displayName: "Jordan Fields",
       handle: "@jordanf",
-      avatar: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=400&q=80",
+      avatar: "https://loremflickr.com/400/400/urban%20photographer%20portrait?random=33",
       bio: "Urban photographer and transit nerd."
     },
     {
       displayName: "Amara Singh",
       handle: "@amaras",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
+      avatar: "https://loremflickr.com/400/400/reporter%20portrait?random=34",
       bio: "Tech policy reporter tracking labor and regulation."
     },
     {
       displayName: "Noah Kim",
       handle: "@nkim",
-      avatar: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=400&q=80",
+      avatar: "https://loremflickr.com/400/400/person%20portrait?random=35",
       bio: "Writes about product teams, layoffs, and recovery."
     },
     {
       displayName: "Talia Brooks",
       handle: "@taliab",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+      avatar: "https://loremflickr.com/400/400/food%20creator%20portrait?random=36",
       bio: "Food creator sharing city guides and recipes."
     }
   ];

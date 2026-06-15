@@ -66,7 +66,7 @@ function Sidebar({ activePage = 'explore' }) {
         <IconPlus /> New Post
       </button>
       <a href="profile.html" className="mt-6 flex items-center gap-3 px-2 py-2 rounded-xl hover:bg-gray-50 transition-colors">
-        <img src="https://i.pravatar.cc/40?img=11" alt="Alex Johnson — your profile" className="w-9 h-9 rounded-full object-cover" />
+        <img src="https://loremflickr.com/40/40/portrait?random=11" alt="Alex Johnson — your profile" className="w-9 h-9 rounded-full object-cover" />
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-gray-900 truncate">Alex Johnson</p>
           <p className="text-xs text-gray-500 truncate">@alexj</p>
@@ -108,21 +108,21 @@ const TRENDING_TAGS = [
 ];
 
 const SUGGESTED_USERS = [
-  { name: 'Dr. Amara Osei', handle: '@amaraosei', avatar: 'https://i.pravatar.cc/80?img=20', bio: 'Climate scientist · UN advisor', followers: '128K' },
-  { name: 'Kai Yamamoto', handle: '@kaiyama', avatar: 'https://i.pravatar.cc/80?img=33', bio: 'Full-stack dev · Open source', followers: '45.2K' },
-  { name: 'Sofia Reyes', handle: '@sofiareyes', avatar: 'https://i.pravatar.cc/80?img=47', bio: 'Travel & food photographer 📸', followers: '212K' },
-  { name: 'Darius Okafor', handle: '@dariusok', avatar: 'https://i.pravatar.cc/80?img=60', bio: 'Sports analyst · #WorldCup2026', followers: '89K' },
-  { name: 'Lena Kowalski', handle: '@lenakowal', avatar: 'https://i.pravatar.cc/80?img=25', bio: 'Product design at Nextly', followers: '31K' },
-  { name: 'Marcus Webb', handle: '@marcwebb', avatar: 'https://i.pravatar.cc/80?img=8', bio: 'Founder @ CodePulse · ex-FAANG', followers: '76K' },
+  { name: 'Dr. Amara Osei', handle: '@amaraosei', avatar: 'https://loremflickr.com/80/80/portrait?random=20', bio: 'Climate scientist · UN advisor', followers: '128K' },
+  { name: 'Kai Yamamoto', handle: '@kaiyama', avatar: 'https://loremflickr.com/80/80/portrait?random=33', bio: 'Full-stack dev · Open source', followers: '45.2K' },
+  { name: 'Sofia Reyes', handle: '@sofiareyes', avatar: 'https://loremflickr.com/80/80/portrait?random=47', bio: 'Travel & food photographer 📸', followers: '212K' },
+  { name: 'Darius Okafor', handle: '@dariusok', avatar: 'https://loremflickr.com/80/80/portrait?random=60', bio: 'Sports analyst · #WorldCup2026', followers: '89K' },
+  { name: 'Lena Kowalski', handle: '@lenakowal', avatar: 'https://loremflickr.com/80/80/portrait?random=25', bio: 'Product design at Nextly', followers: '31K' },
+  { name: 'Marcus Webb', handle: '@marcwebb', avatar: 'https://loremflickr.com/80/80/portrait?random=8', bio: 'Founder @ CodePulse · ex-FAANG', followers: '76K' },
 ];
 
 const POPULAR_POSTS = [
-  { id: 1, img: 'https://picsum.photos/seed/pop1/400/400', author: 'Sofia Reyes', handle: '@sofiareyes', likes: 8421, alt: 'Aerial view of a colorful coastal village at sunset' },
-  { id: 2, img: 'https://picsum.photos/seed/pop2/400/600', author: 'Kai Yamamoto', handle: '@kaiyama', likes: 3201, alt: 'Close-up of mechanical keyboard with RGB lighting' },
-  { id: 3, img: 'https://picsum.photos/seed/pop3/400/300', author: 'Darius Okafor', handle: '@dariusok', likes: 12055, alt: 'Football stadium lit up at night with crowd cheering' },
-  { id: 4, img: 'https://picsum.photos/seed/pop4/400/500', author: 'Lena Kowalski', handle: '@lenakowal', likes: 5603, alt: 'Minimalist desk setup with soft lamp and plant' },
-  { id: 5, img: 'https://picsum.photos/seed/pop5/400/350', author: 'Dr. Amara Osei', handle: '@amaraosei', likes: 7892, alt: 'Wind turbines against a dramatic orange sky' },
-  { id: 6, img: 'https://picsum.photos/seed/pop6/400/450', author: 'Marcus Webb', handle: '@marcwebb', likes: 4110, alt: 'Futuristic city skyline with neon lights at dusk' },
+  { id: 1, img: 'https://loremflickr.com/400/400/village?random=31', author: 'Sofia Reyes', handle: '@sofiareyes', likes: 8421, alt: 'Aerial view of a colorful coastal village at sunset' },
+  { id: 2, img: 'https://loremflickr.com/400/600/keyboard?random=32', author: 'Kai Yamamoto', handle: '@kaiyama', likes: 3201, alt: 'Close-up of mechanical keyboard with RGB lighting' },
+  { id: 3, img: 'https://loremflickr.com/400/300/stadium?random=33', author: 'Darius Okafor', handle: '@dariusok', likes: 12055, alt: 'Football stadium lit up at night with crowd cheering' },
+  { id: 4, img: 'https://loremflickr.com/400/500/desk?random=34', author: 'Lena Kowalski', handle: '@lenakowal', likes: 5603, alt: 'Minimalist desk setup with soft lamp and plant' },
+  { id: 5, img: 'https://loremflickr.com/400/350/windmill?random=35', author: 'Dr. Amara Osei', handle: '@amaraosei', likes: 7892, alt: 'Wind turbines against a dramatic orange sky' },
+  { id: 6, img: 'https://loremflickr.com/400/450/city?random=36', author: 'Marcus Webb', handle: '@marcwebb', likes: 4110, alt: 'Futuristic city skyline with neon lights at dusk' },
 ];
 
 function SuggestedUserCard({ user }) {

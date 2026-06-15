@@ -19,7 +19,7 @@ const feedPosts = [
     time: "18m ago",
     title: "Solstice III",
     copy: "Pushing the lighting on this poster series before I lock the final print palette. Looking for feedback on the warmth around the shadow edges.",
-    image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/900/art?random=63",
     alt: "Warm-toned abstract illustration with layered sun shapes and textured gradients",
     appreciate: 184,
     collect: 62,
@@ -32,7 +32,7 @@ const feedPosts = [
     time: "52m ago",
     title: "Rain Study, Contact Sheet",
     copy: "Shot on 35mm during last night's storm walk. I kept the frame edges rough to preserve the feeling of movement through the city.",
-    image: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/900/street?random=64",
     alt: "Photographic study of a rainy street with reflective pavement and blurred lights",
     appreciate: 231,
     collect: 88,
@@ -45,7 +45,7 @@ const feedPosts = [
     time: "1h ago",
     title: "Atlas Wordmark Iterations",
     copy: "Trying to balance the wide counters with a calmer rhythm on the tail. Which direction feels strongest for an editorial identity?",
-    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/900/typography?random=65",
     alt: "Typography sketchbook with black-and-white wordmark iterations and pencil annotations",
     appreciate: 142,
     collect: 41,
@@ -54,12 +54,12 @@ const feedPosts = [
 ];
 
 const exploreTiles = [
-  { medium: "Digital Art", creator: "Nia Soto", appreciates: 312, image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80", alt: "Digital painting workspace on a tablet with stylus and color tools" },
-  { medium: "Photography", creator: "Ari Mendoza", appreciates: 267, image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80", alt: "Portrait photography composition with camera and printed contact sheets" },
-  { medium: "Typography", creator: "Elle Thorn", appreciates: 198, image: "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=900&q=80", alt: "Desktop layout with typographic posters and letterform studies" },
-  { medium: "3D", creator: "Kenji Lo", appreciates: 354, image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80", alt: "3D modeling scene displayed on dual monitors in a creative studio" },
-  { medium: "Motion", creator: "Sahar Bloom", appreciates: 176, image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80", alt: "Motion design timeline and animated frame previews on a laptop screen" },
-  { medium: "Photography", creator: "Jun Park", appreciates: 224, image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80", alt: "Landscape photography scene with layered mountains during golden hour" },
+  { medium: "Digital Art", creator: "Nia Soto", appreciates: 312, image: "https://loremflickr.com/900/700/digital?random=66", alt: "Digital painting workspace on a tablet with stylus and color tools" },
+  { medium: "Photography", creator: "Ari Mendoza", appreciates: 267, image: "https://loremflickr.com/900/700/photography?random=67", alt: "Portrait photography composition with camera and printed contact sheets" },
+  { medium: "Typography", creator: "Elle Thorn", appreciates: 198, image: "https://loremflickr.com/900/700/design?random=68", alt: "Desktop layout with typographic posters and letterform studies" },
+  { medium: "3D", creator: "Kenji Lo", appreciates: 354, image: "https://loremflickr.com/900/700/design?random=69", alt: "3D modeling scene displayed on dual monitors in a creative studio" },
+  { medium: "Motion", creator: "Sahar Bloom", appreciates: 176, image: "https://loremflickr.com/900/700/studio?random=70", alt: "Motion design timeline and animated frame previews on a laptop screen" },
+  { medium: "Photography", creator: "Jun Park", appreciates: 224, image: "https://loremflickr.com/900/700/landscape?random=71", alt: "Landscape photography scene with layered mountains during golden hour" },
 ];
 
 const risingCreators = [
@@ -76,17 +76,17 @@ const palettes = [
 
 const notifications = {
   activity: [
-    { text: "Hana appreciated your piece 'Solstice III'", time: "4h", thumb: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=300&q=80", alt: "Thumbnail of abstract illustration with layered sun shapes" },
-    { text: "Ari commented on 'Rain Study, Contact Sheet'", time: "7h", thumb: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=300&q=80", alt: "Thumbnail of rainy street photography study" },
-    { text: "Your process post was saved to 12 collections", time: "1d", thumb: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=300&q=80", alt: "Thumbnail of typography sketchbook layout" },
+    { text: "Hana appreciated your piece 'Solstice III'", time: "4h", thumb: "https://loremflickr.com/300/300/art?random=72", alt: "Thumbnail of abstract illustration with layered sun shapes" },
+    { text: "Ari commented on 'Rain Study, Contact Sheet'", time: "7h", thumb: "https://loremflickr.com/300/300/street?random=73", alt: "Thumbnail of rainy street photography study" },
+    { text: "Your process post was saved to 12 collections", time: "1d", thumb: "https://loremflickr.com/300/300/typography?random=74", alt: "Thumbnail of typography sketchbook layout" },
   ],
   feedback: [
-    { text: "Kei requested paintover feedback on 'Harbor Night'", time: "38m", thumb: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=300&q=80", alt: "Thumbnail of painterly harbor scene at night" },
-    { text: "Studio Orbit invited you into a critique circle", time: "3h", thumb: "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=300&q=80", alt: "Thumbnail of design review boards with type studies" },
+    { text: "Kei requested paintover feedback on 'Harbor Night'", time: "38m", thumb: "https://loremflickr.com/300/300/painting?random=75", alt: "Thumbnail of painterly harbor scene at night" },
+    { text: "Studio Orbit invited you into a critique circle", time: "3h", thumb: "https://loremflickr.com/300/300/design?random=76", alt: "Thumbnail of design review boards with type studies" },
   ],
   collections: [
-    { text: "Your photo essay was added to 'Quiet Color References'", time: "2h", thumb: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=300&q=80", alt: "Thumbnail of atmospheric mountain landscape" },
-    { text: "Jun collected 'Atlas Wordmark Iterations'", time: "9h", thumb: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=300&q=80", alt: "Thumbnail of wordmark exploration on paper" },
+    { text: "Your photo essay was added to 'Quiet Color References'", time: "2h", thumb: "https://loremflickr.com/300/300/landscape?random=77", alt: "Thumbnail of atmospheric mountain landscape" },
+    { text: "Jun collected 'Atlas Wordmark Iterations'", time: "9h", thumb: "https://loremflickr.com/300/300/typography?random=78", alt: "Thumbnail of wordmark exploration on paper" },
   ],
 };
 
@@ -100,17 +100,17 @@ const threads = [
 const conversation = [
   { from: "Hana Noor", side: "left", text: "That new contrast pass fixed the focal point. Did you settle on the print texture?" },
   { from: "You", side: "right", text: "Almost. I uploaded the rough export with grain applied at 18%. Curious if it still feels too digital." },
-  { from: "You", side: "right", image: "https://images.unsplash.com/photo-1513364776144-60967b0c78f?auto=format&fit=crop&w=900&q=80", alt: "Preview image of poster artwork with warm gradients and grain texture" },
+  { from: "You", side: "right", image: "https://loremflickr.com/900/700/art?random=79", alt: "Preview image of poster artwork with warm gradients and grain texture" },
   { from: "Hana Noor", side: "left", text: "The grain sits well. I'd just soften the inner orange halo a bit. Seen at 2:14 PM." },
 ];
 
 const profileProjects = [
-  { title: "Solstice III", views: "12.4k", appreciates: 841, image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80", alt: "Abstract illustration poster with warm geometric shapes" },
-  { title: "Station Notes", views: "8.1k", appreciates: 492, image: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80", alt: "Moody street photograph with reflected neon lights" },
-  { title: "Atlas", views: "10.7k", appreciates: 617, image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80", alt: "Typography experiments on a notebook page" },
-  { title: "Signal Forms", views: "6.2k", appreciates: 388, image: "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&w=900&q=80", alt: "Design board featuring modular type and editorial compositions" },
-  { title: "Quiet Field", views: "7.5k", appreciates: 455, image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80", alt: "Landscape photo with layered mountains and soft mist" },
-  { title: "Depth Pass", views: "5.8k", appreciates: 301, image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80", alt: "3D scene development shown on a monitor in a dark studio" },
+  { title: "Solstice III", views: "12.4k", appreciates: 841, image: "https://loremflickr.com/900/700/art?random=80", alt: "Abstract illustration poster with warm geometric shapes" },
+  { title: "Station Notes", views: "8.1k", appreciates: 492, image: "https://loremflickr.com/900/700/street?random=81", alt: "Moody street photograph with reflected neon lights" },
+  { title: "Atlas", views: "10.7k", appreciates: 617, image: "https://loremflickr.com/900/700/typography?random=82", alt: "Typography experiments on a notebook page" },
+  { title: "Signal Forms", views: "6.2k", appreciates: 388, image: "https://loremflickr.com/900/700/design?random=83", alt: "Design board featuring modular type and editorial compositions" },
+  { title: "Quiet Field", views: "7.5k", appreciates: 455, image: "https://loremflickr.com/900/700/landscape?random=84", alt: "Landscape photo with layered mountains and soft mist" },
+  { title: "Depth Pass", views: "5.8k", appreciates: 301, image: "https://loremflickr.com/900/700/design?random=85", alt: "3D scene development shown on a monitor in a dark studio" },
 ];
 
 function icon(name, className = "h-5 w-5") {
@@ -227,7 +227,7 @@ function ComposerCard() {
             h("span", { className: "mt-4 inline-flex rounded-full bg-slate-950 px-4 py-2 text-sm font-semibold text-white" }, "Choose files")
           ),
           h("input", { id: "image-upload", type: "file", className: "sr-only" }),
-          h("img", { src: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80", alt: "Preview of uploaded poster artwork with warm geometric gradients", className: "mt-4 h-52 w-full rounded-[1.5rem] object-cover" })
+          h("img", { src: "https://loremflickr.com/900/700/art?random=86", alt: "Preview of uploaded poster artwork with warm geometric gradients", className: "mt-4 h-52 w-full rounded-[1.5rem] object-cover" })
         )
       ),
       h("div", { className: "flex flex-wrap items-center justify-between gap-3" },
@@ -485,7 +485,7 @@ function MessagesPage() {
 function ProfilePage() {
   return h(Fragment, null,
     h("section", { className: "glass-panel soft-shadow overflow-hidden rounded-[2rem] border border-white/70" },
-      h("img", { src: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1600&q=80", alt: "Creative studio desk with sketches, color swatches, and monitors showing design process", className: "h-56 w-full object-cover sm:h-72" }),
+      h("img", { src: "https://loremflickr.com/1600/900/studio?random=87", alt: "Creative studio desk with sketches, color swatches, and monitors showing design process", className: "h-56 w-full object-cover sm:h-72" }),
       h("div", { className: "p-5 sm:p-6" },
         h("div", { className: "flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between" },
           h("div", null,
@@ -510,7 +510,7 @@ function ProfilePage() {
           h("h2", { id: "featured-title", className: "font-display text-2xl font-semibold text-slate-950" }, "Featured Work"),
           h("span", { className: "rounded-full bg-teal-50 px-3 py-2 text-sm font-semibold text-teal-800" }, "Pinned")
         ),
-        h("img", { src: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80", alt: "Pinned featured poster artwork titled Solstice III with warm gradients", className: "mt-5 h-72 w-full rounded-[1.75rem] object-cover" }),
+        h("img", { src: "https://loremflickr.com/1200/900/art?random=88", alt: "Pinned featured poster artwork titled Solstice III with warm gradients", className: "mt-5 h-72 w-full rounded-[1.75rem] object-cover" }),
         h("h3", { className: "mt-5 text-xl font-semibold text-slate-900" }, "Solstice III"),
         h("p", { className: "mt-2 text-sm leading-7 text-slate-600" }, "A print-led poster exploration combining scanned grain, overlaid gradients, and atmospheric typography studies."),
         h("div", { className: "mt-4 flex flex-wrap gap-2" }, ["841 appreciations", "214 collections", "47 critique notes"].map((stat) => h("span", { key: stat, className: "rounded-full bg-slate-100 px-3 py-2 text-sm text-slate-700" }, stat)))

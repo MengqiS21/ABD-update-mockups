@@ -21,11 +21,11 @@
       id: 1,
       name: "Maya Chen",
       handle: "@maya.builds",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/portrait?random=31",
       avatarAlt: "Portrait of Maya Chen smiling outdoors",
       timestamp: "12m",
       text: "Wrapped a community climate dashboard today. Residents can now compare neighborhood heat risk, transit access, and tree canopy in one place.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/dashboard?random=32",
       imageAlt: "Laptop displaying charts and analytics on a desk",
       likes: 482,
       comments: 39,
@@ -36,11 +36,11 @@
       id: 2,
       name: "Luis Ortega",
       handle: "@luisframes",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/headshot?random=33",
       avatarAlt: "Headshot of Luis Ortega in natural light",
       timestamp: "32m",
       text: "Sunset from the riverwalk tonight looked unreal. Sometimes the best way to reset after news overload is just to go outside for twenty minutes.",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/riverwalk?random=34",
       imageAlt: "Orange sunset over a river with trees in the foreground",
       likes: 1204,
       comments: 88,
@@ -51,7 +51,7 @@
       id: 3,
       name: "Samira Patel",
       handle: "@samirathinks",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/portrait?random=35",
       avatarAlt: "Portrait of Samira Patel against a neutral background",
       timestamp: "1h",
       text: "If your app needs a settings page, make the privacy controls readable in one scan. Nobody should need a scavenger hunt to understand who can see their posts.",
@@ -66,11 +66,11 @@
       id: 4,
       name: "Noah Rivera",
       handle: "@noahruns",
-      avatar: "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/cityportrait?random=36",
       avatarAlt: "Noah Rivera wearing a dark jacket in a city portrait",
       timestamp: "2h",
       text: "Training log: easy miles, light mobility, then way too much coffee. Posting the route photo because the fog actually cooperated for once.",
-      image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/runningtrail?random=37",
       imageAlt: "Foggy path through trees during an early morning run",
       likes: 312,
       comments: 21,
@@ -83,28 +83,28 @@
     {
       name: "Avery Park",
       handle: "@averyreports",
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/portrait?random=38",
       avatarAlt: "Portrait of Avery Park smiling with a city background",
       bio: "Local reporting, transit threads, civic explainers."
     },
     {
       name: "Jordan Bell",
       handle: "@jbell.photo",
-      avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/headshot?random=39",
       avatarAlt: "Portrait of Jordan Bell with soft studio lighting",
       bio: "Street photography and short travel journals."
     },
     {
       name: "Nina Flores",
       handle: "@nina.codes",
-      avatar: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/portrait?random=40",
       avatarAlt: "Nina Flores looking at the camera in a bright portrait",
       bio: "Frontend notes, accessibility, and design systems."
     },
     {
       name: "Owen Hale",
       handle: "@owenonair",
-      avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/headshot?random=41",
       avatarAlt: "Portrait of Owen Hale in a casual jacket",
       bio: "Sports, podcasts, and late-night live reactions."
     }
@@ -113,25 +113,25 @@
   const popularCards = [
     {
       title: "Crowds at the climate march downtown",
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/climatemarch?random=42",
       alt: "Crowd of people gathered outdoors at a public event",
       text: "Photo thread capturing signs, speakers, and turnout."
     },
     {
       title: "Studio notes on better creator analytics",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/workspace?random=43",
       alt: "Coding workspace with laptop and notebook on a desk",
       text: "A breakdown of what metrics actually help small creators."
     },
     {
       title: "Neighborhood cafe guide",
-      image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/cafe?random=44",
       alt: "Coffee cup and pastries on a cafe table",
       text: "Users are collecting low-key places to work without shouting over playlists."
     },
     {
       title: "Matchday street scenes",
-      image: "https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/soccerstadium?random=45",
       alt: "Soccer stadium crowd under bright lights",
       text: "Pulse is filling up with chants, jerseys, and prediction threads."
     }
@@ -195,7 +195,7 @@
     },
     {
       name: "Pulse Design Crew",
-      avatar: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=200&q=80",
+      avatar: "https://loremflickr.com/200/200/teamwork?random=46",
       alt: "Group of coworkers collaborating at a table",
       preview: "Review is live. Feedback window closes at 4.",
       time: "3h",

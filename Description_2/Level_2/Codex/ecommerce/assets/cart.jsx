@@ -6,9 +6,9 @@ function CartPage() {
   const [promo, setPromo] = React.useState("");
   const [promoError, setPromoError] = React.useState("");
   const baseItems = [
-    { id: 1, name: "Oversized Linen Shirt", variant: "Size M · Sage Green", price: 89, image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" },
-    { id: 2, name: "Wide-Leg Hemp Trousers", variant: "Size 30 · Sand", price: 112, image: "https://images.unsplash.com/photo-1506629905607-d9c297d15d0a?auto=format&fit=crop&w=900&q=80" },
-    { id: 3, name: "Canvas Crossbody", variant: "Ochre", price: 58, image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" },
+    { id: 1, name: "Oversized Linen Shirt", variant: "Size M · Sage Green", price: 89, image: "https://loremflickr.com/900/700/shirt?random=66" },
+    { id: 2, name: "Wide-Leg Hemp Trousers", variant: "Size 30 · Sand", price: 112, image: "https://loremflickr.com/900/700/pants?random=30" },
+    { id: 3, name: "Canvas Crossbody", variant: "Ochre", price: 58, image: "https://loremflickr.com/900/700/bag?random=31" },
   ];
 
   const subtotal = baseItems.reduce((sum, item) => sum + item.price * quantities[item.id], 0);
@@ -144,4 +144,3 @@ function CartPage() {
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<CartPage />);
-

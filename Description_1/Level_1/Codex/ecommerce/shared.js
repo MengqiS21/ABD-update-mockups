@@ -11,7 +11,7 @@
       rating: 4.8,
       reviews: 2184,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/headphones?random=1",
       alt: "Sony WH-1000XM5 noise-cancelling headphones in black on a neutral background",
       badge: "20% Off"
     },
@@ -26,7 +26,7 @@
       rating: 4.6,
       reviews: 864,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1585515320310-259814833e62?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/airfryer?random=2",
       alt: "Large black countertop air fryer with digital controls",
       badge: "Hot Deal"
     },
@@ -41,7 +41,7 @@
       rating: 4.4,
       reviews: 522,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/sneakers?random=3",
       alt: "Pair of orange and gray running sneakers placed on a studio backdrop",
       badge: "New"
     },
@@ -56,7 +56,7 @@
       rating: 4.7,
       reviews: 612,
       availability: "Limited Stock",
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/backpack?random=4",
       alt: "Outdoor backpack with hiking gear arranged beside it",
       badge: "Top Rated"
     },
@@ -71,7 +71,7 @@
       rating: 4.5,
       reviews: 936,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/television?random=5",
       alt: "Large flat-screen television displaying a colorful mountain landscape",
       badge: "Flash Sale"
     },
@@ -86,7 +86,7 @@
       rating: 4.3,
       reviews: 310,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/bedroom?random=6",
       alt: "Neatly styled bed with light-colored linen sheets and pillows",
       badge: "Best Seller"
     },
@@ -101,7 +101,7 @@
       rating: 4.2,
       reviews: 1281,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/smartwatch?random=7",
       alt: "Modern fitness smartwatch shown on a clean white background",
       badge: "Trending"
     },
@@ -116,7 +116,7 @@
       rating: 4.7,
       reviews: 445,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1584990347449-a28fef6c1e0d?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/cookware?random=8",
       alt: "Cream ceramic pots and pans stacked on a kitchen counter",
       badge: "Editor Pick"
     },
@@ -131,7 +131,7 @@
       rating: 4.1,
       reviews: 289,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/denim?random=9",
       alt: "Blue denim jacket hanging in a well-lit studio",
       badge: "Seasonal"
     },
@@ -146,7 +146,7 @@
       rating: 4.5,
       reviews: 741,
       availability: "Limited Stock",
-      image: "https://images.unsplash.com/photo-1608854337221-4cf9fa96059c?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/scooter?random=10",
       alt: "Foldable electric scooter parked on an urban sidewalk",
       badge: "Limited"
     },
@@ -161,7 +161,7 @@
       rating: 4.6,
       reviews: 501,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/officechair?random=11",
       alt: "Black ergonomic office chair in a bright home office",
       badge: "Staff Pick"
     },
@@ -176,7 +176,7 @@
       rating: 4.4,
       reviews: 1122,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/speaker?random=12",
       alt: "Compact portable Bluetooth speaker with textured fabric covering",
       badge: "Deal"
     },
@@ -191,7 +191,7 @@
       rating: 4.8,
       reviews: 1920,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/laptop?random=13",
       alt: "Aluminum laptop stand supporting a laptop on a desk",
       badge: "Top Seller"
     },
@@ -206,7 +206,7 @@
       rating: 4.5,
       reviews: 378,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/floorlamp?random=14",
       alt: "Tall modern floor lamp placed beside a sofa",
       badge: "Fresh Pick"
     },
@@ -221,7 +221,7 @@
       rating: 4.3,
       reviews: 670,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/tshirt?random=15",
       alt: "Athletic performance T-shirt folded on a wooden surface",
       badge: "2 for 1"
     },
@@ -236,7 +236,7 @@
       rating: 4.7,
       reviews: 850,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/yoga?random=16",
       alt: "Rolled yoga mat with exercise accessories on a studio floor",
       badge: "Wellness"
     },
@@ -251,7 +251,7 @@
       rating: 4.6,
       reviews: 402,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/espresso?random=17",
       alt: "Stainless steel espresso machine brewing coffee on a kitchen counter",
       badge: "Popular"
     },
@@ -266,7 +266,7 @@
       rating: 4.4,
       reviews: 1420,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/gamingmouse?random=18",
       alt: "RGB gaming mouse glowing on a dark desk surface",
       badge: "Gaming"
     },
@@ -281,7 +281,7 @@
       rating: 4.2,
       reviews: 210,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/baskets?random=19",
       alt: "Set of woven storage baskets placed under a console table",
       badge: "Bundle"
     },
@@ -296,7 +296,7 @@
       rating: 4.5,
       reviews: 988,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/hoodie?random=20",
       alt: "Soft gray hoodie laid flat on a neutral backdrop",
       badge: "Cozy Edit"
     },
@@ -311,7 +311,7 @@
       rating: 4.8,
       reviews: 1332,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/waterbottle?random=21",
       alt: "Insulated metal water bottle standing upright outdoors",
       badge: "Eco Pick"
     },
@@ -326,7 +326,7 @@
       rating: 4.4,
       reviews: 295,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1593618998160-e34014e67546?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/knives?random=22",
       alt: "Wooden knife block with stainless steel kitchen knives",
       badge: "Chef Choice"
     },
@@ -341,7 +341,7 @@
       rating: 4.1,
       reviews: 1550,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/earbuds?random=23",
       alt: "Wireless earbuds and charging case displayed on a tabletop",
       badge: "Save 30%"
     },
@@ -356,7 +356,7 @@
       rating: 4.9,
       reviews: 621,
       availability: "In Stock",
-      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/675/blanket?random=24",
       alt: "Folded soft knit throw blanket draped over a chair",
       badge: "Comfort Pick"
     }

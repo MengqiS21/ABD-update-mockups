@@ -26,7 +26,7 @@ const SkillForge = (() => {
       price: 349,
       credential: "Certificate",
       nextStart: "March 3",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/healthcare?random=32",
       summary: "Train for front-office healthcare roles with live labs, EHR practice, and employer-reviewed workflows.",
     },
     {
@@ -41,7 +41,7 @@ const SkillForge = (() => {
       price: 429,
       credential: "Badge",
       nextStart: "Start today",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/computer?random=33",
       summary: "Build help desk, troubleshooting, and ticketing fluency with guided labs and certification prep.",
     },
     {
@@ -56,7 +56,7 @@ const SkillForge = (() => {
       price: 620,
       credential: "CEU",
       nextStart: "April 9",
-      image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/electrician?random=34",
       summary: "Move from safety basics to blueprint reading and code-aligned installation planning.",
     },
     {
@@ -71,7 +71,7 @@ const SkillForge = (() => {
       price: 299,
       credential: "Certificate",
       nextStart: "March 17",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/office?random=35",
       summary: "Learn operations, scheduling, spreadsheets, and communication systems for office roles.",
     },
     {
@@ -86,7 +86,7 @@ const SkillForge = (() => {
       price: 0,
       credential: "Badge",
       nextStart: "Start today",
-      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/hospital?random=36",
       summary: "Explore instrument handling, infection prevention, and exam readiness with mentor feedback.",
     },
     {
@@ -101,7 +101,7 @@ const SkillForge = (() => {
       price: 465,
       credential: "Certificate",
       nextStart: "March 24",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80",
+      image: "https://loremflickr.com/1200/800/accounting?random=37",
       summary: "Practice payroll workflows, reconciliations, and client-ready reporting with live instruction.",
     },
   ];
@@ -109,21 +109,21 @@ const SkillForge = (() => {
   const successStories = [
     {
       name: "Camille R.",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80",
+      image: "https://loremflickr.com/600/600/person?random=38",
       before: "Retail supervisor",
       after: "Medical front desk coordinator at Mayo Clinic partner network",
       quote: "The cohort pacing and office simulations made the transition realistic, not abstract.",
     },
     {
       name: "Jordan T.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+      image: "https://loremflickr.com/600/600/person?random=39",
       before: "Warehouse associate",
       after: "Tier 1 IT support specialist",
       quote: "I needed a track that respected my work schedule. SkillForge gave me a path I could actually finish.",
     },
     {
       name: "Elena M.",
-      image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=600&q=80",
+      image: "https://loremflickr.com/600/600/person?random=40",
       before: "Caregiver",
       after: "Billing specialist with employer tuition reimbursement",
       quote: "The instructors taught the role, not just the theory. That changed my confidence completely.",

@@ -21,10 +21,10 @@ const posts = [
     id: 1,
     name: "Maya Chen",
     handle: "@maya.codes",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=401",
     time: "18m",
     text: "Spent the morning rebuilding our onboarding flow. Small copy changes, but the experience feels dramatically calmer now. Shipping thoughtful details still matters.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/coding?random=501",
     likes: 284,
     comments: 31,
     shares: 12,
@@ -34,10 +34,10 @@ const posts = [
     id: 2,
     name: "Jules Rivera",
     handle: "@julesphoto",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=402",
     time: "42m",
     text: "Golden hour in Lower Manhattan. Pulse still feels like the only place where people slow down long enough to actually talk about the photo and not just the gear.",
-    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/manhattan?random=502",
     likes: 912,
     comments: 84,
     shares: 20,
@@ -47,7 +47,7 @@ const posts = [
     id: 3,
     name: "Nia Roberts",
     handle: "@niasays",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=403",
     time: "1h",
     text: "A lot of product conversations are really change-management conversations in disguise. Teams want new habits without admitting they need new habits.",
     image: "",
@@ -60,10 +60,10 @@ const posts = [
     id: 4,
     name: "Theo Martinez",
     handle: "@theotravel",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=404",
     time: "2h",
     text: "Weekend reminder: you do not need a productivity framework for a walk, a coffee, and a notebook. Sometimes the reset is the work.",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/notebook?random=504",
     likes: 640,
     comments: 41,
     shares: 18,
@@ -75,22 +75,22 @@ const suggestedUsers = [
   {
     name: "Aria Patel",
     handle: "@ariadraws",
-    avatar: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=405",
   },
   {
     name: "Owen Brooks",
     handle: "@owenbuilds",
-    avatar: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=406",
   },
   {
     name: "Sofia Kim",
     handle: "@sofiamedia",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=407",
   },
   {
     name: "Luca Green",
     handle: "@luca.notes",
-    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=409",
   },
 ];
 
@@ -205,7 +205,7 @@ function Composer() {
   return (
     <section className="surface-card rounded-[32px] border border-slate-200 bg-white p-5 shadow-sm">
       <div className="flex gap-4">
-        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80" alt="Alex" className="h-12 w-12 rounded-2xl object-cover" />
+        <img src="https://loremflickr.com/300/300/portrait?random=408" alt="Alex" className="h-12 w-12 rounded-2xl object-cover" />
         <div className="min-w-0 flex-1">
           <div className="rounded-[24px] border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-400">
             What's on your mind, Alex?
@@ -463,7 +463,7 @@ function ProfilePage() {
           <div className="-mt-16 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div className="flex items-end gap-4">
               <img
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80"
+                src="https://loremflickr.com/300/300/portrait?random=408"
                 alt="Alex"
                 className="h-28 w-28 rounded-[28px] border-4 border-white object-cover"
               />

@@ -16,14 +16,14 @@ function ArticlePage() {
           <p className="mt-5 text-xl leading-8 text-slate-600">New satellite analysis and county pump logs reveal a growing mismatch between what states report, what farmers extract, and what towns can safely depend on.</p>
           <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-slate-500">
             <div className="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Reporter Nina Patel" className="h-12 w-12 rounded-full object-cover" />
+              <img src="https://loremflickr.com/200/200/person?random=46" alt="Reporter Nina Patel" className="h-12 w-12 rounded-full object-cover" />
               <div>
                 <p className="font-semibold text-ink">Nina Patel</p>
                 <p>Published April 22, 2025</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Reporter Owen Clarke" className="h-12 w-12 rounded-full object-cover" />
+              <img src="https://loremflickr.com/200/200/person?random=47" alt="Reporter Owen Clarke" className="h-12 w-12 rounded-full object-cover" />
               <div>
                 <p className="font-semibold text-ink">Owen Clarke</p>
                 <p>Updated with document review April 24, 2025</p>
@@ -45,7 +45,7 @@ function ArticlePage() {
         </section>
 
         <figure className="mt-10 overflow-hidden rounded-[2rem] bg-white shadow-sm">
-          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80" alt="Dry agricultural land crossed by irrigation lines and flooded runoff channels" className="h-[28rem] w-full object-cover" />
+          <img src="https://loremflickr.com/1600/900/farmland?random=49" alt="Dry agricultural land crossed by irrigation lines and flooded runoff channels" className="h-[28rem] w-full object-cover" />
           <figcaption className="px-6 py-4 text-sm text-slate-600">Field reporting in eastern Colorado found irrigation districts preparing for both flash flooding and aquifer decline in the same season.</figcaption>
         </figure>
 

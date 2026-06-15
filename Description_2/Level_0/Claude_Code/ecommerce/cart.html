@@ -202,10 +202,8 @@
                   {items.map(item => (
                     <div key={item.id} className="flex gap-5 bg-white border border-stone-100 rounded-2xl p-5 shadow-sm">
                       {/* Item image */}
-                      <a href="product-detail.html" className="w-24 h-32 rounded-xl flex-none overflow-hidden" style={{ background: `#${item.bg}` }}>
-                        <div className="w-full h-full flex items-end justify-center pb-2">
-                          <span className="text-[9px] text-center opacity-30 font-medium px-1" style={{ color: '#3d5a2c' }}>{item.name}</span>
-                        </div>
+                      <a href="product-detail.html" className="w-24 h-32 rounded-xl flex-none overflow-hidden">
+                        <img src={`https://loremflickr.com/96/128/fashion?random=${item.id}`} alt={item.name} className="w-full h-full object-cover" />
                       </a>
 
                       {/* Item details */}
@@ -396,16 +394,14 @@
               </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-5">
                 {[
-                  { name: 'Ribbed Tank', price: 32, bg: 'f5f0e8' },
-                  { name: 'Wrap Midi Skirt', price: 78, bg: 'c4cfc0' },
-                  { name: 'Linen Blazer', price: 145, bg: 'e8dfc8' },
-                  { name: 'Organic Cotton Tee', price: 38, bg: 'f2f0ed' },
+                  { name: 'Ribbed Tank', price: 32, rnd: 40 },
+                  { name: 'Wrap Midi Skirt', price: 78, rnd: 41 },
+                  { name: 'Linen Blazer', price: 145, rnd: 42 },
+                  { name: 'Organic Cotton Tee', price: 38, rnd: 43 },
                 ].map(p => (
                   <a key={p.name} href="product-detail.html" className="group">
-                    <div className="aspect-[3/4] rounded-2xl mb-3 overflow-hidden" style={{ background: `#${p.bg}` }}>
-                      <div className="w-full h-full flex items-end justify-center pb-4">
-                        <span className="text-xs font-medium text-center opacity-30 px-3">{p.name}</span>
-                      </div>
+                    <div className="aspect-[3/4] rounded-2xl mb-3 overflow-hidden">
+                      <img src={`https://loremflickr.com/300/400/fashion?random=${p.rnd}`} alt={p.name} className="w-full h-full object-cover" />
                     </div>
                     <p className="text-sm font-medium text-stone-800 group-hover:text-sage-700 transition-colors">{p.name}</p>
                     <p className="text-sm font-bold text-stone-900 mt-0.5">${p.price}</p>

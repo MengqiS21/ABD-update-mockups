@@ -73,22 +73,22 @@ window.LakewoodPortalData = (() => {
     {
       name: "Elena Ramirez",
       title: "Mayor",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+      image: "https://loremflickr.com/800/800/mayor%20portrait?random=8"
     },
     {
       name: "Marcus Lee",
       title: "Council President",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+      image: "https://loremflickr.com/800/800/council%20leader%20portrait?random=9"
     },
     {
       name: "Danielle Brooks",
       title: "Council Member",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=800&q=80"
+      image: "https://loremflickr.com/800/800/council%20member%20portrait?random=10"
     },
     {
       name: "Samuel Ortiz",
       title: "Council Member",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80"
+      image: "https://loremflickr.com/800/800/city%20official%20portrait?random=11"
     }
   ];
 

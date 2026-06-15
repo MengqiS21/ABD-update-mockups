@@ -17,10 +17,11 @@
     <div id="root"></div>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/htm@3.1.1/dist/htm.umd.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel" data-presets="react" src="./shared.js"></script>
     <script type="text/babel" data-presets="react">
-      const { Shell, SectionTitle } = window.ThreadHouse;
+      const { Shell, SectionTitle, photoStyle } = window.ThreadHouse;
 
       function StatCard({ title, value, copy, dark }) {
         return (
@@ -52,7 +53,7 @@
                   <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Saved Outfits</p>
                   <div className="mt-5 grid gap-4 sm:grid-cols-2">
                     {["Gallery Opening", "Studio Commute", "Weekend Market", "Late Dinner Layers"].map((look, index) => (
-                      <div key={look} className="product-shot photo-frame p-4">
+                      <div key={look} className="product-shot photo-frame p-4" style={photoStyle("outfit", 160 + index)}>
                         <div className="flex h-full items-end rounded-[1.5rem] border border-white/60 bg-white/20 p-4">
                           <div>
                             <p className="rounded-full bg-white/85 px-3 py-1 text-xs font-semibold text-slate-700">Saved Outfit {index + 1}</p>

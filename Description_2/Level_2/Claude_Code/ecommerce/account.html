@@ -434,7 +434,9 @@
                           <article key={outfit.name} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-th-beige/60 hover:shadow-md transition-shadow" role="listitem" aria-label={`Saved outfit: ${outfit.name}`}>
                             <div className="grid grid-cols-3 gap-0.5 bg-th-beige" aria-label={`${outfit.name} outfit preview — ${outfit.items.join(', ')}`}>
                               {outfit.grads.map((grad, i) => (
-                                <div key={i} className={`aspect-square bg-gradient-to-br ${grad}`} role="img" aria-label={outfit.items[i]}></div>
+                                <div key={i} className="aspect-square overflow-hidden">
+                                  <img src={`https://loremflickr.com/200/200/fashion?random=${outfit.name.length + i * 7}`} alt={outfit.items[i]} className="w-full h-full object-cover" />
+                                </div>
                               ))}
                             </div>
                             <div className="p-4">

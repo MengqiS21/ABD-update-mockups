@@ -18,7 +18,7 @@ window.LearnPathData = (() => {
       category: "Data Science",
       level: "Intermediate",
       duration: "24 hours",
-      image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/520/data%20science?random=1",
       description: "Use Python, pandas, and visualization workflows to analyze datasets and build job-ready projects."
     },
     {
@@ -31,7 +31,7 @@ window.LearnPathData = (() => {
       category: "Web Development",
       level: "Beginner",
       duration: "18 hours",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/520/web%20development?random=2",
       description: "Learn components, state, routing, and modern frontend patterns in a project-driven format."
     },
     {
@@ -44,7 +44,7 @@ window.LearnPathData = (() => {
       category: "UX Design",
       level: "Intermediate",
       duration: "16 hours",
-      image: "https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/520/ux%20design?random=3",
       description: "Run interviews, synthesize findings, and build evidence-backed product recommendations."
     },
     {
@@ -57,7 +57,7 @@ window.LearnPathData = (() => {
       category: "Business",
       level: "Beginner",
       duration: "8 hours",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/520/business%20presentation?random=4",
       description: "Communicate with clarity through strategy decks, pitches, and stakeholder storytelling."
     },
     {
@@ -70,7 +70,7 @@ window.LearnPathData = (() => {
       category: "Photography",
       level: "Beginner",
       duration: "10 hours",
-      image: "https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/520/portrait%20photography?random=5",
       description: "Build confidence with camera settings, lighting, and composition for portraits."
     },
     {
@@ -83,7 +83,7 @@ window.LearnPathData = (() => {
       category: "Data Science",
       level: "Advanced",
       duration: "30 hours",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/520/machine%20learning?random=6",
       description: "Go from prototype to production with feature stores, model monitoring, and evaluation pipelines."
     }
   ];

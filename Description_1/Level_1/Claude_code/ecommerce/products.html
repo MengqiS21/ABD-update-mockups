@@ -257,7 +257,7 @@
       return (
         <article className="bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col overflow-hidden group">
           <a href="product-detail.html" aria-label={`View ${product.name}`} className="block relative overflow-hidden focus-visible:ring-2 focus-visible:ring-brand-600 rounded-t-xl">
-            <img src={`https://picsum.photos/seed/${product.img}/280/200`} alt={product.alt} width="280" height="200"
+            <img src={`https://loremflickr.com/280/200/${product.img}?random=1`} alt={product.alt} width="280" height="200"
               className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300" />
             {discount > 0 && (
               <span className="badge-sale absolute top-2 left-2 text-white text-xs font-bold px-2 py-0.5 rounded-full" aria-label={`${discount}% off`}>{discount}% OFF</span>

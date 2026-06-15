@@ -25,7 +25,7 @@ const stories = [
     time: "12 min read",
     timestamp: "18 minutes ago",
     summary: "Diplomats described a fragile effort to contain regional escalation as insurers, cargo operators, and governments scrambled to assess the fallout.",
-    image: "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?auto=format&fit=crop&w=1400&q=80",
+    image: "https://loremflickr.com/1400/800/ship?random=301",
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const stories = [
     time: "8 min read",
     timestamp: "42 minutes ago",
     summary: "A late-night framework revived stalled talks, but core disputes over rail, ports, and defense logistics remain unresolved.",
-    image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/government?random=302",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const stories = [
     time: "6 min read",
     timestamp: "1 hour ago",
     summary: "Investors are pushing founders toward less theatrical, more practical software tied to measurable business outcomes.",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/technology?random=303",
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ const stories = [
     time: "7 min read",
     timestamp: "2 hours ago",
     summary: "Audiences are seeking intimacy and directness, even as platforms struggle to turn attention into durable subscriptions.",
-    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/studio?random=304",
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ const stories = [
     time: "5 min read",
     timestamp: "3 hours ago",
     summary: "Officials and planners argued that credibility now depends on visible projects with measurable public benefit.",
-    image: "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/infrastructure?random=305",
   },
   {
     id: 6,
@@ -75,7 +75,7 @@ const stories = [
     time: "9 min read",
     timestamp: "5 hours ago",
     summary: "Business groups and labor unions have converged on a more pragmatic conversation about demographic pressure.",
-    image: "https://images.unsplash.com/photo-1478391679764-b2d8b3cd1e94?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/border?random=306",
   },
   {
     id: 7,
@@ -85,7 +85,7 @@ const stories = [
     time: "4 min read",
     timestamp: "7 hours ago",
     summary: "Municipal governments are pairing public health alerts with new cooling and transit measures.",
-    image: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/city?random=307",
   },
   {
     id: 8,
@@ -95,7 +95,7 @@ const stories = [
     time: "6 min read",
     timestamp: "9 hours ago",
     summary: "Regional institutions are playing a larger role in projects once dominated by Washington and Brussels.",
-    image: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?auto=format&fit=crop&w=1200&q=80",
+    image: "https://loremflickr.com/1200/700/bank?random=308",
   },
 ];
 
@@ -103,19 +103,19 @@ const opinionPieces = [
   {
     name: "Leah Everett",
     role: "Columnist",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=401",
     title: "The politics of competence has become more persuasive than the politics of charisma",
   },
   {
     name: "Marcus Hall",
     role: "Tech Critic",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=402",
     title: "AI policy still treats labor disruption as an abstract future problem",
   },
   {
     name: "Priya Desai",
     role: "Contributing Writer",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80",
+    avatar: "https://loremflickr.com/300/300/portrait?random=403",
     title: "Culture coverage needs fewer trend reports and more institutional memory",
   },
 ];

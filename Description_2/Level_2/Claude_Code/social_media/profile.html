@@ -179,10 +179,11 @@
 
             {/* Cover + avatar */}
             <div
-              className="h-52 bg-gradient-to-br from-violet-400 via-folia-accent to-pink-500 relative"
+              className="h-52 relative overflow-hidden"
               role="img"
-              aria-label="Kai Rivera's profile cover: violet to pink gradient"
+              aria-label="Kai Rivera's profile cover"
             >
+              <img src="https://loremflickr.com/1200/208/art?random=100" alt="Kai Rivera's profile cover" className="w-full h-full object-cover" />
               <a href="settings.html" className="absolute top-4 right-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white text-sm font-semibold px-4 py-2 rounded-xl transition-colors" aria-label="Edit profile">
                 Edit profile
               </a>
@@ -266,7 +267,9 @@
                 <div className="grid grid-cols-3 gap-4" role="list" aria-label="Featured works">
                   {FEATURED_WORKS.map(work => (
                     <div key={work.id} role="listitem" className="group relative">
-                      <div className={`aspect-square bg-gradient-to-br ${work.grad} rounded-xl overflow-hidden`} role="img" aria-label={`${work.title} — artwork thumbnail`} />
+                      <div className="aspect-square rounded-xl overflow-hidden">
+                        <img src={`https://loremflickr.com/300/300/art?random=${work.id}`} alt={`${work.title} — artwork thumbnail`} className="w-full h-full object-cover" />
+                      </div>
                       <div className="absolute inset-0 rounded-xl bg-black/0 group-hover:bg-black/40 transition-colors flex flex-col justify-end p-3 opacity-0 group-hover:opacity-100">
                         <p className="text-white font-semibold text-xs">{work.title}</p>
                         <div className="flex gap-2 mt-1">
@@ -319,7 +322,9 @@
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4" role="list" aria-label="All projects">
                     {ALL_PROJECTS.map(p => (
                       <div key={p.id} role="listitem" className="group relative">
-                        <div className={`aspect-square bg-gradient-to-br ${p.grad} rounded-xl`} role="img" aria-label={`${p.title} — ${p.year}`} />
+                        <div className="aspect-square rounded-xl overflow-hidden">
+                          <img src={`https://loremflickr.com/300/300/illustration?random=${p.id + 10}`} alt={`${p.title} — ${p.year}`} className="w-full h-full object-cover" />
+                        </div>
                         <div className="absolute inset-0 rounded-xl bg-black/0 group-hover:bg-black/50 transition-all flex flex-col justify-end p-3 opacity-0 group-hover:opacity-100">
                           <p className="text-white font-semibold text-xs truncate">{p.title}</p>
                           <div className="flex gap-2 mt-0.5">
@@ -336,7 +341,9 @@
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4" role="list" aria-label="Collections">
                     {['Colour Theory','Texture & Grain','Type Inspo','Night Studies'].map((col, i) => (
                       <div key={col} role="listitem" className="group relative cursor-pointer">
-                        <div className={`aspect-square rounded-xl bg-gradient-to-br ${['from-blue-200 to-indigo-400','from-stone-200 to-stone-500','from-yellow-200 to-amber-500','from-slate-400 to-slate-700'][i]}`} role="img" aria-label={`${col} collection thumbnail`} />
+                        <div className="aspect-square rounded-xl overflow-hidden">
+                          <img src={`https://loremflickr.com/200/200/painting?random=${i + 20}`} alt={`${col} collection thumbnail`} className="w-full h-full object-cover" />
+                        </div>
                         <p className="mt-2 text-sm font-semibold text-folia-text">{col}</p>
                         <p className="text-xs text-folia-muted">Saved collection</p>
                       </div>

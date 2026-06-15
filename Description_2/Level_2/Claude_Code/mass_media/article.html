@@ -163,9 +163,9 @@
 
     /* ── Related articles data ─────────────────────────────────── */
     const RELATED = [
-      { title:'The Methane Loophole: Natural Gas "Flaring Credits" Let Drillers Avoid Accountability', author:'David Reinholt', date:'March 22, 2026', dateIso:'2026-03-22', category:'Energy', href:'article.html', imgGrad:'from-orange-500 to-amber-700' },
-      { title:'Inside the "Carbon Cowboys": How Offset Markets Failed Small Landowners', author:'James Adeyemi', date:'March 18, 2026', dateIso:'2026-03-18', category:'Climate', href:'article.html', imgGrad:'from-green-600 to-emerald-900' },
-      { title:'How Drought Has Quietly Ended Colorado\'s 100-Year Farming Legacy', author:'Tom Brackfield', date:'March 12, 2026', dateIso:'2026-03-12', category:'Policy', href:'article.html', imgGrad:'from-amber-700 to-red-800' },
+      { title:'The Methane Loophole: Natural Gas "Flaring Credits" Let Drillers Avoid Accountability', author:'David Reinholt', date:'March 22, 2026', dateIso:'2026-03-22', category:'Energy', href:'article.html', imgGrad:'from-orange-500 to-amber-700', imgKeyword:'oilfield' },
+      { title:'Inside the "Carbon Cowboys": How Offset Markets Failed Small Landowners', author:'James Adeyemi', date:'March 18, 2026', dateIso:'2026-03-18', category:'Climate', href:'article.html', imgGrad:'from-green-600 to-emerald-900', imgKeyword:'forest' },
+      { title:'How Drought Has Quietly Ended Colorado\'s 100-Year Farming Legacy', author:'Tom Brackfield', date:'March 12, 2026', dateIso:'2026-03-12', category:'Policy', href:'article.html', imgGrad:'from-amber-700 to-red-800', imgKeyword:'drought' },
     ];
 
     /* ── Social share button ───────────────────────────────────── */
@@ -314,7 +314,9 @@
 
                   {/* Hero image */}
                   <figure className="mb-6">
-                    <div className="h-64 lg:h-80 bg-gradient-to-br from-blue-900 via-teal-800 to-emerald-900 rounded-sm" role="img" aria-label="Satellite imagery showing land subsidence in the San Joaquin Valley, California, 2024" />
+                    <div className="h-64 lg:h-80 rounded-sm overflow-hidden">
+                      <img src="https://loremflickr.com/900/320/drought?random=20" alt="Satellite imagery showing land subsidence in the San Joaquin Valley, California, 2024" className="w-full h-full object-cover" />
+                    </div>
                     <figcaption className="text-xs text-gw-muted mt-2 font-sans leading-relaxed">
                       Satellite data shows the San Joaquin Valley sinking up to 11 inches per year in some areas due to groundwater depletion. <em>Source: NASA Jet Propulsion Laboratory / Groundwork analysis, 2025.</em>
                     </figcaption>
@@ -430,10 +432,12 @@
                   <section aria-labelledby="related-heading" className="mt-10 pt-6 border-t border-gw-border">
                     <h2 id="related-heading" className="font-serif text-xl font-bold mb-5">Related Investigations</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6" role="list" aria-label="Related articles">
-                      {RELATED.map(r => (
+                      {RELATED.map((r, ri) => (
                         <article key={r.title} role="listitem" aria-label={r.title} className="group">
                           <a href={r.href} aria-label={r.title}>
-                            <div className={`h-28 bg-gradient-to-br ${r.imgGrad} rounded-sm mb-2`} role="img" aria-label={`Image for: ${r.title}`} />
+                            <div className="h-28 rounded-sm mb-2 overflow-hidden">
+                              <img src={`https://loremflickr.com/400/112/${r.imgKeyword || 'environment'}?random=${ri + 30}`} alt={`Image for: ${r.title}`} className="w-full h-full object-cover" />
+                            </div>
                           </a>
                           <span className="text-[11px] font-bold uppercase tracking-widest text-gw-amber font-sans">{r.category}</span>
                           <h3 className="font-serif text-sm font-bold leading-snug mt-1">

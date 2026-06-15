@@ -16,7 +16,7 @@ function ClimatePage() {
     >
       <section aria-labelledby="lead-investigation" className="mt-10 grid gap-8 lg:grid-cols-[1.25fr_0.75fr]">
         <article className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
-          <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80" alt="Smoke and low clouds moving over a western mountain valley" className="h-80 w-full object-cover" />
+          <img src="https://loremflickr.com/1400/800/wildfire?random=50" alt="Smoke and low clouds moving over a western mountain valley" className="h-80 w-full object-cover" />
           <div className="p-6">
             <p className="text-xs font-extrabold uppercase tracking-[0.3em] text-rust">Lead investigation</p>
             <h2 id="lead-investigation" className="mt-3 text-3xl font-serif leading-tight text-ink">

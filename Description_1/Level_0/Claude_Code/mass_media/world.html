@@ -92,7 +92,7 @@ function LeadStory({ story }) {
   return (
     <a href="article.html" className="group flex flex-col md:flex-row gap-8 border-b border-gray-200 pb-10 mb-10">
       <div className="md:w-3/5 overflow-hidden shrink-0">
-        <img src={`https://picsum.photos/seed/${story.seed}/800/500`} alt="" className="w-full h-56 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
+        <img src={`https://loremflickr.com/800/500/world?random=${story.seed}`} alt="" className="w-full h-56 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500" />
       </div>
       <div className="flex flex-col justify-center">
         <span className="inline-block bg-red-700 text-white text-xs font-black px-3 py-1 tracking-widest uppercase mb-4 self-start">{story.region}</span>
@@ -112,7 +112,7 @@ function StoryCard({ story }) {
   return (
     <a href="article.html" className="group flex gap-4">
       <div className="shrink-0 overflow-hidden w-32 h-24">
-        <img src={`https://picsum.photos/seed/${story.seed}/300/200`} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        <img src={`https://loremflickr.com/300/200/news?random=${story.seed}`} alt="" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
       </div>
       <div>
         <span className="text-red-700 text-xs font-black tracking-widest uppercase">{story.region}</span>
@@ -220,7 +220,7 @@ function App() {
                 { title: 'How Finland Became the Template for NATO\'s New East Flank', author: 'Nadia Petrov', region: 'Europe', seed: 'ep3' },
               ].map((s, i) => (
                 <a href="article.html" key={i} className="group flex gap-3 mb-5 last:mb-0">
-                  <img src={`https://picsum.photos/seed/${s.seed}/100/80`} alt="" className="w-20 h-16 object-cover shrink-0" />
+                  <img src={`https://loremflickr.com/100/80/news?random=${s.seed}`} alt="" className="w-20 h-16 object-cover shrink-0" />
                   <div>
                     <span className="text-red-700 text-xs font-black tracking-widest uppercase">{s.region}</span>
                     <p className="font-serif text-sm font-semibold leading-snug mt-0.5 group-hover:text-slate-600 transition-colors">{s.title}</p>

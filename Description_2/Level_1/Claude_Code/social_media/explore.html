@@ -111,10 +111,10 @@ const GRID_ITEMS = [
 ];
 
 const RISING_CREATORS = [
-  { name: 'Riya Mehta', discipline: 'Motion Design', followers: '2.1k', avatar: 'https://picsum.photos/seed/riya/48/48', bio: 'Making things move in Mumbai' },
-  { name: 'Jin Soo', discipline: '3D Art', followers: '4.8k', avatar: 'https://picsum.photos/seed/jinsoo/48/48', bio: 'Seoul-based 3D generalist' },
-  { name: 'Tomás Ruiz', discipline: 'Typography', followers: '1.6k', avatar: 'https://picsum.photos/seed/tomas/48/48', bio: 'Letters are architecture' },
-  { name: 'Kira Novak', discipline: 'Photography', followers: '3.2k', avatar: 'https://picsum.photos/seed/kira/48/48', bio: 'Analog + digital, Prague' },
+  { name: 'Riya Mehta', discipline: 'Motion Design', followers: '2.1k', avatar: 'https://loremflickr.com/48/48/person?random=11', bio: 'Making things move in Mumbai' },
+  { name: 'Jin Soo', discipline: '3D Art', followers: '4.8k', avatar: 'https://loremflickr.com/48/48/person?random=12', bio: 'Seoul-based 3D generalist' },
+  { name: 'Tomás Ruiz', discipline: 'Typography', followers: '1.6k', avatar: 'https://loremflickr.com/48/48/person?random=13', bio: 'Letters are architecture' },
+  { name: 'Kira Novak', discipline: 'Photography', followers: '3.2k', avatar: 'https://loremflickr.com/48/48/person?random=14', bio: 'Analog + digital, Prague' },
 ];
 
 const PALETTES = [
@@ -133,7 +133,7 @@ function GridTile({ item }) {
       className="tile relative block rounded-xl overflow-hidden bg-zinc-800 group"
     >
       <img
-        src={`https://picsum.photos/seed/${item.seed}/400/400`}
+        src={`https://loremflickr.com/400/400/art?random=${item.seed}`}
         alt={item.imageAlt}
         className="w-full aspect-square object-cover transition-transform duration-300 group-hover:scale-105"
         loading="lazy"

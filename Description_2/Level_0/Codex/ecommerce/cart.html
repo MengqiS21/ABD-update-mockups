@@ -17,15 +17,16 @@
     <div id="root"></div>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/htm@3.1.1/dist/htm.umd.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel" data-presets="react" src="./shared.js"></script>
     <script type="text/babel" data-presets="react">
-      const { Shell, SectionTitle } = window.ThreadHouse;
+      const { Shell, SectionTitle, photoStyle } = window.ThreadHouse;
 
-      function CartItem({ name, meta, price }) {
+      function CartItem({ name, meta, price, imageIndex }) {
         return (
           <div className="grid gap-4 rounded-[2rem] bg-white p-5 shadow-[0_18px_55px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/70 sm:grid-cols-[9rem_1fr_auto]">
-            <div className="product-shot photo-frame max-w-[9rem] p-3">
+            <div className="product-shot photo-frame max-w-[9rem] p-3" style={photoStyle("clothing", 150 + imageIndex)}>
               <div className="h-full rounded-[1.2rem] border border-white/60 bg-white/30" />
             </div>
             <div className="space-y-2">
@@ -55,9 +56,9 @@
                     title="Three pieces ready for checkout"
                     copy="Review fit details, gifting add-ons, delivery timing, and rewards progress before completing your order."
                   />
-                  <CartItem name="Oversized Linen Shirt" meta="Sage Green / Size M / Qty 1" price="$89.00" />
-                  <CartItem name="Shift Cargo Pant" meta="Black / Size M / Qty 1" price="$95.00" />
-                  <CartItem name="Transit Utility Tote" meta="Forest / One Size / Qty 1" price="$58.00" />
+                  <CartItem name="Oversized Linen Shirt" meta="Sage Green / Size M / Qty 1" price="$89.00" imageIndex={1} />
+                  <CartItem name="Shift Cargo Pant" meta="Black / Size M / Qty 1" price="$95.00" imageIndex={2} />
+                  <CartItem name="Transit Utility Tote" meta="Forest / One Size / Qty 1" price="$58.00" imageIndex={3} />
                 </div>
                 <div className="space-y-6">
                   <div className="rounded-[2rem] bg-white p-6 shadow-[0_18px_55px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/70">

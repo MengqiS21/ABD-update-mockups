@@ -24,7 +24,7 @@ function ProfilePage() {
     >
       <section aria-labelledby="profile-heading" className="overflow-hidden rounded-[2rem] border border-white/70 shadow-xl shadow-slate-200/50">
         <div className="relative">
-          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80" alt="Artist desk with prints, camera, and sketchbooks" className="h-72 w-full object-cover" />
+          <img src="https://loremflickr.com/1600/900/studio?random=61" alt="Artist desk with prints, camera, and sketchbooks" className="h-72 w-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/20 to-transparent"></div>
           <div className="absolute bottom-0 left-0 p-6 text-white">
             <h2 id="profile-heading" className="text-4xl font-semibold">Maya Lin</h2>

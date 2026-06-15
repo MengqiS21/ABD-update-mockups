@@ -82,22 +82,22 @@ const leaders = [
   {
     name: "Elena Torres",
     title: "Mayor",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80",
+    image: "https://loremflickr.com/600/600/portrait?random=201",
   },
   {
     name: "Marcus Green",
     title: "City Council President",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    image: "https://loremflickr.com/600/600/portrait?random=202",
   },
   {
     name: "Dana Kim",
     title: "City Council Member",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80",
+    image: "https://loremflickr.com/600/600/portrait?random=203",
   },
   {
     name: "Robert Singh",
     title: "City Council Member",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80",
+    image: "https://loremflickr.com/600/600/portrait?random=204",
   },
 ];
 

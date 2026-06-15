@@ -227,21 +227,21 @@
       const [letterSubmitted, setLetterSubmitted] = useState(false);
 
       const columnists = [
-        { name: 'Eleanor Hart', title: 'Foreign Policy Analyst', latestHeadline: 'The West Must Confront Its Own Fragility', avatar: 'https://picsum.photos/seed/eleanorhart/160/160' },
-        { name: 'Dr. Kwame Asante', title: 'Climate & Geopolitics', latestHeadline: 'Why Climate Denial Is Now a Geopolitical Strategy', avatar: 'https://picsum.photos/seed/kwameasante/160/160' },
-        { name: 'Margot Lefebvre', title: 'Media Critic', latestHeadline: 'In Defense of Slow Journalism', avatar: 'https://picsum.photos/seed/margot/160/160' },
-        { name: 'James Okafor', title: 'Economic Policy', latestHeadline: 'The IMF Is Getting Africa Wrong', avatar: 'https://picsum.photos/seed/jamesokafor/160/160' },
-        { name: 'Dr. Yuna Sato', title: 'Technology & Society', latestHeadline: 'Democracy Cannot Outsource Its Thinking to AI', avatar: 'https://picsum.photos/seed/yunasato/160/160' },
-        { name: 'Rafael Medina', title: 'Latin America Correspondent', latestHeadline: 'Bolsonaro is Gone. His Movement is Not.', avatar: 'https://picsum.photos/seed/rafaelmed/160/160' },
+        { name: 'Eleanor Hart', title: 'Foreign Policy Analyst', latestHeadline: 'The West Must Confront Its Own Fragility', avatar: 'https://loremflickr.com/160/160/portrait?random=50' },
+        { name: 'Dr. Kwame Asante', title: 'Climate & Geopolitics', latestHeadline: 'Why Climate Denial Is Now a Geopolitical Strategy', avatar: 'https://loremflickr.com/160/160/portrait?random=51' },
+        { name: 'Margot Lefebvre', title: 'Media Critic', latestHeadline: 'In Defense of Slow Journalism', avatar: 'https://loremflickr.com/160/160/portrait?random=52' },
+        { name: 'James Okafor', title: 'Economic Policy', latestHeadline: 'The IMF Is Getting Africa Wrong', avatar: 'https://loremflickr.com/160/160/portrait?random=53' },
+        { name: 'Dr. Yuna Sato', title: 'Technology & Society', latestHeadline: 'Democracy Cannot Outsource Its Thinking to AI', avatar: 'https://loremflickr.com/160/160/portrait?random=54' },
+        { name: 'Rafael Medina', title: 'Latin America Correspondent', latestHeadline: 'Bolsonaro is Gone. His Movement is Not.', avatar: 'https://loremflickr.com/160/160/portrait?random=55' },
       ];
 
       const recentPieces = [
-        { headline: "China's Economic Slowdown Is Everyone's Problem", author: 'Eleanor Hart', date: 'March 16', summary: 'The structural weakness in Chinese demand is not a domestic concern. It threatens to reshape global trade flows in ways policymakers are not prepared for.', avatar: 'https://picsum.photos/seed/eleanorhart/80/80' },
-        { headline: 'The Afghan Women the World Forgot', author: 'Margot Lefebvre', date: 'March 15', summary: 'Three years since the Taliban reclaimed Kabul, international media has largely moved on. The women living under the regime have not.', avatar: 'https://picsum.photos/seed/margot/80/80' },
-        { headline: 'On Nuclear Deterrence and the Illusion of Control', author: 'Dr. Kwame Asante', date: 'March 14', summary: 'The logic of deterrence was built for a bipolar world. In the multipolar reality of 2026, its assumptions are dangerously outdated.', avatar: 'https://picsum.photos/seed/kwameasante/80/80' },
-        { headline: "Africa's Youth Dividend Is Real — But Squandered", author: 'James Okafor', date: 'March 13', summary: "The continent's demographic advantage will turn into instability unless governments and international partners radically rethink their approach to education and jobs.", avatar: 'https://picsum.photos/seed/jamesokafor/80/80' },
-        { headline: 'Why I Changed My Mind on Open-Source AI', author: 'Dr. Yuna Sato', date: 'March 12', summary: 'For years I argued that open models were democratizing innovation. I no longer believe that story is as simple as I thought.', avatar: 'https://picsum.photos/seed/yunasato/80/80' },
-        { headline: 'The New Authoritarians Are Not What You Think', author: 'Rafael Medina', date: 'March 11', summary: 'The twenty-first-century autocrat does not seize power in a coup. They are elected, and then they hollow out the institutions around them.', avatar: 'https://picsum.photos/seed/rafaelmed/80/80' },
+        { headline: "China's Economic Slowdown Is Everyone's Problem", author: 'Eleanor Hart', date: 'March 16', summary: 'The structural weakness in Chinese demand is not a domestic concern. It threatens to reshape global trade flows in ways policymakers are not prepared for.', avatar: 'https://loremflickr.com/80/80/portrait?random=50' },
+        { headline: 'The Afghan Women the World Forgot', author: 'Margot Lefebvre', date: 'March 15', summary: 'Three years since the Taliban reclaimed Kabul, international media has largely moved on. The women living under the regime have not.', avatar: 'https://loremflickr.com/80/80/portrait?random=52' },
+        { headline: 'On Nuclear Deterrence and the Illusion of Control', author: 'Dr. Kwame Asante', date: 'March 14', summary: 'The logic of deterrence was built for a bipolar world. In the multipolar reality of 2026, its assumptions are dangerously outdated.', avatar: 'https://loremflickr.com/80/80/portrait?random=51' },
+        { headline: "Africa's Youth Dividend Is Real — But Squandered", author: 'James Okafor', date: 'March 13', summary: "The continent's demographic advantage will turn into instability unless governments and international partners radically rethink their approach to education and jobs.", avatar: 'https://loremflickr.com/80/80/portrait?random=53' },
+        { headline: 'Why I Changed My Mind on Open-Source AI', author: 'Dr. Yuna Sato', date: 'March 12', summary: 'For years I argued that open models were democratizing innovation. I no longer believe that story is as simple as I thought.', avatar: 'https://loremflickr.com/80/80/portrait?random=54' },
+        { headline: 'The New Authoritarians Are Not What You Think', author: 'Rafael Medina', date: 'March 11', summary: 'The twenty-first-century autocrat does not seize power in a coup. They are elected, and then they hollow out the institutions around them.', avatar: 'https://loremflickr.com/80/80/portrait?random=55' },
       ];
 
       const validateLetter = () => {
@@ -286,7 +286,7 @@
                     <a href="#" className="hover:text-red-700 transition-colors">The West Must Confront Its Own Fragility</a>
                   </h2>
                   <div className="flex items-center gap-4 mb-6">
-                    <img src="https://picsum.photos/seed/eleanorhart/120/120" alt="Eleanor Hart, Foreign Policy Analyst"
+                    <img src="https://loremflickr.com/120/120/portrait?random=50" alt="Eleanor Hart, Foreign Policy Analyst"
                       className="w-14 h-14 rounded-full object-cover" />
                     <div>
                       <p className="font-bold">Eleanor Hart</p>
@@ -303,7 +303,7 @@
                   </a>
                 </div>
                 <div>
-                  <img src="https://picsum.photos/seed/westessay/700/500" alt="Illustration representing the fragility of Western democratic institutions"
+                  <img src="https://loremflickr.com/700/500/politics?random=10" alt="Illustration representing the fragility of Western democratic institutions"
                     className="w-full rounded-xl object-cover h-80 md:h-96" />
                 </div>
               </section>

@@ -170,7 +170,7 @@
         <article className="bg-white rounded-xl border border-gray-200 p-4 md:p-5 flex gap-4" aria-label={`Cart item: ${item.name}`}>
           {/* Image */}
           <a href="product-detail.html" className="shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded-xl" aria-label={`View ${item.name}`}>
-            <img src={`https://picsum.photos/seed/${item.img}/120/120`} alt={item.alt} width="120" height="120"
+            <img src={`https://loremflickr.com/120/120/${item.img}?random=1`} alt={item.alt} width="120" height="120"
               className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-xl" />
           </a>
 
@@ -339,7 +339,7 @@
             <li key={p.id} role="listitem">
               <article className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md transition-shadow flex flex-col items-center gap-2">
                 <a href="product-detail.html" aria-label={`View ${p.name}`} className="block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 rounded-xl overflow-hidden w-full">
-                  <img src={`https://picsum.photos/seed/${p.img}/200/160`} alt={p.alt} width="200" height="160"
+                  <img src={`https://loremflickr.com/200/160/${p.img}?random=1`} alt={p.alt} width="200" height="160"
                     className="w-full h-28 object-cover rounded-lg hover:scale-105 transition-transform duration-300" />
                 </a>
                 <h3 className="text-xs font-semibold text-gray-800 text-center line-clamp-2 leading-snug">

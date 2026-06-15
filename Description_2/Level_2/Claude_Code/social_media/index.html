@@ -229,8 +229,8 @@
 
           {/* Post image */}
           <a href="explore.html" aria-label={`View full post by ${post.author}`} className="block">
-            <div className={`w-full aspect-[4/3] bg-gradient-to-br ${post.imgGrad} relative overflow-hidden`} role="img" aria-label={`Artwork by ${post.author}`}>
-              <div aria-hidden="true" className="absolute inset-0 opacity-20 mix-blend-overlay" style={{backgroundImage:'radial-gradient(circle at 30% 40%, rgba(255,255,255,0.4) 0%, transparent 60%)'}}></div>
+            <div className="w-full aspect-[4/3] relative overflow-hidden">
+              <img src={`https://loremflickr.com/600/450/art?random=${post.id}`} alt={`Artwork by ${post.author}`} className="w-full h-full object-cover" />
             </div>
           </a>
 

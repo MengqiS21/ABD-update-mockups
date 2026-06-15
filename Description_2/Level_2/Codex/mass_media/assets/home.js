@@ -18,7 +18,7 @@ function HomePage() {
 
       <section aria-labelledby="hero-story" className="mt-10 overflow-hidden rounded-[2.5rem] bg-ink text-white shadow-editorial">
         <div className="relative min-h-[78vh]">
-          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80" alt="Dust and floodwater patterns cutting across a western desert basin" className="absolute inset-0 h-full w-full object-cover" />
+          <img src="https://loremflickr.com/1600/900/desert?random=48" alt="Dust and floodwater patterns cutting across a western desert basin" className="absolute inset-0 h-full w-full object-cover" />
           <div className="hero-wash absolute inset-0"></div>
           <div className="relative z-10 flex min-h-[78vh] max-w-4xl flex-col justify-end px-6 py-10 lg:px-12 lg:py-14">
             <p className="text-xs font-extrabold uppercase tracking-[0.34em] text-sand">Feature investigation</p>

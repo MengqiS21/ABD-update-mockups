@@ -119,7 +119,7 @@
                  aria-label={`Cart item: ${item.name}`}>
           {/* Thumbnail */}
           <a href="product-detail.html" className="flex-shrink-0 rounded-xl overflow-hidden w-24 sm:w-32 aspect-[3/4] bg-border focus-visible:ring-2 focus-visible:ring-forest">
-            <img src={`https://picsum.photos/seed/${item.seed}/200/280`}
+            <img src={`https://loremflickr.com/200/280/clothing?random=${item.id}`}
                  alt={`${item.name} in ${item.color}, size ${item.size}`}
                  className="w-full h-full object-cover" />
           </a>
@@ -495,15 +495,15 @@
             <h2 id="recently-heading" className="font-serif text-2xl font-bold text-charcoal mb-6">Recently Viewed</h2>
             <ul className="grid grid-cols-2 sm:grid-cols-4 gap-4" aria-label="Recently viewed products">
               {[
-                { name:'Recycled Fleece Hoodie', price:98, seed:'rv1' },
-                { name:'Linen Midi Skirt',       price:95, seed:'rv2' },
-                { name:'Bamboo Wrap Dress',      price:148,seed:'rv3' },
-                { name:'Organic Cotton Joggers', price:75, seed:'rv4' },
+                { name:'Recycled Fleece Hoodie', price:98, seed:11 },
+                { name:'Linen Midi Skirt',       price:95, seed:12 },
+                { name:'Bamboo Wrap Dress',      price:148,seed:13 },
+                { name:'Organic Cotton Joggers', price:75, seed:14 },
               ].map(p => (
                 <li key={p.name}>
                   <a href="product-detail.html" className="group block" aria-label={`${p.name}, $${p.price}`}>
                     <div className="aspect-[3/4] rounded-xl overflow-hidden bg-border mb-2">
-                      <img src={`https://picsum.photos/seed/${p.seed}/200/280`} alt={p.name}
+                      <img src={`https://loremflickr.com/200/280/clothing?random=${p.seed}`} alt={p.name}
                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <p className="text-sm font-medium text-charcoal group-hover:text-forest transition-colors">{p.name}</p>

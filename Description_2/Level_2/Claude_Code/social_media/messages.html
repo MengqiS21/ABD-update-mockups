@@ -206,7 +206,9 @@
                       className="w-full flex items-center gap-3 p-3 rounded-xl border border-folia-border hover:border-folia-accent hover:bg-folia-accent/5 transition-colors text-left"
                       aria-label={`Share project: ${p.name}`}
                     >
-                      <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${p.grad} flex-shrink-0`} role="img" aria-label={`${p.name} thumbnail`} />
+                      <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                        <img src={`https://loremflickr.com/48/48/art?random=${p.id + 30}`} alt={`${p.name} thumbnail`} className="w-full h-full object-cover" />
+                      </div>
                       <span className="font-medium text-sm text-folia-text">{p.name}</span>
                     </button>
                   </li>
@@ -347,10 +349,12 @@
                     <div className={`max-w-xs lg:max-w-md ${msg.mine ? 'items-end' : 'items-start'} flex flex-col gap-1`}>
                       {msg.imgGrad ? (
                         <div
-                          className={`w-48 h-36 rounded-xl bg-gradient-to-br ${msg.imgGrad}`}
+                          className="w-48 h-36 rounded-xl overflow-hidden"
                           role="img"
                           aria-label={msg.imgLabel || 'Shared image'}
-                        />
+                        >
+                          <img src={`https://loremflickr.com/192/144/art?random=${msg.id + 60}`} alt={msg.imgLabel || 'Shared image'} className="w-full h-full object-cover" />
+                        </div>
                       ) : (
                         <div className={`px-4 py-2.5 rounded-2xl text-sm ${msg.mine ? 'bg-folia-accent text-white rounded-br-sm' : 'bg-white border border-folia-border text-folia-text rounded-bl-sm'}`}>
                           {msg.text}

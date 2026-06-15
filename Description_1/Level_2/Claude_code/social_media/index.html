@@ -80,7 +80,7 @@ function Sidebar({ activePage = 'feed' }) {
         <IconPlus /> New Post
       </button>
       <a href="profile.html" className="mt-6 flex items-center gap-3 px-2 py-2 rounded-xl hover:bg-gray-50 transition-colors">
-        <img src="https://i.pravatar.cc/40?img=11" alt="Alex Johnson — your profile" className="w-9 h-9 rounded-full object-cover" />
+        <img src="https://loremflickr.com/40/40/portrait?random=11" alt="Alex Johnson — your profile" className="w-9 h-9 rounded-full object-cover" />
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-gray-900 truncate">Alex Johnson</p>
           <p className="text-xs text-gray-500 truncate">@alexj</p>
@@ -187,7 +187,7 @@ function Composer({ onPost }) {
   return (
     <section aria-label="Create a post" className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 mb-4">
       <div className="flex gap-3">
-        <img src="https://i.pravatar.cc/40?img=11" alt="Your avatar, Alex Johnson" className="w-10 h-10 rounded-full object-cover flex-shrink-0 mt-1" />
+        <img src="https://loremflickr.com/40/40/portrait?random=11" alt="Your avatar, Alex Johnson" className="w-10 h-10 rounded-full object-cover flex-shrink-0 mt-1" />
         <div className="flex-1">
           <label htmlFor="composer-input" className="sr-only">What's on your mind, Alex?</label>
           <textarea
@@ -414,9 +414,9 @@ function TrendingSidebar() {
     { tag: 'MarsUpdate', posts: '18K', emoji: '🚀', hot: false },
   ];
   const suggested = [
-    { name: 'Priya Sharma', handle: '@priyash', avatar: 'https://i.pravatar.cc/40?img=5' },
-    { name: 'Marcus Webb', handle: '@marcwebb', avatar: 'https://i.pravatar.cc/40?img=8' },
-    { name: 'Chloe Kim', handle: '@chloekim', avatar: 'https://i.pravatar.cc/40?img=16' },
+    { name: 'Priya Sharma', handle: '@priyash', avatar: 'https://loremflickr.com/40/40/portrait?random=20' },
+    { name: 'Marcus Webb', handle: '@marcwebb', avatar: 'https://loremflickr.com/40/40/portrait?random=8' },
+    { name: 'Chloe Kim', handle: '@chloekim', avatar: 'https://loremflickr.com/40/40/portrait?random=16' },
   ];
   return (
     <aside aria-label="Trending topics and suggestions" className="w-80 flex-shrink-0 hidden xl:block space-y-4 sticky top-4">
@@ -463,11 +463,11 @@ function TrendingSidebar() {
 
 /* ── Sample Posts Data ── */
 const INITIAL_POSTS = [
-  { id: 1, author: { name: 'Maya Chen', handle: '@mayachen', avatar: 'https://i.pravatar.cc/44?img=5' }, time: '2h', isoTime: '2026-03-17T10:00', text: 'Just wrapped up my talk at #ClimateWeek and the energy in that room was incredible. We\'re seeing real momentum in renewable energy adoption — 2026 is shaping up to be a pivotal year. 🌱', tags: ['ClimateWeek', 'Sustainability'], likes: 234, comments: 41, shares: 88, liked: false },
-  { id: 2, author: { name: 'Jordan Rivera', handle: '@jordanr', avatar: 'https://i.pravatar.cc/44?img=7' }, time: '4h', isoTime: '2026-03-17T08:00', text: 'Hot take: the current wave of #TechLayoffs is actually accelerating the indie dev movement. More talented engineers going solo = more innovative products for everyone. Thoughts?', tags: ['TechLayoffs', 'IndieHacking'], likes: 891, comments: 203, shares: 145, liked: true, image: 'https://picsum.photos/seed/techpost/600/300', imageAlt: 'Abstract tech graphic with code snippets and developer workspace' },
-  { id: 3, author: { name: 'Sam Park', handle: '@sampark', avatar: 'https://i.pravatar.cc/44?img=12' }, time: '5h', isoTime: '2026-03-17T07:00', text: '⚽ #WorldCup2026 tickets just landed in my inbox. MEXICO CITY HERE WE COME!! Who else is making the trip?', tags: ['WorldCup2026'], likes: 1204, comments: 87, shares: 312, liked: false, image: 'https://picsum.photos/seed/stadium/600/280', imageAlt: 'Packed football stadium with colorful fan sections' },
-  { id: 4, author: { name: 'Riley Torres', handle: '@rileyt', avatar: 'https://i.pravatar.cc/44?img=9' }, time: '7h', isoTime: '2026-03-17T05:00', text: 'The new coffee shop on Meridian opened today and wow — the architecture alone is worth the trip. Found my new remote work spot. ☕', likes: 156, comments: 22, shares: 14, liked: false, image: 'https://picsum.photos/seed/coffee/600/320', imageAlt: 'Bright, modern coffee shop interior with large windows and hanging plants' },
-  { id: 5, author: { name: 'Chris Lee', handle: '@chrislee', avatar: 'https://i.pravatar.cc/44?img=3' }, time: '9h', isoTime: '2026-03-17T03:00', text: 'Reminder that accessibility isn\'t a feature — it\'s the baseline. If your app doesn\'t work with a screen reader or keyboard, it\'s not done. Full stop. #a11y #WebDev', tags: ['a11y', 'WebDev'], likes: 2341, comments: 178, shares: 654, liked: false },
+  { id: 1, author: { name: 'Maya Chen', handle: '@mayachen', avatar: 'https://loremflickr.com/44/44/portrait?random=5' }, time: '2h', isoTime: '2026-03-17T10:00', text: 'Just wrapped up my talk at #ClimateWeek and the energy in that room was incredible. We\'re seeing real momentum in renewable energy adoption — 2026 is shaping up to be a pivotal year. 🌱', tags: ['ClimateWeek', 'Sustainability'], likes: 234, comments: 41, shares: 88, liked: false },
+  { id: 2, author: { name: 'Jordan Rivera', handle: '@jordanr', avatar: 'https://loremflickr.com/44/44/portrait?random=7' }, time: '4h', isoTime: '2026-03-17T08:00', text: 'Hot take: the current wave of #TechLayoffs is actually accelerating the indie dev movement. More talented engineers going solo = more innovative products for everyone. Thoughts?', tags: ['TechLayoffs', 'IndieHacking'], likes: 891, comments: 203, shares: 145, liked: true, image: 'https://loremflickr.com/600/300/technology?random=21', imageAlt: 'Abstract tech graphic with code snippets and developer workspace' },
+  { id: 3, author: { name: 'Sam Park', handle: '@sampark', avatar: 'https://loremflickr.com/44/44/portrait?random=12' }, time: '5h', isoTime: '2026-03-17T07:00', text: '⚽ #WorldCup2026 tickets just landed in my inbox. MEXICO CITY HERE WE COME!! Who else is making the trip?', tags: ['WorldCup2026'], likes: 1204, comments: 87, shares: 312, liked: false, image: 'https://loremflickr.com/600/280/stadium?random=22', imageAlt: 'Packed football stadium with colorful fan sections' },
+  { id: 4, author: { name: 'Riley Torres', handle: '@rileyt', avatar: 'https://loremflickr.com/44/44/portrait?random=9' }, time: '7h', isoTime: '2026-03-17T05:00', text: 'The new coffee shop on Meridian opened today and wow — the architecture alone is worth the trip. Found my new remote work spot. ☕', likes: 156, comments: 22, shares: 14, liked: false, image: 'https://loremflickr.com/600/320/coffee?random=23', imageAlt: 'Bright, modern coffee shop interior with large windows and hanging plants' },
+  { id: 5, author: { name: 'Chris Lee', handle: '@chrislee', avatar: 'https://loremflickr.com/44/44/portrait?random=3' }, time: '9h', isoTime: '2026-03-17T03:00', text: 'Reminder that accessibility isn\'t a feature — it\'s the baseline. If your app doesn\'t work with a screen reader or keyboard, it\'s not done. Full stop. #a11y #WebDev', tags: ['a11y', 'WebDev'], likes: 2341, comments: 178, shares: 654, liked: false },
 ];
 
 /* ── Feed Page ── */
@@ -476,7 +476,7 @@ function FeedPage() {
 
   const handlePost = (text) => {
     const newPost = {
-      id: Date.now(), author: { name: 'Alex Johnson', handle: '@alexj', avatar: 'https://i.pravatar.cc/44?img=11' },
+      id: Date.now(), author: { name: 'Alex Johnson', handle: '@alexj', avatar: 'https://loremflickr.com/44/44/portrait?random=11' },
       time: 'just now', isoTime: new Date().toISOString(), text, likes: 0, comments: 0, shares: 0, liked: false,
     };
     setPosts(prev => [newPost, ...prev]);

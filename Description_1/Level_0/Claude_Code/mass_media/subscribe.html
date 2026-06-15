@@ -235,7 +235,7 @@ function Testimonials() {
             </div>
             <p className="text-gray-700 text-sm leading-relaxed mb-5 italic">"{t.text}"</p>
             <div className="flex items-center gap-3">
-              <img src={`https://picsum.photos/seed/${t.seed}-av/80/80`} alt="" className="w-10 h-10 rounded-full object-cover" />
+              <img src={`https://loremflickr.com/80/80/person?random=${t.seed}`} alt="" className="w-10 h-10 rounded-full object-cover" />
               <div>
                 <div className="font-semibold text-sm text-gray-900">{t.name}</div>
                 <div className="text-xs text-gray-500">{t.location} · {t.plan} subscriber</div>

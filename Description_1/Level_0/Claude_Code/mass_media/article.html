@@ -182,7 +182,7 @@ function App() {
 
         {/* Byline */}
         <div className="flex items-center gap-4 border-y border-gray-200 py-4 mb-8">
-          <img src="https://picsum.photos/seed/amara-av/80/80" alt="Amara Osei" className="w-12 h-12 rounded-full object-cover" />
+          <img src="https://loremflickr.com/80/80/person?random=1" alt="Amara Osei" className="w-12 h-12 rounded-full object-cover" />
           <div>
             <a href="opinion.html" className="font-semibold text-sm text-gray-900 hover:text-red-700">Amara Osei</a>
             <p className="text-xs text-gray-500">Senior World Correspondent, Cairo Bureau</p>
@@ -202,7 +202,7 @@ function App() {
 
         {/* Hero image */}
         <figure className="mb-8 -mx-4 md:mx-0">
-          <img src="https://picsum.photos/seed/redsea-hero/1200/680" alt="A cargo vessel in the Red Sea" className="w-full object-cover" style={{maxHeight: '480px'}} />
+          <img src="https://loremflickr.com/1200/680/ocean?random=1" alt="A cargo vessel in the Red Sea" className="w-full object-cover" style={{maxHeight: '480px'}} />
           <figcaption className="text-xs text-gray-400 mt-2 px-4 md:px-0">
             A container vessel navigates under escort through the southern Red Sea corridor. Photograph: Maritime Safety Authority / AP
           </figcaption>
@@ -258,7 +258,7 @@ function App() {
 
         {/* Author bio */}
         <div className="mt-8 bg-slate-50 border border-gray-200 p-6 flex gap-5">
-          <img src="https://picsum.photos/seed/amara-av/80/80" alt="Amara Osei" className="w-16 h-16 rounded-full object-cover shrink-0" />
+          <img src="https://loremflickr.com/80/80/person?random=1" alt="Amara Osei" className="w-16 h-16 rounded-full object-cover shrink-0" />
           <div>
             <a href="opinion.html" className="font-serif font-bold text-gray-900 hover:text-red-700 text-lg">Amara Osei</a>
             <p className="text-xs text-gray-500 mb-2">Senior World Correspondent, Cairo Bureau</p>
@@ -281,7 +281,7 @@ function App() {
             {moreFromWorld.map((s, i) => (
               <a href="article.html" key={i} className="group">
                 <div className="overflow-hidden mb-3">
-                  <img src={`https://picsum.photos/seed/${s.seed}/400/260`} alt="" className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={`https://loremflickr.com/400/260/news?random=${s.seed}`} alt="" className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <span className="text-red-700 text-xs font-black tracking-widest uppercase">{s.region}</span>
                 <h3 className="font-serif text-sm font-semibold leading-snug mt-1 group-hover:text-slate-600 transition-colors">{s.title}</h3>

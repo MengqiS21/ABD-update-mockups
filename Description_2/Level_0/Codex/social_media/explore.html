@@ -20,7 +20,7 @@
     <script src="https://unpkg.com/htm@3.1.1/dist/htm.umd.js"></script>
     <script src="./shared.js"></script>
     <script>
-      const { html, AppShell, Card, exploreTiles, risingCreators, palettes } = window.Folia;
+      const { html, AppShell, Card, exploreTiles, risingCreators, palettes, artworkStyle } = window.Folia;
 
       function ExploreGrid() {
         return html`
@@ -41,7 +41,7 @@
             <div className="mt-5 grid auto-rows-[210px] gap-4 md:grid-cols-3">
               ${exploreTiles.map(
                 (tile) => html`
-                  <div key=${tile.creator} className=${`group artwork-panel ${tile.mood} ${tile.size} relative overflow-hidden rounded-[1.75rem]`}>
+                  <div key=${tile.creator} className=${`group artwork-panel ${tile.mood} ${tile.size} relative overflow-hidden rounded-[1.75rem]`} style=${artworkStyle(tile.medium.toLowerCase(), 530 + exploreTiles.indexOf(tile))}>
                     <div className="tile-overlay absolute inset-0 flex items-end p-5 opacity-100 transition md:opacity-90 md:group-hover:opacity-100">
                       <div className="text-white">
                         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-slate-200">${tile.medium}</p>

@@ -250,7 +250,7 @@ function Wishlist() {
   const announce = t => { setMsg(t); setTimeout(()=>setMsg(''),3000); };
   const remove = (id,name) => { setItems(prev=>prev.filter(i=>i.id!==id)); announce(`${name} removed from wishlist.`); };
   const addCart = (item) => { const cart = JSON.parse(localStorage.getItem('novamart_cart')||'[]'); const idx=cart.findIndex(i=>i.id===item.id); if(idx>=0)cart[idx].quantity+=1;else cart.push({...item,quantity:1}); localStorage.setItem('novamart_cart',JSON.stringify(cart)); announce(`${item.name} added to cart.`); };
-  const makeImg = p => { const s=`<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#${p.hue}18"/><rect x="55" y="45" width="90" height="90" rx="12" fill="#${p.hue}35"/><text x="100" y="102" font-family="Arial" font-size="52" font-weight="bold" fill="#${p.hue}" text-anchor="middle" dominant-baseline="middle">${p.name[0]}</text></svg>`; return `data:image/svg+xml,${encodeURIComponent(s)}`; };
+  const makeImg = p => { const keyMap = { Electronics: 'electronics', Kitchen: 'kitchen', Clothing: 'fashion', Sports: 'fitness' }; return `https://loremflickr.com/200/200/${keyMap[p.cat]||'product'}?random=${p.id}`; };
   return (
     <section aria-labelledby="wishlist-heading">
       <div role="status" aria-live="polite" className="sr-only">{msg}</div>

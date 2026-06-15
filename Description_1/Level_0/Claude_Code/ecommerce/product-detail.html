@@ -103,10 +103,10 @@ function Footer() {
 }
 
 const IMAGES = [
-  'https://picsum.photos/seed/sony1/600/500',
-  'https://picsum.photos/seed/sony2/600/500',
-  'https://picsum.photos/seed/sony3/600/500',
-  'https://picsum.photos/seed/sony4/600/500',
+  'https://loremflickr.com/600/500/headphones?random=1',
+  'https://loremflickr.com/600/500/headphones?random=2',
+  'https://loremflickr.com/600/500/headphones?random=3',
+  'https://loremflickr.com/600/500/headphones?random=4',
 ];
 
 const COLORS = [
@@ -430,7 +430,7 @@ function ProductDetail() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {RELATED.map((p,i)=>(
               <a key={i} href="product-detail.html" className="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition overflow-hidden group">
-                <img src={`https://picsum.photos/seed/${p.seed}/300/200`} alt={p.name}
+                <img src={`https://loremflickr.com/300/200/headphones?random=${p.seed}`} alt={p.name}
                      className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"/>
                 <div className="p-3">
                   <p className="text-xs text-blue-600 font-medium">{p.brand}</p>

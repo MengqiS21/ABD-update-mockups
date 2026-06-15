@@ -60,6 +60,14 @@ window.ThreadHouse = (() => {
     { title: "Weekend", copy: "Soft textures and travel-light essentials." },
   ];
 
+  function photoStyle(keyword, n) {
+    return {
+      backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.12), rgba(15,23,42,0.18)), url("https://loremflickr.com/800/1000/${keyword}?random=${n}")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    };
+  }
+
   function Logo() {
     return html`
       <a href="./index.html" className="flex items-center gap-3">
@@ -168,7 +176,7 @@ window.ThreadHouse = (() => {
   function ProductCard({ product, detailHref = "./product-detail.html", badge }) {
     return html`
       <article className="overflow-hidden rounded-[2rem] bg-white shadow-[0_18px_55px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/70">
-        <div className="product-shot photo-frame relative p-5">
+        <div className="product-shot photo-frame relative p-5" style=${photoStyle("clothing", product.id || product.name.length)}>
           ${badge
             ? html`<span className="absolute left-5 top-5 rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-900">${badge}</span>`
             : null}
@@ -212,6 +220,7 @@ window.ThreadHouse = (() => {
     Shell,
     ProductCard,
     SectionTitle,
+    photoStyle,
     navItems,
     newArrivals,
     productCatalog,

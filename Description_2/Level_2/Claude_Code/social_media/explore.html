@@ -157,11 +157,11 @@
     ];
 
     const RISING_CREATORS = [
-      { name:'Felix Müller',   handle:'@felixm',   discipline:'Typography', grad:'from-yellow-400 to-orange-500', followers:'1.2K', recentWork:'from-yellow-100 via-amber-200 to-orange-300' },
-      { name:'Amara Osei',     handle:'@amaraosei',discipline:'3D Art',     grad:'from-purple-400 to-violet-600', followers:'2.8K', recentWork:'from-purple-300 via-violet-400 to-indigo-500' },
-      { name:'Zoe Park',       handle:'@zoepark',  discipline:'Photography',grad:'from-gray-400 to-gray-600',     followers:'3.4K', recentWork:'from-gray-700 via-gray-500 to-gray-900' },
-      { name:'Nadia Kowalski', handle:'@nadiak',   discipline:'Photography',grad:'from-amber-400 to-stone-500',   followers:'890',  recentWork:'from-stone-200 via-amber-100 to-stone-300' },
-      { name:'Cleo Barnes',    handle:'@cleob',    discipline:'Illustration',grad:'from-sky-400 to-indigo-500',   followers:'1.9K', recentWork:'from-sky-200 via-blue-300 to-indigo-400' },
+      { id:51, name:'Felix Müller',   handle:'@felixm',   discipline:'Typography', grad:'from-yellow-400 to-orange-500', followers:'1.2K', recentWork:'from-yellow-100 via-amber-200 to-orange-300' },
+      { id:52, name:'Amara Osei',     handle:'@amaraosei',discipline:'3D Art',     grad:'from-purple-400 to-violet-600', followers:'2.8K', recentWork:'from-purple-300 via-violet-400 to-indigo-500' },
+      { id:53, name:'Zoe Park',       handle:'@zoepark',  discipline:'Photography',grad:'from-gray-400 to-gray-600',     followers:'3.4K', recentWork:'from-gray-700 via-gray-500 to-gray-900' },
+      { id:54, name:'Nadia Kowalski', handle:'@nadiak',   discipline:'Photography',grad:'from-amber-400 to-stone-500',   followers:'890',  recentWork:'from-stone-200 via-amber-100 to-stone-300' },
+      { id:55, name:'Cleo Barnes',    handle:'@cleob',    discipline:'Illustration',grad:'from-sky-400 to-indigo-500',   followers:'1.9K', recentWork:'from-sky-200 via-blue-300 to-indigo-400' },
     ];
 
     const TRENDING_PALETTES = [
@@ -179,8 +179,9 @@
       const heightClass = item.size === 'tall' ? 'row-span-2' : 'row-span-1';
 
       return (
-        <div className={`grid-item ${heightClass} bg-gradient-to-br ${item.grad}`}
+        <div className={`grid-item ${heightClass}`}
           style={{ minHeight: item.size === 'tall' ? '360px' : '176px' }}>
+          <img src={`https://loremflickr.com/400/${item.size === 'tall' ? '600' : '300'}/${item.medium === '3d' ? 'art' : item.medium}?random=${item.id}`} alt={`${item.title} by ${item.author}`} className="absolute inset-0 w-full h-full object-cover" aria-hidden="true" />
           {/* Overlay */}
           <div className="overlay" aria-hidden="true" />
           <div className="overlay-content">
@@ -217,7 +218,9 @@
       return (
         <div className="bg-white border border-folia-border rounded-2xl overflow-hidden flex-shrink-0 w-48">
           {/* Recent work preview */}
-          <div className={`h-24 bg-gradient-to-br ${creator.recentWork}`} role="img" aria-label={`Recent work by ${creator.name}`} />
+          <div className="h-24 overflow-hidden">
+            <img src={`https://loremflickr.com/192/96/art?random=${creator.id}`} alt={`Recent work by ${creator.name}`} className="w-full h-full object-cover" />
+          </div>
           {/* Info */}
           <div className="p-3">
             <div className="flex items-center gap-2 mb-2">

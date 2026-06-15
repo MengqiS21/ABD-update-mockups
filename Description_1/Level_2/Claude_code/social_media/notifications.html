@@ -67,7 +67,7 @@ function Sidebar({ activePage = 'notifications' }) {
         <IconPlus /> New Post
       </button>
       <a href="profile.html" className="mt-6 flex items-center gap-3 px-2 py-2 rounded-xl hover:bg-gray-50 transition-colors">
-        <img src="https://i.pravatar.cc/40?img=11" alt="Alex Johnson — your profile" className="w-9 h-9 rounded-full object-cover" />
+        <img src="https://loremflickr.com/40/40/portrait?random=11" alt="Alex Johnson — your profile" className="w-9 h-9 rounded-full object-cover" />
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-gray-900 truncate">Alex Johnson</p>
           <p className="text-xs text-gray-500 truncate">@alexj</p>
@@ -100,16 +100,16 @@ function MobileNav({ activePage = 'notifications' }) {
 const TABS = ['All', 'Mentions', 'Likes', 'Follows'];
 
 const ALL_NOTIFICATIONS = [
-  { id: 1, type: 'like', user: { name: 'Maya Chen', handle: '@mayachen', avatar: 'https://i.pravatar.cc/44?img=5' }, action: 'liked your post', snippet: '"Accessibility isn\'t a feature — it\'s the baseline."', time: '2h', read: false, category: 'Likes' },
-  { id: 2, type: 'follow', user: { name: 'Darius Okafor', handle: '@dariusok', avatar: 'https://i.pravatar.cc/44?img=60' }, action: 'started following you', snippet: null, time: '3h', read: false, category: 'Follows' },
-  { id: 3, type: 'mention', user: { name: 'Jordan Rivera', handle: '@jordanr', avatar: 'https://i.pravatar.cc/44?img=7' }, action: 'mentioned you in a post', snippet: '"@alexj totally agree with your take on #TechLayoffs"', time: '4h', read: false, category: 'Mentions' },
-  { id: 4, type: 'like', user: { name: 'Sam Park', handle: '@sampark', avatar: 'https://i.pravatar.cc/44?img=12' }, action: 'liked your post', snippet: '"Just wrapped up my talk at #ClimateWeek…"', time: '5h', read: true, category: 'Likes' },
-  { id: 5, type: 'comment', user: { name: 'Riley Torres', handle: '@rileyt', avatar: 'https://i.pravatar.cc/44?img=9' }, action: 'replied to your post', snippet: '"This is such a great point! More devs need to hear this."', time: '6h', read: true, category: 'Mentions' },
-  { id: 6, type: 'follow', user: { name: 'Sofia Reyes', handle: '@sofiareyes', avatar: 'https://i.pravatar.cc/44?img=47' }, action: 'started following you', snippet: null, time: '8h', read: true, category: 'Follows' },
-  { id: 7, type: 'like', user: { name: 'Kai Yamamoto', handle: '@kaiyama', avatar: 'https://i.pravatar.cc/44?img=33' }, action: 'and 47 others liked your post', snippet: '"The new coffee shop on Meridian opened today…"', time: '10h', read: true, category: 'Likes' },
-  { id: 8, type: 'mention', user: { name: 'Chris Lee', handle: '@chrislee', avatar: 'https://i.pravatar.cc/44?img=3' }, action: 'tagged you in a thread', snippet: '"@alexj check out what the Pulse team is doing with a11y"', time: '1d', read: true, category: 'Mentions' },
-  { id: 9, type: 'follow', user: { name: 'Priya Sharma', handle: '@priyash', avatar: 'https://i.pravatar.cc/44?img=20' }, action: 'started following you', snippet: null, time: '1d', read: true, category: 'Follows' },
-  { id: 10, type: 'like', user: { name: 'Marcus Webb', handle: '@marcwebb', avatar: 'https://i.pravatar.cc/44?img=8' }, action: 'liked your post', snippet: '"Hot take: the current wave of #TechLayoffs…"', time: '2d', read: true, category: 'Likes' },
+  { id: 1, type: 'like', user: { name: 'Maya Chen', handle: '@mayachen', avatar: 'https://loremflickr.com/44/44/portrait?random=5' }, action: 'liked your post', snippet: '"Accessibility isn\'t a feature — it\'s the baseline."', time: '2h', read: false, category: 'Likes' },
+  { id: 2, type: 'follow', user: { name: 'Darius Okafor', handle: '@dariusok', avatar: 'https://loremflickr.com/44/44/portrait?random=60' }, action: 'started following you', snippet: null, time: '3h', read: false, category: 'Follows' },
+  { id: 3, type: 'mention', user: { name: 'Jordan Rivera', handle: '@jordanr', avatar: 'https://loremflickr.com/44/44/portrait?random=7' }, action: 'mentioned you in a post', snippet: '"@alexj totally agree with your take on #TechLayoffs"', time: '4h', read: false, category: 'Mentions' },
+  { id: 4, type: 'like', user: { name: 'Sam Park', handle: '@sampark', avatar: 'https://loremflickr.com/44/44/portrait?random=12' }, action: 'liked your post', snippet: '"Just wrapped up my talk at #ClimateWeek…"', time: '5h', read: true, category: 'Likes' },
+  { id: 5, type: 'comment', user: { name: 'Riley Torres', handle: '@rileyt', avatar: 'https://loremflickr.com/44/44/portrait?random=9' }, action: 'replied to your post', snippet: '"This is such a great point! More devs need to hear this."', time: '6h', read: true, category: 'Mentions' },
+  { id: 6, type: 'follow', user: { name: 'Sofia Reyes', handle: '@sofiareyes', avatar: 'https://loremflickr.com/44/44/portrait?random=47' }, action: 'started following you', snippet: null, time: '8h', read: true, category: 'Follows' },
+  { id: 7, type: 'like', user: { name: 'Kai Yamamoto', handle: '@kaiyama', avatar: 'https://loremflickr.com/44/44/portrait?random=33' }, action: 'and 47 others liked your post', snippet: '"The new coffee shop on Meridian opened today…"', time: '10h', read: true, category: 'Likes' },
+  { id: 8, type: 'mention', user: { name: 'Chris Lee', handle: '@chrislee', avatar: 'https://loremflickr.com/44/44/portrait?random=3' }, action: 'tagged you in a thread', snippet: '"@alexj check out what the Pulse team is doing with a11y"', time: '1d', read: true, category: 'Mentions' },
+  { id: 9, type: 'follow', user: { name: 'Priya Sharma', handle: '@priyash', avatar: 'https://loremflickr.com/44/44/portrait?random=20' }, action: 'started following you', snippet: null, time: '1d', read: true, category: 'Follows' },
+  { id: 10, type: 'like', user: { name: 'Marcus Webb', handle: '@marcwebb', avatar: 'https://loremflickr.com/44/44/portrait?random=8' }, action: 'liked your post', snippet: '"Hot take: the current wave of #TechLayoffs…"', time: '2d', read: true, category: 'Likes' },
 ];
 
 const TYPE_ICON = {

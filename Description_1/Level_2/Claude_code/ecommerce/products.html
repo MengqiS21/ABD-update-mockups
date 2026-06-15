@@ -50,8 +50,8 @@ const PRODUCTS = [
 ];
 
 function productImg(p) {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect width="400" height="400" fill="#${p.hue}18"/><rect x="140" y="110" width="120" height="120" rx="16" fill="#${p.hue}35"/><text x="200" y="190" font-family="Arial" font-size="72" font-weight="bold" fill="#${p.hue}" text-anchor="middle">${p.name[0]}</text><text x="200" y="330" font-family="Arial,sans-serif" font-size="15" fill="#${p.hue}aa" text-anchor="middle">${p.cat}</text></svg>`;
-  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+  const keyMap = { Electronics: 'electronics', Kitchen: 'kitchen', Clothing: 'fashion', Sports: 'fitness' };
+  return `https://loremflickr.com/400/400/${keyMap[p.cat]||'product'}?random=${p.id}`;
 }
 
 function getCartCount() {

@@ -13,11 +13,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Black", "Silver", "Midnight Blue"],
       sizes: ["Standard"],
-      image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/headphones?random=38",
       gallery: [
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/headphones?random=39",
+        "https://loremflickr.com/900/900/headphones?random=40",
+        "https://loremflickr.com/900/900/headphones?random=41"
       ],
       shortDescription: "Wireless noise-canceling headphones with all-day comfort and crisp audio.",
       description: "The Sony WH-1000XM5 pairs adaptive noise canceling with balanced sound, long battery life, and intuitive touch controls for commuting, work, and travel.",
@@ -36,11 +36,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Matte Black", "Cream"],
       sizes: ["5.8L"],
-      image: "https://images.unsplash.com/photo-1585515656473-4e4b1e4ecf86?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/air%20fryer?random=42",
       gallery: [
-        "https://images.unsplash.com/photo-1585515656473-4e4b1e4ecf86?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/air%20fryer?random=43",
+        "https://loremflickr.com/900/900/air%20fryer?random=44",
+        "https://loremflickr.com/900/900/air%20fryer?random=45"
       ],
       shortDescription: "Countertop air fryer with touch presets for crispy weeknight meals.",
       description: "A family-size air fryer with eight presets, dishwasher-safe basket, and programmable timer for healthier everyday cooking.",
@@ -59,11 +59,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Forest", "Slate", "Sand"],
       sizes: ["S", "M", "L", "XL"],
-      image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/rain%20jacket?random=46",
       gallery: [
-        "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/rain%20jacket?random=47",
+        "https://loremflickr.com/900/900/rain%20jacket?random=48",
+        "https://loremflickr.com/900/900/rain%20jacket?random=49"
       ],
       shortDescription: "Lightweight waterproof shell with adjustable hood and sealed seams.",
       description: "Built for changing weather, this packable rain jacket combines water resistance, breathability, and a clean city-ready silhouette.",
@@ -82,11 +82,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Black", "Orange"],
       sizes: ["42mm"],
-      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/fitness%20watch?random=50",
       gallery: [
-        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/fitness%20watch?random=51",
+        "https://loremflickr.com/900/900/fitness%20watch?random=52",
+        "https://loremflickr.com/900/900/fitness%20watch?random=53"
       ],
       shortDescription: "GPS-enabled fitness watch with sleep, heart-rate, and workout tracking.",
       description: "Track runs, gym sessions, and recovery with a bright AMOLED display, guided workouts, and up to 10 days of battery life.",
@@ -105,11 +105,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["White", "Charcoal"],
       sizes: ["Standard"],
-      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/table%20lamp?random=54",
       gallery: [
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/table%20lamp?random=55",
+        "https://loremflickr.com/900/900/table%20lamp?random=56",
+        "https://loremflickr.com/900/900/table%20lamp?random=57"
       ],
       shortDescription: "Voice-ready lamp with warm-to-cool lighting presets and timer control.",
       description: "A compact smart lamp for desks and nightstands with tunable white light, touch dimming, and app-based schedules.",
@@ -128,11 +128,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Teal", "Graphite"],
       sizes: ["Single Serve"],
-      image: "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/blender?random=58",
       gallery: [
-        "https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/blender?random=59",
+        "https://loremflickr.com/900/900/blender?random=60",
+        "https://loremflickr.com/900/900/blender?random=61"
       ],
       shortDescription: "Compact blender with travel cups for smoothies and quick prep.",
       description: "Great for single-serve smoothies, protein shakes, and sauces with stainless steel blades and easy-clean cups.",
@@ -151,11 +151,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Black", "Olive"],
       sizes: ["20L"],
-      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/backpack?random=62",
       gallery: [
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/backpack?random=63",
+        "https://loremflickr.com/900/900/backpack?random=64",
+        "https://loremflickr.com/900/900/backpack?random=65"
       ],
       shortDescription: "Laptop backpack with hidden pockets and weather-resistant fabric.",
       description: "Organized storage for commute essentials, featuring a padded laptop sleeve, external bottle pocket, and breathable back panel.",
@@ -174,11 +174,11 @@ window.NovaMartData = (() => {
       availability: "Limited Stock",
       colors: ["Snow", "Stone"],
       sizes: ["Mini"],
-      image: "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/smart%20speaker?random=66",
       gallery: [
-        "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/smart%20speaker?random=67",
+        "https://loremflickr.com/900/900/smart%20speaker?random=68",
+        "https://loremflickr.com/900/900/smart%20speaker?random=69"
       ],
       shortDescription: "Compact speaker for music, voice control, and room-by-room audio.",
       description: "A small but capable smart speaker with room-filling sound, multi-room sync, and easy voice controls.",
@@ -197,11 +197,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["White", "Navy", "Rose"],
       sizes: ["XS", "S", "M", "L"],
-      image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/t%20shirt?random=70",
       gallery: [
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/t%20shirt?random=71",
+        "https://loremflickr.com/900/900/t%20shirt?random=72",
+        "https://loremflickr.com/900/900/t%20shirt?random=73"
       ],
       shortDescription: "Soft cotton-blend tee designed for everyday layering and comfort.",
       description: "An easy wardrobe staple with a relaxed fit, durable knit, and breathable cotton feel.",
@@ -220,11 +220,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Lilac", "Charcoal"],
       sizes: ["6mm"],
-      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/yoga%20mat?random=74",
       gallery: [
-        "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/yoga%20mat?random=75",
+        "https://loremflickr.com/900/900/yoga%20mat?random=76",
+        "https://loremflickr.com/900/900/yoga%20mat?random=77"
       ],
       shortDescription: "High-grip yoga mat with extra cushioning for studio and home practice.",
       description: "Supportive 6mm padding, textured grip, and a carry strap make this mat ideal for yoga, stretching, and mobility work.",
@@ -243,11 +243,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Ivory", "Sky", "Sage"],
       sizes: ["Queen", "King"],
-      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/bed%20sheets?random=78",
       gallery: [
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/bed%20sheets?random=79",
+        "https://loremflickr.com/900/900/bed%20sheets?random=80",
+        "https://loremflickr.com/900/900/bed%20sheets?random=81"
       ],
       shortDescription: "Breathable percale sheet set with a crisp hotel-style finish.",
       description: "Made from long-staple cotton for a cool touch and smooth weave, this sheet set refreshes guest rooms and everyday bedrooms.",
@@ -266,11 +266,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Graphite", "Silver"],
       sizes: ["128GB"],
-      image: "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/tablet%20computer?random=82",
       gallery: [
-        "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/tablet%20computer?random=83",
+        "https://loremflickr.com/900/900/tablet%20computer?random=84",
+        "https://loremflickr.com/900/900/tablet%20computer?random=85"
       ],
       shortDescription: "Portable tablet with vivid display for streaming, reading, and work.",
       description: "An everyday tablet with ample storage, strong battery life, and a bright screen for entertainment or productivity on the go.",
@@ -289,11 +289,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Steel"],
       sizes: ["6-Piece"],
-      image: "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/kitchen%20knives?random=86",
       gallery: [
-        "https://images.unsplash.com/photo-1590794056226-79ef3a8147e1?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1514986888952-8cd320577b68?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/kitchen%20knives?random=87",
+        "https://loremflickr.com/900/900/kitchen%20knives?random=88",
+        "https://loremflickr.com/900/900/kitchen%20knives?random=89"
       ],
       shortDescription: "Essential knife set with precision blades and a slim countertop block.",
       description: "A home kitchen upgrade featuring stainless blades, ergonomic handles, and a compact acacia storage block.",
@@ -312,11 +312,11 @@ window.NovaMartData = (() => {
       availability: "Limited Stock",
       colors: ["Camel", "Pebble"],
       sizes: ["Standard"],
-      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/lounge%20chair?random=90",
       gallery: [
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/lounge%20chair?random=91",
+        "https://loremflickr.com/900/900/lounge%20chair?random=92",
+        "https://loremflickr.com/900/900/lounge%20chair?random=93"
       ],
       shortDescription: "Modern upholstered chair for reading corners and living rooms.",
       description: "This accent chair balances soft cushioning with a sculpted wood frame for a warm modern look.",
@@ -335,11 +335,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Cobalt", "Coral"],
       sizes: ["7", "8", "9", "10", "11"],
-      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/running%20shoes?random=94",
       gallery: [
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1511556670410-f9b4b5f1d65b?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/running%20shoes?random=95",
+        "https://loremflickr.com/900/900/running%20shoes?random=96",
+        "https://loremflickr.com/900/900/running%20shoes?random=97"
       ],
       shortDescription: "Supportive running shoes with grip outsole for roads and light trails.",
       description: "Responsive foam, breathable mesh, and all-terrain traction keep every workout stable and comfortable.",
@@ -358,11 +358,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Black"],
       sizes: ["Standard"],
-      image: "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/video%20doorbell?random=98",
       gallery: [
-        "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/video%20doorbell?random=99",
+        "https://loremflickr.com/900/900/video%20doorbell?random=100",
+        "https://loremflickr.com/900/900/video%20doorbell?random=101"
       ],
       shortDescription: "HD doorbell camera with motion alerts and two-way talk.",
       description: "Monitor deliveries and visitors with real-time notifications, infrared night vision, and cloud-ready recordings.",
@@ -381,11 +381,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Oat", "Terracotta"],
       sizes: ["Full/Queen", "King"],
-      image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/duvet%20cover?random=102",
       gallery: [
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/duvet%20cover?random=103",
+        "https://loremflickr.com/900/900/duvet%20cover?random=104",
+        "https://loremflickr.com/900/900/duvet%20cover?random=105"
       ],
       shortDescription: "Relaxed linen-blend duvet cover with button closures and corner ties.",
       description: "Softened fabric with lived-in texture adds warmth and breathability across seasons.",
@@ -404,11 +404,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Black", "Ice"],
       sizes: ["20000mAh"],
-      image: "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/power%20bank?random=106",
       gallery: [
-        "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1495435229349-e86db7bfa013?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/power%20bank?random=107",
+        "https://loremflickr.com/900/900/power%20bank?random=108",
+        "https://loremflickr.com/900/900/power%20bank?random=109"
       ],
       shortDescription: "Fast-charging battery pack for phones, tablets, and travel kits.",
       description: "High-capacity portable power with dual USB-C outputs, LED charge indicator, and airline-friendly design.",
@@ -427,11 +427,11 @@ window.NovaMartData = (() => {
       availability: "Limited Stock",
       colors: ["Silver"],
       sizes: ["Compact"],
-      image: "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/espresso%20machine?random=110",
       gallery: [
-        "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/espresso%20machine?random=111",
+        "https://loremflickr.com/900/900/espresso%20machine?random=112",
+        "https://loremflickr.com/900/900/espresso%20machine?random=113"
       ],
       shortDescription: "Slim espresso machine with milk frother and programmable shot timing.",
       description: "Make cafe-style drinks at home with quick heat-up, 15-bar pressure, and an integrated steam wand.",
@@ -450,11 +450,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Champagne", "Black"],
       sizes: ["21-inch"],
-      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/carry%20on%20suitcase?random=114",
       gallery: [
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/carry%20on%20suitcase?random=115",
+        "https://loremflickr.com/900/900/carry%20on%20suitcase?random=116",
+        "https://loremflickr.com/900/900/carry%20on%20suitcase?random=117"
       ],
       shortDescription: "Lightweight hard-shell carry-on with spinner wheels and TSA lock.",
       description: "Designed for frequent flyers with a split interior, durable shell, and smooth telescoping handle.",
@@ -473,11 +473,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Graphite"],
       sizes: ["Standard"],
-      image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/camping%20lantern?random=118",
       gallery: [
-        "https://images.unsplash.com/photo-1522163182402-834f871fd851?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/camping%20lantern?random=119",
+        "https://loremflickr.com/900/900/camping%20lantern?random=120",
+        "https://loremflickr.com/900/900/camping%20lantern?random=121"
       ],
       shortDescription: "Rechargeable lantern with dimmable brightness for campsites and outages.",
       description: "A durable weather-resistant lantern with hanging hook, long runtime, and USB charging.",
@@ -496,11 +496,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Birch", "White"],
       sizes: ["3-Piece"],
-      image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/desk%20organizer?random=122",
       gallery: [
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/desk%20organizer?random=123",
+        "https://loremflickr.com/900/900/desk%20organizer?random=124",
+        "https://loremflickr.com/900/900/desk%20organizer?random=125"
       ],
       shortDescription: "Modular desktop storage set for notebooks, pens, and small accessories.",
       description: "A flexible set of trays and cups that keeps workspaces clean without looking cluttered.",
@@ -519,11 +519,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Black", "Mist"],
       sizes: ["Standard"],
-      image: "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/wireless%20mouse?random=126",
       gallery: [
-        "https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/wireless%20mouse?random=127",
+        "https://loremflickr.com/900/900/wireless%20mouse?random=128",
+        "https://loremflickr.com/900/900/wireless%20mouse?random=129"
       ],
       shortDescription: "Compact wireless mouse with quiet clicks and dual-device pairing.",
       description: "Designed for everyday productivity with smooth tracking, silent buttons, and long battery life.",
@@ -542,11 +542,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Sage", "Graphite"],
       sizes: ["3-Piece"],
-      image: "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/ceramic%20pan?random=130",
       gallery: [
-        "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1514986888952-8cd320577b68?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/ceramic%20pan?random=131",
+        "https://loremflickr.com/900/900/ceramic%20pan?random=132",
+        "https://loremflickr.com/900/900/ceramic%20pan?random=133"
       ],
       shortDescription: "Nonstick ceramic cookware set for daily stovetop cooking.",
       description: "Three versatile pans with stay-cool handles and easy-release surfaces for low-oil meals.",
@@ -565,11 +565,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Heather Grey", "Black"],
       sizes: ["S", "M", "L", "XL"],
-      image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/hoodie?random=134",
       gallery: [
-        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/hoodie?random=135",
+        "https://loremflickr.com/900/900/hoodie?random=136",
+        "https://loremflickr.com/900/900/hoodie?random=137"
       ],
       shortDescription: "Soft fleece hoodie with a relaxed fit for travel and weekends.",
       description: "Everyday casual comfort with brushed lining, rib cuffs, and a structured hood.",
@@ -588,11 +588,11 @@ window.NovaMartData = (() => {
       availability: "In Stock",
       colors: ["Black"],
       sizes: ["4 Heads"],
-      image: "https://images.unsplash.com/photo-1599058918144-1ffabb6ab9a0?auto=format&fit=crop&w=900&q=80",
+      image: "https://loremflickr.com/900/900/massage%20gun?random=138",
       gallery: [
-        "https://images.unsplash.com/photo-1599058918144-1ffabb6ab9a0?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=80",
-        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80"
+        "https://loremflickr.com/900/900/massage%20gun?random=139",
+        "https://loremflickr.com/900/900/massage%20gun?random=140",
+        "https://loremflickr.com/900/900/massage%20gun?random=141"
       ],
       shortDescription: "Portable massage gun with multiple speed settings for recovery work.",
       description: "Target tired muscles with quiet percussion, interchangeable heads, and a travel-ready carrying case.",

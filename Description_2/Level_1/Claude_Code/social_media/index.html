@@ -205,7 +205,7 @@ function Composer() {
       <form onSubmit={handleSubmit}>
         <div className="flex gap-3 items-start">
           <img
-            src="https://picsum.photos/seed/myavatar/40/40"
+            src="https://loremflickr.com/40/40/person?random=10"
             alt="Your avatar"
             className="w-10 h-10 rounded-full flex-shrink-0 object-cover"
           />
@@ -283,11 +283,11 @@ const POSTS = [
     id: 1,
     author: 'Hana Kimura',
     handle: '@hanakimura',
-    avatar: 'https://picsum.photos/seed/hana/40/40',
+    avatar: 'https://loremflickr.com/40/40/person?random=1',
     discipline: 'Digital Illustration',
     title: 'Solstice III',
     caption: 'Finally finished this piece after 3 weeks of work-in-progress — the light rays were killing me but I think they landed right ✨',
-    image: 'https://picsum.photos/seed/solstice/800/520',
+    image: 'https://loremflickr.com/800/520/art?random=1',
     imageAlt: 'A luminous digital illustration showing a solstice landscape with golden light rays filtering through misty trees',
     tags: ['#digitalart', '#procreate', '#illustration'],
     appreciations: 847,
@@ -299,11 +299,11 @@ const POSTS = [
     id: 2,
     author: 'Marco Ferreira',
     handle: '@marcoferreira',
-    avatar: 'https://picsum.photos/seed/marco/40/40',
+    avatar: 'https://loremflickr.com/40/40/person?random=2',
     discipline: 'Photography',
     title: 'Urban Decay Series #4',
     caption: 'Abandoned factory on the outskirts of Porto. Shot on 35mm with expired Kodak Portra.',
-    image: 'https://picsum.photos/seed/urbandecay/800/560',
+    image: 'https://loremflickr.com/800/560/photography?random=2',
     imageAlt: 'Black and white film photograph of an abandoned factory interior with dramatic light shafts through broken windows',
     tags: ['#photography', '#35mm', '#filmphoto'],
     appreciations: 523,
@@ -315,11 +315,11 @@ const POSTS = [
     id: 3,
     author: 'Yael Cohen',
     handle: '@yaeldesign',
-    avatar: 'https://picsum.photos/seed/yael/40/40',
+    avatar: 'https://loremflickr.com/40/40/person?random=3',
     discipline: 'Typography',
     title: 'Neon Dreams',
     caption: 'Experimental lettering exploring how neon signage aesthetics translate to static digital composition. Tools: Figma + After Effects.',
-    image: 'https://picsum.photos/seed/neondreams/800/480',
+    image: 'https://loremflickr.com/800/480/art?random=3',
     imageAlt: 'Vivid neon-style typographic composition with glowing letterforms against a dark background',
     tags: ['#typography', '#lettering', '#figma'],
     appreciations: 389,
@@ -331,11 +331,11 @@ const POSTS = [
     id: 4,
     author: 'Sofia Reyes',
     handle: '@sofiacreates',
-    avatar: 'https://picsum.photos/seed/sofia/40/40',
+    avatar: 'https://loremflickr.com/40/40/person?random=4',
     discipline: '3D Art',
     title: 'Bloom',
     caption: 'Procedural flower studies in Blender. Each petal is fully parametric — I can regenerate the whole scene in seconds.',
-    image: 'https://picsum.photos/seed/bloom3d/800/500',
+    image: 'https://loremflickr.com/800/500/art?random=4',
     imageAlt: 'Photorealistic 3D render of stylized blooming flowers with soft subsurface scattering and delicate translucent petals',
     tags: ['#3dart', '#blender', '#procedural'],
     appreciations: 712,
@@ -450,9 +450,9 @@ function PostCard({ post }) {
 
 /* ── Right Panel ────────────────────────────────────────────── */
 const SUGGESTED = [
-  { name: 'Lena Park', discipline: 'Motion Design', avatar: 'https://picsum.photos/seed/lena/36/36' },
-  { name: 'Nico Brun', discipline: 'Illustration', avatar: 'https://picsum.photos/seed/nico/36/36' },
-  { name: 'Amara Diop', discipline: 'Photography', avatar: 'https://picsum.photos/seed/amara/36/36' },
+  { name: 'Lena Park', discipline: 'Motion Design', avatar: 'https://loremflickr.com/36/36/person?random=5' },
+  { name: 'Nico Brun', discipline: 'Illustration', avatar: 'https://loremflickr.com/36/36/person?random=6' },
+  { name: 'Amara Diop', discipline: 'Photography', avatar: 'https://loremflickr.com/36/36/person?random=7' },
 ];
 
 const TRENDING_TAGS = ['#procreate', '#blender3d', '#filmphoto', '#letterpress', '#motiongraphics'];

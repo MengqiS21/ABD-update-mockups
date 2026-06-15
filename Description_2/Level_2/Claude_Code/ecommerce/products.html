@@ -509,7 +509,9 @@
                           <article key={outfit.set} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-th-beige" aria-label={`Outfit set: ${outfit.set}`}>
                             <div className="grid grid-cols-3 gap-0.5 bg-th-beige">
                               {outfit.items.map((item, i) => (
-                                <div key={i} className={`aspect-square bg-gradient-to-br ${GRADS[item.id % GRADS.length]}`} role="img" aria-label={item.name}></div>
+                                <div key={i} className="aspect-square overflow-hidden">
+                                  <img src={`https://loremflickr.com/200/200/fashion?random=${item.id * 4 + i}`} alt={item.name} className="w-full h-full object-cover" />
+                                </div>
                               ))}
                             </div>
                             <div className="p-4">
@@ -539,9 +541,8 @@
                             return (
                               <article key={p.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow" role="listitem" aria-label={p.name}>
                                 <a href="product-detail.html" aria-label={`View details for ${p.name} in ${p.color}`} className="block">
-                                  <div className={`bg-gradient-to-br ${grad} aspect-[3/4] flex items-center justify-center relative overflow-hidden`} role="img" aria-label={`${p.name} product photo`}>
-                                    <div aria-hidden="true" className="absolute inset-0 opacity-10" style={{backgroundImage:'repeating-linear-gradient(45deg,#000 0,#000 1px,transparent 0,transparent 6px)'}}></div>
-                                    <svg aria-hidden="true" className="w-12 h-12 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z" /></svg>
+                                  <div className="aspect-[3/4] relative overflow-hidden">
+                                    <img src={`https://loremflickr.com/300/400/fashion?random=${p.id}`} alt={`${p.name} product photo`} className="w-full h-full object-cover" />
                                     {p.badge && <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full" aria-label={`Badge: ${p.badge}`}>{p.badge}</span>}
                                     {p.isNew && <span className="absolute top-2 right-2 bg-th-green text-white text-xs font-bold px-2 py-0.5 rounded-full" aria-label="New arrival">New</span>}
                                   </div>

@@ -67,7 +67,7 @@ function CourseDetailPage() {
           <section aria-labelledby="instructor-heading" className="rounded-[2rem] border border-slate-200 bg-white p-6">
             <h2 id="instructor-heading" className="text-3xl font-semibold text-slate-950">Instructor profile</h2>
             <div className="mt-5 grid gap-6 md:grid-cols-[0.3fr_0.7fr]">
-              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Portrait of Dr. Lena Ortiz" className="h-44 w-full rounded-[1.5rem] object-cover" />
+              <img src="https://loremflickr.com/800/800/instructor?random=41" alt="Portrait of Dr. Lena Ortiz" className="h-44 w-full rounded-[1.5rem] object-cover" />
               <div>
                 <h3 className="text-xl font-semibold text-slate-950">Dr. Lena Ortiz, RHIA</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-600">Former ambulatory care operations lead with 14 years of experience in health information administration, patient access systems, and frontline training.</p>

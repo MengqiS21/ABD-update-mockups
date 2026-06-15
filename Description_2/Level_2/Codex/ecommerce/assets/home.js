@@ -11,7 +11,7 @@ function HomePage() {
     >
       <section aria-labelledby="hero-heading" className="overflow-hidden rounded-[2rem] bg-slate-900 text-white shadow-2xl shadow-slate-300/50">
         <div className="relative min-h-[75vh]">
-          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1600&q=80" alt="Models wearing pieces from the ThreadHouse spring collection in a sunlit studio" className="absolute inset-0 h-full w-full object-cover" />
+          <img src="https://loremflickr.com/1600/900/fashion?random=25" alt="Models wearing pieces from the ThreadHouse spring collection in a sunlit studio" className="absolute inset-0 h-full w-full object-cover" />
           <div className="hero-overlay absolute inset-0"></div>
           <div className="relative z-10 flex min-h-[75vh] max-w-3xl flex-col justify-end px-6 py-12 lg:px-12 lg:py-16">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-lime-300">Editorial drop</p>

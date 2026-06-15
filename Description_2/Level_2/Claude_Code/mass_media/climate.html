@@ -168,14 +168,14 @@
     const ALL_TAGS = ['Sea Level','Wildfire','Carbon Markets','Permafrost','Drought','Ocean Acidification','Deforestation','Heatwaves','Ice Loss'];
 
     const STORIES = [
-      { id:1, title:'The Invisible Flood: How Groundwater Collapse Is Reshaping the American West', author:'Camille Okafor', date:'March 20, 2026', dateIso:'2026-03-20', readTime:22, tags:['Drought','Sea Level'], category:'Climate', href:'article.html', imgGrad:'from-blue-900 via-teal-800 to-emerald-900', isLead:true,
+      { id:1, title:'The Invisible Flood: How Groundwater Collapse Is Reshaping the American West', author:'Camille Okafor', date:'March 20, 2026', dateIso:'2026-03-20', readTime:22, tags:['Drought','Sea Level'], category:'Climate', href:'article.html', imgGrad:'from-blue-900 via-teal-800 to-emerald-900', imgKeyword:'drought', isLead:true,
         deck:'Aquifers that took 10,000 years to fill are emptying in decades. Our six-month investigation — drawing on 2.4 million well records — reveals what happens when the water runs out.' },
-      { id:2, title:'Sea Ice Loss in the Arctic Is Altering Polar Vortex Patterns, Bringing Extreme Cold to the U.S. Midwest', author:'Priya Vásquez', date:'March 18, 2026', dateIso:'2026-03-18', readTime:9, tags:['Ice Loss','Heatwaves'], category:'Climate', href:'article.html', imgGrad:'from-sky-300 to-blue-600' },
-      { id:3, title:'Wildfire Smoke Now Poses Year-Round Health Risk to 100 Million Americans, Study Finds', author:'David Reinholt', date:'March 15, 2026', dateIso:'2026-03-15', readTime:7, tags:['Wildfire'], category:'Climate', href:'article.html', imgGrad:'from-orange-600 to-red-800' },
-      { id:4, title:'The Carbon Markets Charade: Why Billions in Offsets Are Mathematically Impossible to Verify', author:'James Adeyemi', date:'March 12, 2026', dateIso:'2026-03-12', readTime:15, tags:['Carbon Markets'], category:'Climate', href:'article.html', imgGrad:'from-emerald-700 to-green-900' },
-      { id:5, title:'Ocean Acidification Is Dissolving Coral Reefs Faster Than Any Model Predicted', author:'Sofia Lindgren', date:'March 10, 2026', dateIso:'2026-03-10', readTime:11, tags:['Ocean Acidification'], category:'Climate', href:'article.html', imgGrad:'from-cyan-500 to-teal-700' },
-      { id:6, title:'Amazon Deforestation Rate Surges as Brazil Rolls Back Environmental Enforcement', author:'Tom Brackfield', date:'March 7, 2026', dateIso:'2026-03-07', readTime:8, tags:['Deforestation'], category:'Climate', href:'article.html', imgGrad:'from-green-600 to-lime-900' },
-      { id:7, title:'Permafrost Thaw Is Releasing Ancient Viruses — And Scientists Are Watching Closely', author:'Priya Vásquez', date:'March 4, 2026', dateIso:'2026-03-04', readTime:10, tags:['Permafrost'], category:'Climate', href:'article.html', imgGrad:'from-slate-400 to-blue-700' },
+      { id:2, title:'Sea Ice Loss in the Arctic Is Altering Polar Vortex Patterns, Bringing Extreme Cold to the U.S. Midwest', author:'Priya Vásquez', date:'March 18, 2026', dateIso:'2026-03-18', readTime:9, tags:['Ice Loss','Heatwaves'], category:'Climate', href:'article.html', imgGrad:'from-sky-300 to-blue-600', imgKeyword:'arctic' },
+      { id:3, title:'Wildfire Smoke Now Poses Year-Round Health Risk to 100 Million Americans, Study Finds', author:'David Reinholt', date:'March 15, 2026', dateIso:'2026-03-15', readTime:7, tags:['Wildfire'], category:'Climate', href:'article.html', imgGrad:'from-orange-600 to-red-800', imgKeyword:'wildfire' },
+      { id:4, title:'The Carbon Markets Charade: Why Billions in Offsets Are Mathematically Impossible to Verify', author:'James Adeyemi', date:'March 12, 2026', dateIso:'2026-03-12', readTime:15, tags:['Carbon Markets'], category:'Climate', href:'article.html', imgGrad:'from-emerald-700 to-green-900', imgKeyword:'forest' },
+      { id:5, title:'Ocean Acidification Is Dissolving Coral Reefs Faster Than Any Model Predicted', author:'Sofia Lindgren', date:'March 10, 2026', dateIso:'2026-03-10', readTime:11, tags:['Ocean Acidification'], category:'Climate', href:'article.html', imgGrad:'from-cyan-500 to-teal-700', imgKeyword:'ocean' },
+      { id:6, title:'Amazon Deforestation Rate Surges as Brazil Rolls Back Environmental Enforcement', author:'Tom Brackfield', date:'March 7, 2026', dateIso:'2026-03-07', readTime:8, tags:['Deforestation'], category:'Climate', href:'article.html', imgGrad:'from-green-600 to-lime-900', imgKeyword:'amazon' },
+      { id:7, title:'Permafrost Thaw Is Releasing Ancient Viruses — And Scientists Are Watching Closely', author:'Priya Vásquez', date:'March 4, 2026', dateIso:'2026-03-04', readTime:10, tags:['Permafrost'], category:'Climate', href:'article.html', imgGrad:'from-slate-400 to-blue-700', imgKeyword:'arctic' },
     ];
 
     const KEY_DOCS = [
@@ -256,7 +256,9 @@
                       {lead && (
                         <article className="mb-8 pb-8 border-b-2 border-gw-border" aria-label={`Lead investigation: ${lead.title}`}>
                           <a href={lead.href} aria-label={lead.title}>
-                            <div className={`h-64 bg-gradient-to-br ${lead.imgGrad} rounded-sm mb-4`} role="img" aria-label={`Image for: ${lead.title}`} />
+                            <div className="h-64 rounded-sm mb-4 overflow-hidden">
+                              <img src={`https://loremflickr.com/700/256/${lead.imgKeyword || 'climate'}?random=${lead.id + 40}`} alt={`Image for: ${lead.title}`} className="w-full h-full object-cover" />
+                            </div>
                           </a>
                           <div className="flex items-center gap-2 mb-2">
                             <span className="text-xs font-bold uppercase tracking-widest text-gw-amber font-sans">{lead.category}</span>
@@ -311,7 +313,9 @@
                                   </div>
                                 </div>
                                 <a href={story.href} aria-hidden="true" tabIndex={-1} className="flex-shrink-0 w-28 h-20">
-                                  <div className={`w-full h-full bg-gradient-to-br ${story.imgGrad} rounded-sm`} aria-hidden="true" />
+                                  <div className="w-full h-full rounded-sm overflow-hidden">
+                                    <img src={`https://loremflickr.com/112/80/${story.imgKeyword || 'climate'}?random=${story.id + 40}`} alt="" aria-hidden="true" className="w-full h-full object-cover" />
+                                  </div>
                                 </a>
                               </div>
                             </article>

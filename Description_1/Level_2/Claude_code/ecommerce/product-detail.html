@@ -31,15 +31,11 @@ const RELATED = [
 ];
 
 /* ─── Gallery images for Sony WH-1000XM5 ─── */
-function makeImg(hue, label) {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600"><rect width="600" height="600" fill="#${hue}18"/><rect x="180" y="160" width="240" height="240" rx="28" fill="#${hue}35"/><text x="300" y="300" font-family="Arial" font-size="100" font-weight="bold" fill="#${hue}" text-anchor="middle" dominant-baseline="middle">S</text><text x="300" y="440" font-family="Arial,sans-serif" font-size="20" fill="#${hue}aa" text-anchor="middle">${label}</text></svg>`;
-  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
-}
 const GALLERY = [
-  { id:1, src:makeImg('1e40af','Front view'),   alt:'Sony WH-1000XM5 headphones front view, over-ear design in Midnight Black' },
-  { id:2, src:makeImg('1e3a8a','Side view'),    alt:'Sony WH-1000XM5 headphones side profile showing ear cup and adjustable headband' },
-  { id:3, src:makeImg('1e40af','Top view'),     alt:'Sony WH-1000XM5 headphones top view displaying headband and cushioning' },
-  { id:4, src:makeImg('0891b2','Platinum view'),alt:'Sony WH-1000XM5 headphones in Platinum Silver colorway' },
+  { id:1, src:'https://loremflickr.com/600/600/headphones?random=1', alt:'Sony WH-1000XM5 headphones front view, over-ear design in Midnight Black' },
+  { id:2, src:'https://loremflickr.com/600/600/headphones?random=2', alt:'Sony WH-1000XM5 headphones side profile showing ear cup and adjustable headband' },
+  { id:3, src:'https://loremflickr.com/600/600/headphones?random=3', alt:'Sony WH-1000XM5 headphones top view displaying headband and cushioning' },
+  { id:4, src:'https://loremflickr.com/600/600/headphones?random=4', alt:'Sony WH-1000XM5 headphones in Platinum Silver colorway' },
 ];
 
 const PRODUCT = {
@@ -151,7 +147,8 @@ function Footer() {
 /* ─── Related Product Card ─── */
 function RelatedCard({ p, onAddToCart }) {
   const [added, setAdded] = useState(false);
-  const img = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect width="400" height="400" fill="#${p.hue}18"/><rect x="140" y="110" width="120" height="120" rx="16" fill="#${p.hue}35"/><text x="200" y="190" font-family="Arial" font-size="72" font-weight="bold" fill="#${p.hue}" text-anchor="middle">${p.name[0]}</text></svg>`)}`;
+  const keyMap = { Electronics: 'electronics', Kitchen: 'kitchen', Clothing: 'fashion', Sports: 'fitness' };
+  const img = `https://loremflickr.com/400/160/${keyMap[p.cat]||'product'}?random=${p.id}`;
   return (
     <article className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 overflow-hidden flex flex-col" aria-label={p.name}>
       <a href="product-detail.html" aria-label={`View details for ${p.name}`} className="block focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">

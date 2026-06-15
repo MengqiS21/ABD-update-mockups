@@ -90,7 +90,11 @@
                     <div
                       key=${tile.title}
                       className="mood-tile editorial-card flex min-h-[20rem] items-end rounded-[2rem] p-6 text-stone-50 shadow-float"
-                      style=${{ backgroundPosition: `${20 + index * 15}% center` }}
+                      style=${{
+                        backgroundImage: `linear-gradient(135deg, rgba(17, 24, 39, 0.28), rgba(17, 24, 39, 0.04)), url("https://loremflickr.com/900/1100/fashion?random=${110 + index}")`,
+                        backgroundSize: "cover",
+                        backgroundPosition: `${20 + index * 15}% center`,
+                      }}
                     >
                       <div className="relative z-10 space-y-3">
                         <p className="text-2xl font-semibold">${tile.title}</p>

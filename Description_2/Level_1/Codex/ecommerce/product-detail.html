@@ -41,19 +41,19 @@
     <script type="text/babel">
       const { useEffect, useState } = React;
       const images = [
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+        "https://loremflickr.com/1200/900/shirt?random=42",
+        "https://loremflickr.com/1200/900/fashion?random=43",
+        "https://loremflickr.com/1200/900/fashion?random=44",
+        "https://loremflickr.com/1200/900/knitwear?random=45",
       ];
       const completeLook = [
-        { name: "Tailored Utility Trouser", price: 112, detail: "Organic Cotton · Sand", image: "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=900&q=80" },
-        { name: "Patchwork Tote", price: 54, detail: "Recycled Polyester · Multi", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" },
-        { name: "Artist Scarf", price: 48, detail: "Organic Cotton · Terracotta", image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80" },
+        { name: "Tailored Utility Trouser", price: 112, detail: "Organic Cotton · Sand", image: "https://loremflickr.com/900/700/trousers?random=46" },
+        { name: "Patchwork Tote", price: 54, detail: "Recycled Polyester · Multi", image: "https://loremflickr.com/900/700/bag?random=47" },
+        { name: "Artist Scarf", price: 48, detail: "Organic Cotton · Terracotta", image: "https://loremflickr.com/900/700/scarf?random=48" },
       ];
       const reviews = [
-        { name: "Rina, Portland", text: "I sized up for an extra slouchy fit and wore it open over a tank. The fabric feels airy but still polished.", image: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=900&q=80" },
-        { name: "Dev, Toronto", text: "The sage tone is even better in daylight. Easy with tailored pants and sneakers.", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" },
+        { name: "Rina, Portland", text: "I sized up for an extra slouchy fit and wore it open over a tank. The fabric feels airy but still polished.", image: "https://loremflickr.com/900/700/student?random=49" },
+        { name: "Dev, Toronto", text: "The sage tone is even better in daylight. Easy with tailored pants and sneakers.", image: "https://loremflickr.com/900/700/student?random=50" },
       ];
 
       function DetailPage() {
