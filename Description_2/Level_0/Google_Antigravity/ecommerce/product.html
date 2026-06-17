@@ -197,10 +197,10 @@
 
         const ProductPage = () => {
             const images = [
-                "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-                "https://images.unsplash.com/photo-1596755094514-f87e34085b2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDQ1fHxsaW5lbiUyMHNoaXJ0fGVufDB8fHx8MTY5OTgxMjQwMnww&ixlib=rb-4.0.3&q=80&w=1200", // Using alternative urls for mockup since direct matches might not exist, but let's re-use related images
-                "https://images.unsplash.com/photo-1603252109303-2751441dd157?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-                "https://images.unsplash.com/photo-1588143926639-9aa8f3fd32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                "https://loremflickr.com/1200/1200/shirt?random=82",
+                "https://loremflickr.com/1200/1200/shirt?random=113", // Using alternative urls for mockup since direct matches might not exist, but let's re-use related images
+                "https://loremflickr.com/1200/1200/clothing?random=114",
+                "https://loremflickr.com/1200/1200/fabric?random=115"
             ];
 
             const [activeImage, setActiveImage] = useState(0);
@@ -370,9 +370,9 @@
                                 <h2 className="text-2xl font-bold font-display mb-10 text-center">Complete the Look</h2>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                                     {[
-                                        { name: "Organic Cotton Canvas Tote", price: "$45.00", image: "https://images.unsplash.com/photo-1597589827317-4c6d6e0a90bd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
-                                        { name: "Essential Wide Leg Trousers", price: "$110.00", image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
-                                        { name: "Chunky Leather Loafers", price: "$160.00", image: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" }
+                                        { name: "Organic Cotton Canvas Tote", price: "$45.00", image: "https://loremflickr.com/600/600/bag?random=83" },
+                                        { name: "Essential Wide Leg Trousers", price: "$110.00", image: "https://loremflickr.com/600/600/trousers?random=86" },
+                                        { name: "Chunky Leather Loafers", price: "$160.00", image: "https://loremflickr.com/600/600/shoes?random=100" }
                                     ].map((item, id) => (
                                         <div key={id} className="group cursor-pointer">
                                             <a href="product.html" className="block relative aspect-[3/4] bg-gray-100 rounded-md overflow-hidden mb-4">
@@ -419,8 +419,8 @@
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                     {[
-                                        { name: "Sarah M.", fit: "True to size", body: "Absolutely love the fit and feel of this shirt. The sage green is exactly as pictured. I wear it to the office and on weekends.", image: "https://images.unsplash.com/photo-1549422079-05d8fcd67bdc?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
-                                        { name: "Elena P.", fit: "Runs large", body: "It's definitely oversized as described. I sized down to a Small and it fits perfect. The linen quality is fantastic for the price point.", image: "https://images.unsplash.com/photo-1510467554522-6b95c3bbbf92?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
+                                        { name: "Sarah M.", fit: "True to size", body: "Absolutely love the fit and feel of this shirt. The sage green is exactly as pictured. I wear it to the office and on weekends.", image: "https://loremflickr.com/400/400/portrait?random=111" },
+                                        { name: "Elena P.", fit: "Runs large", body: "It's definitely oversized as described. I sized down to a Small and it fits perfect. The linen quality is fantastic for the price point.", image: "https://loremflickr.com/400/400/portrait?random=112" },
                                         { name: "Jessica T.", fit: "True to size", body: "My new staple button down! Taking it on vacation next week. Doesn't wrinkle quite as bad as other linen shirts I own.", image: null }
                                     ].map((review, rIdx) => (
                                         <div key={rIdx} className="bg-gray-50 rounded-lg p-6">

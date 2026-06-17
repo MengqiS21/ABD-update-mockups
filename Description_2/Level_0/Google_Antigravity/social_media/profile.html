@@ -124,7 +124,7 @@
                         <div className="flex items-center gap-2 text-folia-500 font-bold text-xl">
                             <Icons.Sparkles className="w-6 h-6" /> Folia
                         </div>
-                        <img src="https://i.pravatar.cc/150?img=43" alt="Avatar" className="w-8 h-8 rounded-full border border-dark-border" />
+                        <img src="https://loremflickr.com/150/150/portrait?random=20" alt="Avatar" className="w-8 h-8 rounded-full border border-dark-border" />
                     </div>
 
                     {/* Desktop Sidebar */}
@@ -151,7 +151,7 @@
                         </button>
 
                         <div className="flex items-center gap-3 px-4 py-3 mt-4 border-t border-dark-border cursor-pointer hover:bg-dark-card rounded-xl transition-colors">
-                            <img src="https://i.pravatar.cc/150?img=43" alt="Avatar" className="w-10 h-10 rounded-full bg-dark-card" />
+                            <img src="https://loremflickr.com/150/150/portrait?random=20" alt="Avatar" className="w-10 h-10 rounded-full bg-dark-card" />
                             <div className="flex-1 min-w-0">
                                 <p className="text-sm font-medium text-slate-200 truncate">Alex Rivera</p>
                                 <p className="text-xs text-slate-500 truncate">@arivera_design</p>
@@ -195,7 +195,7 @@
                                 { name: 'Sarah Joy', handle: '@sjoy_photo', role: 'Photography', img: '5' }
                             ].map((user, i) => (
                                 <div key={i} className="flex items-center gap-3 mb-4 last:mb-0">
-                                    <img src={`https://i.pravatar.cc/150?img=${user.img}`} className="w-10 h-10 rounded-full" alt={user.name} />
+                                    <img src={`https://loremflickr.com/150/150/portrait?random=${user.img}`} className="w-10 h-10 rounded-full" alt={user.name} />
                                     <div className="flex-1 min-w-0">
                                         <p className="text-sm font-medium text-slate-200 truncate">{user.name}</p>
                                         <p className="text-xs text-slate-500 truncate">{user.role}</p>
@@ -236,19 +236,19 @@
             const [activeTab, setActiveTab] = React.useState('Portfolio');
 
             const portfolio = [
-                { id: 1, img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe', views: '12.4k', likes: 1205 },
-                { id: 2, img: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab', views: '8.2k', likes: 840 },
-                { id: 3, img: 'https://images.unsplash.com/photo-1644329712398-75e11dfaf250', views: '5.1k', likes: 622 },
-                { id: 4, img: 'https://images.unsplash.com/photo-1629198688000-71f23e745b6e', views: '18.9k', likes: 2100 },
-                { id: 5, img: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5', views: '3.4k', likes: 412 },
-                { id: 6, img: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853', views: '1.2k', likes: 180 },
+                { id: 1, img: 'https://loremflickr.com/600/600/design?random=30', views: '12.4k', likes: 1205 },
+                { id: 2, img: 'https://loremflickr.com/600/600/art?random=31', views: '8.2k', likes: 840 },
+                { id: 3, img: 'https://loremflickr.com/600/600/abstract?random=32', views: '5.1k', likes: 622 },
+                { id: 4, img: 'https://loremflickr.com/600/600/typography?random=33', views: '18.9k', likes: 2100 },
+                { id: 5, img: 'https://loremflickr.com/600/600/painting?random=34', views: '3.4k', likes: 412 },
+                { id: 6, img: 'https://loremflickr.com/600/600/photography?random=35', views: '1.2k', likes: 180 },
             ];
 
             return (
                 <div className="pb-20 md:pb-0 min-h-screen">
                     {/* Header Image */}
                     <div className="h-48 md:h-64 w-full relative">
-                        <img src="https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2670&auto=format&fit=crop" className="w-full h-full object-cover" alt="Header" />
+                        <img src="https://loremflickr.com/1920/600/abstract?random=36" className="w-full h-full object-cover" alt="Header" />
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-dark-bg/90"></div>
                         
                         {/* Profile Info overlay */}
@@ -256,7 +256,7 @@
                             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                                 <div className="flex items-end gap-4 md:gap-6">
                                     <div className="relative group cursor-pointer">
-                                        <img src="https://i.pravatar.cc/150?img=43" className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-dark-bg bg-dark-card object-cover group-hover:border-folia-500 transition-colors" alt="Avatar" />
+                                        <img src="https://loremflickr.com/150/150/portrait?random=20" className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-dark-bg bg-dark-card object-cover group-hover:border-folia-500 transition-colors" alt="Avatar" />
                                         <div className="absolute bottom-2 right-2 w-4 h-4 bg-emerald-500 border-2 border-dark-bg rounded-full"></div>
                                     </div>
                                     <div className="mb-2">
@@ -326,7 +326,7 @@
                                 <Icons.Bookmark className="w-4 h-4 text-folia-500" /> Featured Work
                             </h3>
                             <div className="rounded-2xl overflow-hidden border border-dark-border hover:border-folia-600/50 shadow-lg group cursor-pointer relative lg:h-[400px] transition-colors">
-                                <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=2680" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Featured" />
+                                <img src="https://loremflickr.com/1200/400/typography?random=37" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Featured" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/20 to-transparent flex flex-col justify-end p-6 lg:p-8 opacity-90 group-hover:opacity-100 transition-opacity">
                                     <h2 className="text-2xl lg:text-3xl font-bold text-white mb-2 drop-shadow-lg">Brutalist Typography Volume I.</h2>
                                     <div className="flex items-center gap-4 text-white/90 font-medium text-sm drop-shadow-md">
@@ -340,7 +340,7 @@
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
                             {portfolio.map(item => (
                                 <div key={item.id} className="relative rounded-xl overflow-hidden group cursor-pointer aspect-square bg-dark-card border border-dark-border hover:border-folia-500/30 transition-colors">
-                                    <img src={`${item.img}?auto=format&fit=crop&w=600&q=80`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Portfolio item" />
+                                    <img src={item.img} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Portfolio item" />
                                     
                                     <div className="absolute inset-0 bg-dark-bg/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center border-2 border-transparent group-hover:border-folia-500/50 rounded-xl">
                                         <div className="flex gap-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">

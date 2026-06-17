@@ -216,16 +216,16 @@
             const [cartMessage, setCartMessage] = useState("");
 
             const images = [
-                "https://images.unsplash.com/photo-1596755094514-f87e32f85e2c?auto=format&fit=crop&w=1000&q=80",
-                "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=1000&q=80",
-                "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1000&q=80",
-                "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=80"
+                "https://loremflickr.com/1000/1000/shirt?random=124",
+                "https://loremflickr.com/1000/1000/shirt?random=125",
+                "https://loremflickr.com/1000/1000/tshirt?random=126",
+                "https://loremflickr.com/1000/1000/fashion?random=127"
             ];
 
             const completeLook = [
-                { id: 101, name: "Pleated Trousers", price: "$110.00", image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=400&q=80" },
-                { id: 102, name: "Minimalist Watch", price: "$145.00", image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=400&q=80" },
-                { id: 103, name: "Leather Loafers", price: "$165.00", image: "https://images.unsplash.com/photo-1533827432537-70133748f5c8?auto=format&fit=crop&w=400&q=80" }
+                { id: 101, name: "Pleated Trousers", price: "$110.00", image: "https://loremflickr.com/400/400/pants?random=128" },
+                { id: 102, name: "Minimalist Watch", price: "$145.00", image: "https://loremflickr.com/400/400/watch?random=129" },
+                { id: 103, name: "Leather Loafers", price: "$165.00", image: "https://loremflickr.com/400/400/shoes?random=130" }
             ];
 
             const handleAddToCart = () => {
@@ -441,11 +441,11 @@
                                     <div key={i} className="flex-none w-64 md:w-72 relative group">
                                         <div className="relative h-80 w-full rounded-lg overflow-hidden bg-gray-200">
                                             <img
-                                                src={`https://images.unsplash.com/photo-${1500000000000 + (i * 12345)}?auto=format&fit=crop&w=400&q=80`}
+                                                src={`https://loremflickr.com/400/600/fashion?random=${131 + i}`}
                                                 alt={`Customer wearing ${selectedColor} shirt`}
                                                 className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
                                                 onError={(e) => {
-                                                    e.target.src = "https://images.unsplash.com/photo-1596755094514-f87e32f85e2c?auto=format&fit=crop&w=400&q=80";
+                                                    e.target.src = "https://loremflickr.com/400/600/shirt?random=136";
                                                 }}
                                             />
                                             <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/60 to-transparent">

@@ -115,7 +115,7 @@
                             {convos.map(c => (
                                 <button key={c.id} onClick={() => setActiveConvo(c)} className={`w-full p-4 flex items-center gap-3 transition-colors text-left border-r-2 ${activeConvo?.id === c.id ? 'bg-white/[0.04] border-indigo-500' : 'hover:bg-white/[0.02] border-transparent'}`}>
                                     <div className="relative shrink-0">
-                                        <img src={`https://i.pravatar.cc/150?u=${c.img}`} alt={c.name} className="w-12 h-12 rounded-full object-cover" />
+                                        <img src={`https://loremflickr.com/150/150/portrait?random=${c.img}`} alt={c.name} className="w-12 h-12 rounded-full object-cover" />
                                         {c.unread > 0 && <span className="absolute -top-1 -right-1 bg-indigo-500 border-2 border-[#0a0a0a] w-4 h-4 rounded-full"></span>}
                                     </div>
                                     <div className="flex-1 min-w-0">
@@ -136,7 +136,7 @@
                             <React.Fragment>
                                 <header className="p-4 border-b border-neutral-800/60 flex items-center justify-between sticky top-0 bg-[#0a0a0a]/90 backdrop-blur-md z-10 shrink-0">
                                     <div className="flex items-center gap-3 cursor-pointer group">
-                                        <img src={`https://i.pravatar.cc/150?u=${activeConvo.img}`} className="w-10 h-10 rounded-full object-cover group-hover:opacity-90 transition-opacity" />
+                                        <img src={`https://loremflickr.com/150/150/portrait?random=${activeConvo.img}`} className="w-10 h-10 rounded-full object-cover group-hover:opacity-90 transition-opacity" />
                                         <div className="flex flex-col leading-tight">
                                             <span className="font-bold text-white text-[15px] group-hover:underline">{activeConvo.name}</span>
                                             <span className="text-neutral-500 text-xs">{activeConvo.handle}</span>
@@ -149,7 +149,7 @@
 
                                 <div className="flex-1 overflow-y-auto no-scrollbar p-6 space-y-4">
                                     <div className="text-center">
-                                        <img src={`https://i.pravatar.cc/150?u=${activeConvo.img}`} className="w-16 h-16 rounded-full mx-auto mb-2" />
+                                        <img src={`https://loremflickr.com/150/150/portrait?random=${activeConvo.img}`} className="w-16 h-16 rounded-full mx-auto mb-2" />
                                         <h3 className="font-bold text-white mb-0.5">{activeConvo.name}</h3>
                                         <p className="text-sm text-neutral-500 mb-6">{activeConvo.handle}</p>
                                         <p className="text-xs text-neutral-600 font-medium uppercase tracking-widest border-b border-neutral-800 pb-2 inline-block px-10">Today</p>

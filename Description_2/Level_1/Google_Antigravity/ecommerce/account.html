@@ -112,12 +112,12 @@
 
                     {[{
                         id: 'ORD-98231', date: 'March 14, 2026', status: 'Delivered', total: '$145.00', items: [
-                            { name: 'Merino Wool Beanie', img: 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=150&auto=format&fit=crop' },
-                            { name: 'Ribbed Cotton Socks x2', img: 'https://images.unsplash.com/photo-1582269411985-7140f1a92a7e?w=150&auto=format&fit=crop' }
+                            { name: 'Merino Wool Beanie', img: 'https://loremflickr.com/150/150/knitwear?random=80' },
+                            { name: 'Ribbed Cotton Socks x2', img: 'https://loremflickr.com/150/150/socks?random=81' }
                         ]
                     }, {
                         id: 'ORD-84511', date: 'January 02, 2026', status: 'Delivered', total: '$210.00', items: [
-                            { name: 'Heavyweight Hoodie', img: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=150&auto=format&fit=crop' }
+                            { name: 'Heavyweight Hoodie', img: 'https://loremflickr.com/150/150/hoodie?random=82' }
                         ]
                     }].map((order, idx) => (
                         <div key={idx} className="bg-white border border-stone-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
@@ -257,8 +257,8 @@
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
-                            { name: 'Weekend Coffee Run', img: 'https://images.unsplash.com/photo-1550614000-4b95d466f288?w=800&auto=format&fit=crop', items: 3 },
-                            { name: 'Office Casual', img: 'https://images.unsplash.com/photo-1617137968427-ec561cd9aa22?w=800&auto=format&fit=crop', items: 4 }
+                            { name: 'Weekend Coffee Run', img: 'https://loremflickr.com/800/600/fashion?random=83', items: 3 },
+                            { name: 'Office Casual', img: 'https://loremflickr.com/800/600/office?random=84', items: 4 }
                         ].map((outfit, idx) => (
                             <div key={idx} className="group relative rounded-xl overflow-hidden aspect-[16/10] shadow-sm border border-stone-200 cursor-pointer">
                                 <img src={outfit.img} alt={outfit.name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -331,7 +331,7 @@
                         <aside className="w-full md:w-64 flex-shrink-0">
                             <div className="flex items-center space-x-4 mb-8">
                                 <div className="w-14 h-14 bg-stone-300 rounded-full overflow-hidden shadow-inner border-2 border-white">
-                                    <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=200&auto=format&fit=crop" alt="User Avatar" className="w-full h-full object-cover" />
+                                    <img src="https://loremflickr.com/200/200/portrait?random=85" alt="User Avatar" className="w-full h-full object-cover" />
                                 </div>
                                 <div>
                                     <h1 className="font-bold text-stone-900">John Doe</h1>

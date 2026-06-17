@@ -89,7 +89,7 @@ function SocialLayout({ children, activePage }) {
                     </div>
 
                     <button className="flex items-center gap-3 p-3 lg:px-4 rounded-full hover:bg-white/5 transition-colors mt-auto w-fit xl:w-full group">
-                        <img src="https://i.pravatar.cc/150?u=alex" alt="Alex's avatar" className="w-10 h-10 rounded-full bg-neutral-800 object-cover ring-2 ring-transparent group-hover:ring-neutral-700 transition-all" />
+                        <img src="https://loremflickr.com/150/150/portrait?random=4" alt="Alex's avatar" className="w-10 h-10 rounded-full bg-neutral-800 object-cover ring-2 ring-transparent group-hover:ring-neutral-700 transition-all" />
                         <div className="hidden xl:flex flex-col items-start leading-tight min-w-0">
                             <span className="font-bold text-[15px] truncate w-full text-left text-white">Alex Rivers</span>
                             <span className="text-neutral-500 text-sm truncate w-full text-left">@alexrivers</span>
@@ -148,7 +148,7 @@ function SocialLayout({ children, activePage }) {
                                     ].map((u, i) => (
                                         <div key={i} className="flex items-center justify-between p-4 hover:bg-white/[0.03] transition-colors cursor-pointer">
                                             <div className="flex items-center gap-3 min-w-0">
-                                                <img src={`https://i.pravatar.cc/150?u=${u.img}`} alt={u.name} className="w-10 h-10 rounded-full object-cover" />
+                                                <img src={`https://loremflickr.com/150/150/portrait?random=${u.img}`} alt={u.name} className="w-10 h-10 rounded-full object-cover" />
                                                 <div className="flex flex-col min-w-0">
                                                     <span className="font-bold text-[15px] truncate hover:underline">{u.name}</span>
                                                     <span className="text-neutral-500 text-[15px] truncate">{u.handle}</span>

@@ -217,7 +217,7 @@
                     <div className="mt-auto flex items-center pt-2">
                         {author && (
                             <img
-                                src={`https://ui-avatars.com/api/?name=${author}&background=f1f5f9&color=1d2939`}
+                                src={`https://loremflickr.com/48/48/portrait?random=${author.length + 20}`}
                                 alt={author}
                                 className="w-8 h-8 rounded-full mr-3 border border-gray-200"
                             />
@@ -266,10 +266,10 @@
 
         const Homepage = () => {
             const worldSection = [
-                { title: "European Markets Rally Following Central Bank Update", author: "Sarah Jenkins", time: "2 hours ago", image: "https://picsum.photos/seed/img_648/800/600" },
-                { title: "New Climate Accord Reached in Paris Talks", author: "David Chen", time: "5 hours ago", image: "https://picsum.photos/seed/img_648/800/600" },
-                { title: "Innovations in Deep Sea Exploration", author: "Maria Rodriguez", time: "8 hours ago", image: "https://picsum.photos/seed/img_648/800/600" },
-                { title: "Global Summit Addresses Trade Imbalances", author: "James Wilson", time: "11 hours ago", image: "https://picsum.photos/seed/img_648/800/600" }
+                { title: "European Markets Rally Following Central Bank Update", author: "Sarah Jenkins", time: "2 hours ago", image: "https://loremflickr.com/600/400/finance?random=14" },
+                { title: "New Climate Accord Reached in Paris Talks", author: "David Chen", time: "5 hours ago", image: "https://loremflickr.com/600/400/climate?random=18" },
+                { title: "Innovations in Deep Sea Exploration", author: "Maria Rodriguez", time: "8 hours ago", image: "https://loremflickr.com/600/400/ocean?random=17" },
+                { title: "Global Summit Addresses Trade Imbalances", author: "James Wilson", time: "11 hours ago", image: "https://loremflickr.com/600/400/diplomacy?random=12" }
             ];
 
             return (
@@ -301,7 +301,7 @@
                                     summary="Negotiators work through the night seeking consensus on climate provisions, while thousands gather outside the convention center. The outcome promises to reshape international environmental policy for the next decade."
                                     author="Elena Rostova"
                                     time="1 hour ago"
-                                    image="https://picsum.photos/seed/img_578/800/600"
+                                    image="https://loremflickr.com/1200/800/diplomacy?random=12"
                                 />
 
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pt-8 border-t border-gray-200">
@@ -309,19 +309,19 @@
                                         title="The Rising Cost of Urban Living: A Global Perspective"
                                         author="Michael Chang"
                                         time="3 hours ago"
-                                        image="https://picsum.photos/seed/img_646/800/600"
+                                        image="https://loremflickr.com/600/400/city?random=15"
                                     />
                                     <ArticleCard
                                         title="Breakthrough in Quantum Computing Announced at MIT"
                                         author="Dr. Sarah Hughes"
                                         time="4 hours ago"
-                                        image="https://picsum.photos/seed/img_646/800/600"
+                                        image="https://loremflickr.com/600/400/technology?random=16"
                                     />
                                     <ArticleCard
                                         title="Art exhibition transforms abandoned subway station"
                                         author="Julian Vance"
                                         time="6 hours ago"
-                                        image="https://picsum.photos/seed/img_646/800/600"
+                                        image="https://loremflickr.com/600/400/art?random=19"
                                     />
                                 </div>
                             </div>
@@ -352,10 +352,10 @@
                         <SectionStrip title="World" articles={worldSection} />
 
                         <SectionStrip title="Tech & Science" articles={[
-                            { title: "Electric vehicle sales surpass gas equivalents in major European market", author: "Daniel Kim", time: "1 hour ago", image: "https://picsum.photos/seed/img_648/800/600" },
-                            { title: "NASA's newest rover discovers potentially water-bearing minerals", author: "Dr. Amanda West", time: "3 hours ago", image: "https://picsum.photos/seed/img_648/800/600" },
-                            { title: "The rise of conscious AI: Are we there yet?", author: "Tech Desk", time: "5 hours ago", image: "https://picsum.photos/seed/img_648/800/600" },
-                            { title: "Cybersecurity firm warns of new widespread vulnerability", author: "Alex Torres", time: "7 hours ago", image: "https://picsum.photos/seed/img_648/800/600" }
+                            { title: "Electric vehicle sales surpass gas equivalents in major European market", author: "Daniel Kim", time: "1 hour ago", image: "https://loremflickr.com/600/400/electric?random=20" },
+                            { title: "NASA's newest rover discovers potentially water-bearing minerals", author: "Dr. Amanda West", time: "3 hours ago", image: "https://loremflickr.com/600/400/space?random=17" },
+                            { title: "The rise of conscious AI: Are we there yet?", author: "Tech Desk", time: "5 hours ago", image: "https://loremflickr.com/600/400/technology?random=16" },
+                            { title: "Cybersecurity firm warns of new widespread vulnerability", author: "Alex Torres", time: "7 hours ago", image: "https://loremflickr.com/600/400/security?random=23" }
                         ]} />
 
                     </main>

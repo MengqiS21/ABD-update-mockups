@@ -63,12 +63,12 @@
             ];
 
             const gridItems = [
-                { type: 'image', src: 'https://images.unsplash.com/photo-1510793664726-22a84e6223d6?auto=format&fit=crop&q=80&w=600', span: 'col-span-2 row-span-2' },
+                { type: 'image', src: 'https://loremflickr.com/800/600/photography?random=6', span: 'col-span-2 row-span-2' },
                 { type: 'text', title: 'Why I moved from VS Code to Neovim', desc: 'A deep dive into keyboard-centric development.' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1627398246734-d832d207d57c?auto=format&fit=crop&q=80&w=600', span: 'col-span-1 row-span-1' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?auto=format&fit=crop&q=80&w=600', span: 'col-span-1 row-span-2' },
+                { type: 'image', src: 'https://loremflickr.com/800/600/design?random=7', span: 'col-span-1 row-span-1' },
+                { type: 'image', src: 'https://loremflickr.com/800/600/workspace?random=11', span: 'col-span-1 row-span-2' },
                 { type: 'text', title: 'Breaking: Mars Rover discovers water crystals', desc: 'Science · Trending' },
-                { type: 'image', src: 'https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=600', span: 'col-span-2 row-span-1' },
+                { type: 'image', src: 'https://loremflickr.com/800/600/laptop?random=8', span: 'col-span-2 row-span-1' },
             ];
 
             return (
@@ -104,7 +104,7 @@
                             {usersToFollow.map(u => (
                                 <div key={u.handle} className="bg-neutral-900 border border-neutral-800 rounded-2xl p-4 flex items-center justify-between hover:border-neutral-700 transition-colors cursor-pointer">
                                     <div className="flex items-center gap-3 min-w-0">
-                                        <img src={`https://i.pravatar.cc/150?u=${u.img}`} alt={u.name} className="w-12 h-12 rounded-full object-cover shrink-0" />
+                                        <img src={`https://loremflickr.com/150/150/portrait?random=${u.img}`} alt={u.name} className="w-12 h-12 rounded-full object-cover shrink-0" />
                                         <div className="flex flex-col min-w-0">
                                             <span className="font-bold text-[15px] truncate text-white">{u.name}</span>
                                             <span className="text-neutral-500 text-sm truncate">{u.handle}</span>

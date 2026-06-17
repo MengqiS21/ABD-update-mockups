@@ -124,7 +124,7 @@
                         <div className="flex items-center gap-2 text-folia-500 font-bold text-xl">
                             <Icons.Sparkles className="w-6 h-6" /> Folia
                         </div>
-                        <img src="https://i.pravatar.cc/150?img=43" alt="Avatar" className="w-8 h-8 rounded-full border border-dark-border" />
+                        <img src="https://loremflickr.com/150/150/portrait?random=20" alt="Avatar" className="w-8 h-8 rounded-full border border-dark-border" />
                     </div>
 
                     {/* Desktop Sidebar */}
@@ -151,7 +151,7 @@
                         </button>
 
                         <div className="flex items-center gap-3 px-4 py-3 mt-4 border-t border-dark-border cursor-pointer hover:bg-dark-card rounded-xl transition-colors">
-                            <img src="https://i.pravatar.cc/150?img=43" alt="Avatar" className="w-10 h-10 rounded-full bg-dark-card" />
+                            <img src="https://loremflickr.com/150/150/portrait?random=20" alt="Avatar" className="w-10 h-10 rounded-full bg-dark-card" />
                             <div className="flex-1 min-w-0">
                                 <p className="text-sm font-medium text-slate-200 truncate">Alex Rivera</p>
                                 <p className="text-xs text-slate-500 truncate">@arivera_design</p>
@@ -195,7 +195,7 @@
                                 { name: 'Sarah Joy', handle: '@sjoy_photo', role: 'Photography', img: '5' }
                             ].map((user, i) => (
                                 <div key={i} className="flex items-center gap-3 mb-4 last:mb-0">
-                                    <img src={`https://i.pravatar.cc/150?img=${user.img}`} className="w-10 h-10 rounded-full" alt={user.name} />
+                                    <img src={`https://loremflickr.com/150/150/portrait?random=${user.img}`} className="w-10 h-10 rounded-full" alt={user.name} />
                                     <div className="flex-1 min-w-0">
                                         <p className="text-sm font-medium text-slate-200 truncate">{user.name}</p>
                                         <p className="text-xs text-slate-500 truncate">{user.role}</p>
@@ -243,12 +243,12 @@
             ];
 
             const discoveryPosts = [
-                { id: 1, image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe', author: 'Klara Weiss', likes: 342, category: '3D', aspect: 'aspect-[3/4]' },
-                { id: 2, image: 'https://images.unsplash.com/photo-1629198688000-71f23e745b6e', author: 'Julian Ford', likes: 821, category: 'Typography', aspect: 'aspect-square' },
-                { id: 3, image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5', author: 'Maya Lin', likes: 1205, category: 'Digital Art', aspect: 'aspect-[4/3]' },
-                { id: 4, image: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853', author: 'Sam Cheng', likes: 430, category: 'Photography', aspect: 'aspect-square' },
-                { id: 5, image: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e', author: 'Nina Ray', likes: 612, category: '3D', aspect: 'aspect-[3/4]' },
-                { id: 6, image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab', author: 'Alex Rivera', likes: 980, category: 'Digital Art', aspect: 'aspect-[4/3]' },
+                { id: 1, image: 'https://loremflickr.com/600/800/design?random=40', author: 'Klara Weiss', likes: 342, category: '3D', aspect: 'aspect-[3/4]' },
+                { id: 2, image: 'https://loremflickr.com/600/600/typography?random=41', author: 'Julian Ford', likes: 821, category: 'Typography', aspect: 'aspect-square' },
+                { id: 3, image: 'https://loremflickr.com/800/600/art?random=42', author: 'Maya Lin', likes: 1205, category: 'Digital Art', aspect: 'aspect-[4/3]' },
+                { id: 4, image: 'https://loremflickr.com/600/600/photography?random=43', author: 'Sam Cheng', likes: 430, category: 'Photography', aspect: 'aspect-square' },
+                { id: 5, image: 'https://loremflickr.com/600/800/sculpture?random=44', author: 'Nina Ray', likes: 612, category: '3D', aspect: 'aspect-[3/4]' },
+                { id: 6, image: 'https://loremflickr.com/800/600/digital?random=45', author: 'Alex Rivera', likes: 980, category: 'Digital Art', aspect: 'aspect-[4/3]' },
             ];
 
             return (
@@ -277,7 +277,7 @@
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                             {risingCreators.map((creator, i) => (
                                 <div key={i} className="bg-dark-card border border-dark-border rounded-xl p-4 flex flex-col items-center text-center hover:border-folia-500/50 transition-colors cursor-pointer group">
-                                    <img src={`https://i.pravatar.cc/150?img=${creator.img}`} alt={creator.name} className="w-16 h-16 rounded-full mb-3 group-hover:scale-105 transition-transform border-2 border-transparent group-hover:border-folia-500" />
+                                    <img src={`https://loremflickr.com/150/150/portrait?random=${creator.img}`} alt={creator.name} className="w-16 h-16 rounded-full mb-3 group-hover:scale-105 transition-transform border-2 border-transparent group-hover:border-folia-500" />
                                     <h3 className="font-bold text-slate-200 text-sm w-full truncate">{creator.name}</h3>
                                     <p className="text-xs text-slate-500 mb-3 w-full truncate">{creator.role}</p>
                                     <button className="w-full py-1.5 rounded-lg bg-dark-bg border border-dark-border text-xs font-semibold text-slate-300 hover:bg-folia-600 hover:text-white hover:border-folia-600 group-hover:border-folia-500/50 transition-all">
@@ -296,7 +296,7 @@
                         <div className="columns-1 sm:columns-2 gap-4 space-y-4">
                             {discoveryPosts.map((post, i) => (
                                 <div key={post.id} className={`relative rounded-2xl overflow-hidden group cursor-pointer break-inside-avoid ${post.aspect} bg-dark-card border border-dark-border`}>
-                                    <img src={`${post.image}?auto=format&fit=crop&w=600&q=80`} alt="Discover" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                    <img src={post.image} alt="Discover" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                                     
                                     {/* Hover Overlay */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-dark-bg/90 via-dark-bg/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">

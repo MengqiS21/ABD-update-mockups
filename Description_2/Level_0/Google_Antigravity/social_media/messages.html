@@ -124,7 +124,7 @@
                         <div className="flex items-center gap-2 text-folia-500 font-bold text-xl">
                             <Icons.Sparkles className="w-6 h-6" /> Folia
                         </div>
-                        <img src="https://i.pravatar.cc/150?img=43" alt="Avatar" className="w-8 h-8 rounded-full border border-dark-border" />
+                        <img src="https://loremflickr.com/150/150/portrait?random=20" alt="Avatar" className="w-8 h-8 rounded-full border border-dark-border" />
                     </div>
 
                     {/* Desktop Sidebar */}
@@ -151,7 +151,7 @@
                         </button>
 
                         <div className="flex items-center gap-3 px-4 py-3 mt-4 border-t border-dark-border cursor-pointer hover:bg-dark-card rounded-xl transition-colors">
-                            <img src="https://i.pravatar.cc/150?img=43" alt="Avatar" className="w-10 h-10 rounded-full bg-dark-card" />
+                            <img src="https://loremflickr.com/150/150/portrait?random=20" alt="Avatar" className="w-10 h-10 rounded-full bg-dark-card" />
                             <div className="flex-1 min-w-0">
                                 <p className="text-sm font-medium text-slate-200 truncate">Alex Rivera</p>
                                 <p className="text-xs text-slate-500 truncate">@arivera_design</p>
@@ -195,7 +195,7 @@
                                 { name: 'Sarah Joy', handle: '@sjoy_photo', role: 'Photography', img: '5' }
                             ].map((user, i) => (
                                 <div key={i} className="flex items-center gap-3 mb-4 last:mb-0">
-                                    <img src={`https://i.pravatar.cc/150?img=${user.img}`} className="w-10 h-10 rounded-full" alt={user.name} />
+                                    <img src={`https://loremflickr.com/150/150/portrait?random=${user.img}`} className="w-10 h-10 rounded-full" alt={user.name} />
                                     <div className="flex-1 min-w-0">
                                         <p className="text-sm font-medium text-slate-200 truncate">{user.name}</p>
                                         <p className="text-xs text-slate-500 truncate">{user.role}</p>
@@ -233,10 +233,10 @@
         // Messages Page implementation
         const MessagesPage = () => {
             const conversations = [
-                { id: 1, name: 'Studio Nord', avatar: 'https://i.pravatar.cc/150?img=51', msg: 'The new assets look great! Let\'s jump on a call...', time: '10m', unread: 2 },
-                { id: 2, name: 'Elena Roth', avatar: 'https://i.pravatar.cc/150?img=32', msg: 'Shared a project with you', time: '2h', unread: 0 },
-                { id: 3, name: 'Alex Rivera', avatar: 'https://i.pravatar.cc/150?img=15', msg: 'Thanks for the feedback man. Really appreciate it.', time: '1d', unread: 0 },
-                { id: 4, name: 'Klara Weiss', avatar: 'https://i.pravatar.cc/150?img=1', msg: 'Are you open for commissions this month?', time: '2d', unread: 0 },
+                { id: 1, name: 'Studio Nord', avatar: 'https://loremflickr.com/150/150/portrait?random=21', msg: 'The new assets look great! Let\'s jump on a call...', time: '10m', unread: 2 },
+                { id: 2, name: 'Elena Roth', avatar: 'https://loremflickr.com/150/150/portrait?random=22', msg: 'Shared a project with you', time: '2h', unread: 0 },
+                { id: 3, name: 'Alex Rivera', avatar: 'https://loremflickr.com/150/150/portrait?random=23', msg: 'Thanks for the feedback man. Really appreciate it.', time: '1d', unread: 0 },
+                { id: 4, name: 'Klara Weiss', avatar: 'https://loremflickr.com/150/150/portrait?random=24', msg: 'Are you open for commissions this month?', time: '2d', unread: 0 },
             ];
 
             return (
@@ -288,7 +288,7 @@
                         {/* Chat Header */}
                         <div className="p-4 border-b border-dark-border glass-effect flex items-center justify-between">
                             <div className="flex items-center gap-3">
-                                <img src="https://i.pravatar.cc/150?img=51" alt="Studio Nord" className="w-10 h-10 rounded-full border border-dark-border" />
+                                <img src="https://loremflickr.com/150/150/portrait?random=21" alt="Studio Nord" className="w-10 h-10 rounded-full border border-dark-border" />
                                 <div>
                                     <h2 className="text-sm font-bold text-slate-100 flex items-center gap-2">Studio Nord <Icons.Sparkles className="w-3.5 h-3.5 text-folia-500" /></h2>
                                     <p className="text-xs text-slate-500 flex items-center gap-1">
@@ -311,7 +311,7 @@
                             
                             {/* Received Message */}
                             <div className="flex gap-3 max-w-[85%]">
-                                <img src="https://i.pravatar.cc/150?img=51" className="w-8 h-8 rounded-full" alt="Nord" />
+                                <img src="https://loremflickr.com/150/150/portrait?random=21" className="w-8 h-8 rounded-full" alt="Nord" />
                                 <div>
                                     <div className="bg-dark-card border border-dark-border p-3 rounded-2xl rounded-tl-sm text-sm text-slate-200 shadow-sm">
                                         Hey! We're reviewing the assets for the campaign. The color palette looks solid.
@@ -321,13 +321,13 @@
 
                             {/* Sent Message with Image */}
                             <div className="flex gap-3 max-w-[85%] self-end flex-row-reverse">
-                                <img src="https://i.pravatar.cc/150?img=43" className="w-8 h-8 rounded-full" alt="Me" />
+                                <img src="https://loremflickr.com/150/150/portrait?random=20" className="w-8 h-8 rounded-full" alt="Me" />
                                 <div className="flex flex-col items-end gap-2">
                                     <div className="bg-folia-600 p-3 rounded-2xl rounded-tr-sm text-sm text-white shadow-lg shadow-folia-600/20 max-w-[300px]">
                                         Awesome. I also have an alternative light version. Take a look:
                                     </div>
                                     <div className="rounded-xl overflow-hidden border border-folia-500/50 relative group cursor-pointer w-64">
-                                        <img src="https://images.unsplash.com/photo-1629198688000-71f23e745b6e?w=400&q=80" alt="Shared work" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        <img src="https://loremflickr.com/400/300/typography?random=46" alt="Shared work" className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500" />
                                         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
                                             <div className="bg-white/20 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs font-bold text-white border border-white/30 drop-shadow-md">View Component</div>
                                         </div>
@@ -338,7 +338,7 @@
 
                             {/* Received Message */}
                             <div className="flex gap-3 max-w-[85%]">
-                                <img src="https://i.pravatar.cc/150?img=51" className="w-8 h-8 rounded-full" alt="Nord" />
+                                <img src="https://loremflickr.com/150/150/portrait?random=21" className="w-8 h-8 rounded-full" alt="Nord" />
                                 <div>
                                     <div className="bg-dark-card border border-dark-border p-3 rounded-2xl rounded-tl-sm text-sm text-slate-200 shadow-sm">
                                         The new assets look great! Let's jump on a call to finalize the typography.

@@ -94,7 +94,7 @@
 
                         <div className="p-4 mb-4">
                             <a href="profile.html" className="flex items-center gap-3 p-2 lg:p-3 -mx-2 lg:mx-0 rounded-2xl hover:bg-zinc-100 transition-colors justify-center lg:justify-start">
-                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Hana Creative" className="w-10 h-10 rounded-full object-cover ring-2 ring-white shadow-sm shrink-0" />
+                                <img src="https://loremflickr.com/150/150/portrait?random=30" alt="Hana Creative" className="w-10 h-10 rounded-full object-cover ring-2 ring-white shadow-sm shrink-0" />
                                 <div className="hidden lg:block flex-1 min-w-0">
                                     <p className="text-[15px] font-semibold text-zinc-900 truncate">Hana Creative</p>
                                     <p className="text-[13px] text-zinc-500 truncate">@hanastudios</p>
@@ -117,7 +117,7 @@
                             );
                         })}
                         <a href="profile.html" className="p-2.5">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Profile" className="w-7 h-7 rounded-full object-cover ring-2 ring-white shadow-sm" />
+                            <img src="https://loremflickr.com/150/150/portrait?random=30" alt="Profile" className="w-7 h-7 rounded-full object-cover ring-2 ring-white shadow-sm" />
                         </a>
                     </nav>
                 </>
@@ -133,11 +133,11 @@
                     id: 1,
                     author: "Marcus Wei",
                     handle: "@marcus3d",
-                    avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&q=80",
+                    avatar: "https://loremflickr.com/150/150/portrait?random=70",
                     timeAgo: "2h",
                     content: "Just wrapped up the lighting tests for 'Solstice III'. The new render engine is completely changing my workflow. 🌌 Thoughts on the god rays in the second shot?",
                     tags: ["#3DModel", "#OctaneRender", "#SciFi"],
-                    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+                    image: "https://loremflickr.com/1200/800/abstract?random=71",
                     likes: 342,
                     comments: 28,
                     shares: 12,
@@ -147,11 +147,11 @@
                     id: 2,
                     author: "Elena Rossi",
                     handle: "@elenarossi_art",
-                    avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=150&q=80",
+                    avatar: "https://loremflickr.com/150/150/portrait?random=72",
                     timeAgo: "5h",
                     content: "Editorial spread concepts for the upcoming issue of VANGUARD. Going for a very brutalist typographic approach to contrast the soft, film photography.",
                     tags: ["#Typography", "#Editorial", "#GraphicDesign"],
-                    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=1200&q=80",
+                    image: "https://loremflickr.com/1200/800/editorial?random=73",
                     likes: 891,
                     comments: 64,
                     shares: 45,
@@ -186,7 +186,7 @@
                             {/* Composer */}
                             <div className="bg-white border-y sm:border border-zinc-200 sm:rounded-2xl p-4 shadow-sm">
                                 <div className="flex gap-4">
-                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="You" className="w-10 h-10 rounded-full object-cover shrink-0" />
+                                    <img src="https://loremflickr.com/150/150/portrait?random=30" alt="You" className="w-10 h-10 rounded-full object-cover shrink-0" />
                                     <div className="flex-1">
                                         <textarea
                                             placeholder="Share your work-in-progress, inspiration, or sketches..."
@@ -310,9 +310,9 @@
                             <h3 className="font-bold text-[17px] text-zinc-900 mb-4">Trending Creators</h3>
                             <div className="space-y-4">
                                 {[
-                                    { name: "Sarah Jenkins", handle: "@sarahj_art", type: "3D Motion", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" },
-                                    { name: "Kenzo M.", handle: "@kenzovisuals", type: "Photography", img: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80" },
-                                    { name: "Studio A+", handle: "@studioaplus", type: "Architecture", img: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=150&q=80" }
+                                    { name: "Sarah Jenkins", handle: "@sarahj_art", type: "3D Motion", img: "https://loremflickr.com/150/150/portrait?random=74" },
+                                    { name: "Kenzo M.", handle: "@kenzovisuals", type: "Photography", img: "https://loremflickr.com/150/150/portrait?random=75" },
+                                    { name: "Studio A+", handle: "@studioaplus", type: "Architecture", img: "https://loremflickr.com/150/150/portrait?random=76" }
                                 ].map((creator, i) => (
                                     <div key={i} className="flex items-center gap-3">
                                         <img src={creator.img} alt={creator.name} className="w-10 h-10 rounded-full object-cover shrink-0" />
